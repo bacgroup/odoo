@@ -1,22 +1,22 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * calendar
+# 	* calendar
 # 
 # Translators:
-# Seongseok Shin <shinss61@hotmail.com>, 2018
-# Mark Lee <odoos@soti.33mail.com>, 2018
-# Martin Trigaux, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2018
+# Seongseok Shin <shinss61@hotmail.com>, 2019
+# Mark Lee <odoos@soti.33mail.com>, 2019
+# Martin Trigaux, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 13:18+0000\n"
-"PO-Revision-Date: 2018-08-24 09:17+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-09-23 11:33+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: Linkup <link-up@naver.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgid "${object.event_id.name}: Date updated"
 msgstr "${object.event_id.name}: 업데이트 날짜"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:741
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid ""
 "%s at %s To\n"
@@ -45,57 +45,22 @@ msgstr ""
 "%s에서 %s(%s)로"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:732
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "%s at (%s To %s) (%s)"
 msgstr "%s에서 (%s에서 %s로) (%s)로"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:229
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "%s has accepted invitation"
 msgstr "%s 초대장을 수락했습니다."
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:237
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "%s has declined invitation"
 msgstr "%s 초대장을 거부했습니다."
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_notif_5
-msgid "1 Day(s)"
-msgstr "1일"
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_notif_3
-msgid "1 Hour(s)"
-msgstr "1시간"
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_notif_1
-msgid "15 Minute(s)"
-msgstr "15분"
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_notif_4
-msgid "2 Hour(s)"
-msgstr "2시간"
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_mail_1
-msgid "3 Hour(s), by e-mail"
-msgstr "3시간, 이메일로"
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_notif_2
-msgid "30 Minute(s)"
-msgstr "30분"
-
-#. module: calendar
-#: model:calendar.alarm,name:calendar.alarm_mail_2
-msgid "6 Hour(s), by e-mail"
-msgstr "6시간, 이메일로"
 
 #. module: calendar
 #: model:mail.template,body_html:calendar.calendar_template_meeting_invitation
@@ -522,18 +487,20 @@ msgstr ""
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
-#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 msgid "<span> hours</span>"
 msgstr "<span> 시간</span>"
 
 #. module: calendar
+#. openerp-web
+#: code:addons/calendar/static/src/xml/base_calendar.xml:0
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
+#, python-format
 msgid "Accept"
 msgstr "수락"
 
 #. module: calendar
-#: selection:calendar.attendee,state:0
-#: selection:calendar.event,attendee_status:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_attendee__state__accepted
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__attendee_status__accepted
 msgid "Accepted"
 msgstr "수락됨"
 
@@ -541,6 +508,18 @@ msgstr "수락됨"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_needaction
 msgid "Action Needed"
 msgstr "작업이 필요함"
+
+#. module: calendar
+#: model:ir.model.fields,field_description:calendar.field_mail_activity_type__category
+msgid "Action to Perform"
+msgstr ""
+
+#. module: calendar
+#: model:ir.model.fields,help:calendar.field_mail_activity_type__category
+msgid ""
+"Actions may trigger specific behavior like opening calendar view or "
+"automatically mark as done when a document is uploaded"
+msgstr ""
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_contacts__active
@@ -565,22 +544,27 @@ msgstr "활동 유형"
 
 #. module: calendar
 #. openerp-web
-#: code:addons/calendar/static/src/xml/base_calendar.xml:36
+#: code:addons/calendar/static/src/xml/base_calendar.xml:0
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__allday
 #, python-format
 msgid "All Day"
 msgstr "하루 종일"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:728
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "AllDay , %s"
 msgstr "하루 종일, %s"
 
 #. module: calendar
-#: sql_constraint:calendar.contacts:0
+#: model:ir.model.constraint,message:calendar.constraint_calendar_contacts_user_id_partner_id_unique
 msgid "An user cannot have twice the same contact."
 msgstr "사용자는 동일한 연락처를 반복적으로 만들 수 없습니다."
+
+#. module: calendar
+#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_search
+msgid "Archived"
+msgstr "보관"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_ir_attachment
@@ -595,30 +579,29 @@ msgstr "첨부 파일 수"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__is_attendee
 msgid "Attendee"
-msgstr "참가자"
+msgstr "참석자"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__attendee_status
 msgid "Attendee Status"
-msgstr "참가자 상태"
+msgstr "참석자 상태"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__partner_ids
 #: model_terms:ir.ui.view,arch_db:calendar.invitation_page_anonymous
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
-#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 msgid "Attendees"
-msgstr "참가자"
+msgstr "참석자"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_search
 msgid "Availability"
-msgstr "사용 가능"
+msgstr "사용 가능성"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:1693
-#: selection:calendar.attendee,availability:0
-#: selection:calendar.event,show_as:0
+#: code:addons/calendar/models/calendar.py:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_attendee__availability__busy
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__show_as__busy
 #, python-format
 msgid "Busy"
 msgstr "바쁨"
@@ -626,13 +609,13 @@ msgstr "바쁨"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__byday
 msgid "By day"
-msgstr "하루"
+msgstr "일별"
 
 #. module: calendar
 #: model:ir.ui.menu,name:calendar.mail_menu_calendar
 #: model:ir.ui.menu,name:calendar.menu_calendar_configuration
 msgid "Calendar"
-msgstr "달력"
+msgstr "일정 관리"
 
 #. module: calendar
 #: model:ir.actions.act_window,name:calendar.action_calendar_alarm
@@ -640,17 +623,22 @@ msgstr "달력"
 #: model_terms:ir.ui.view,arch_db:calendar.calendar_alarm_view_form
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_alarm_tree
 msgid "Calendar Alarm"
-msgstr "달력 알림"
+msgstr "일정 알림"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_calendar_attendee
 msgid "Calendar Attendee Information"
-msgstr "달력 참석자 정보"
+msgstr "캘린더 참석자 정보"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_calendar_contacts
 msgid "Calendar Contacts"
-msgstr "달력 연락처"
+msgstr "일정 연락처"
+
+#. module: calendar
+#: model:ir.model,name:calendar.model_calendar_event
+msgid "Calendar Event"
+msgstr "일정 행사"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.invitation_page_anonymous
@@ -670,16 +658,6 @@ msgid "Calendar: Event Reminder"
 msgstr "달력 : 일정 알림"
 
 #. module: calendar
-#: model:ir.model.fields,help:calendar.field_mail_activity_type__category
-msgid "Categories may trigger specific behavior like opening calendar view"
-msgstr "범주가 일정 보기를 여는 것과 같은 특정 동작을 trigger(트리거)할 수 있습니다."
-
-#. module: calendar
-#: model:ir.model.fields,field_description:calendar.field_mail_activity_type__category
-msgid "Category"
-msgstr "분류"
-
-#. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "Click here to update only this instance and not all recurrences."
 msgstr "전체 일정이 아닌 이번 일정만 업데이트하려면 여기를 클릭하십시오."
@@ -690,9 +668,9 @@ msgid "Common name"
 msgstr "공통 이름"
 
 #. module: calendar
-#: selection:calendar.event,state:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__state__open
 msgid "Confirmed"
-msgstr "확인됨"
+msgstr "확정됨"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_res_partner
@@ -707,7 +685,7 @@ msgstr "연락처"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__create_uid
 #: model:ir.model.fields,field_description:calendar.field_calendar_event_type__create_uid
 msgid "Created by"
-msgstr "작성자"
+msgstr "작성인"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_alarm__create_date
@@ -725,8 +703,8 @@ msgid "Date"
 msgstr "날짜"
 
 #. module: calendar
-#: selection:calendar.event,month_by:0
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__day
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__month_by__date
 msgid "Date of month"
 msgstr "날짜"
 
@@ -736,34 +714,38 @@ msgid "Day of Month"
 msgstr "일"
 
 #. module: calendar
-#: selection:calendar.event,month_by:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__month_by__day
 msgid "Day of month"
 msgstr "일"
 
 #. module: calendar
-#: selection:calendar.alarm,interval:0 selection:calendar.event,rrule_type:0
-msgid "Day(s)"
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_alarm__interval__days
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__rrule_type__daily
+msgid "Days"
 msgstr "일"
 
 #. module: calendar
+#. openerp-web
+#: code:addons/calendar/static/src/xml/base_calendar.xml:0
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
+#, python-format
 msgid "Decline"
 msgstr "거절"
 
 #. module: calendar
-#: selection:calendar.attendee,state:0
-#: selection:calendar.event,attendee_status:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_attendee__state__declined
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__attendee_status__declined
 msgid "Declined"
 msgstr "거절함"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__description
 msgid "Description"
-msgstr "내용"
+msgstr "설명"
 
 #. module: calendar
 #. openerp-web
-#: code:addons/calendar/static/src/xml/base_calendar.xml:18
+#: code:addons/calendar/static/src/xml/notification_calendar.xml:0
 #, python-format
 msgid "Details"
 msgstr "세부 정보"
@@ -776,11 +758,10 @@ msgstr "세부 정보"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__display_name
 #: model:ir.model.fields,field_description:calendar.field_calendar_event_type__display_name
 msgid "Display Name"
-msgstr "제목"
+msgstr "표시 이름"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
-#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 msgid "Document"
 msgstr "문서"
 
@@ -812,10 +793,20 @@ msgid "Duration in minutes"
 msgstr "기간(분)"
 
 #. module: calendar
-#: selection:calendar.alarm,type:0
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__email
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_alarm__alarm_type__email
 msgid "Email"
 msgstr "이메일"
+
+#. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_mail_1
+msgid "Email - 3 Hours"
+msgstr "이메일 - 3 시간전"
+
+#. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_mail_2
+msgid "Email - 6 Hours"
+msgstr "이메일 - 6 시간전"
 
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_attendee__email
@@ -839,7 +830,7 @@ msgid "End Datetime"
 msgstr "종료일시"
 
 #. module: calendar
-#: selection:calendar.event,end_type:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__end_type__end_date
 msgid "End date"
 msgstr "종료일"
 
@@ -847,11 +838,6 @@ msgstr "종료일"
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "Ending at"
 msgstr "종료시간"
-
-#. module: calendar
-#: model:ir.model,name:calendar.model_calendar_event
-msgid "Event"
-msgstr "일정"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_calendar_alarm
@@ -874,34 +860,28 @@ msgid "Event Time"
 msgstr "일정 시간"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:1234
-#, python-format
-msgid "Event recurrence interval cannot be negative."
-msgstr "일정 반복은 음수가 아닙니다."
-
-#. module: calendar
-#: selection:calendar.event,privacy:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__privacy__public
 msgid "Everyone"
 msgstr "전체 공개"
 
 #. module: calendar
-#: code:addons/calendar/models/mail_activity.py:38
+#: code:addons/calendar/models/mail_activity.py:0
 #, python-format
 msgid "Feedback: "
 msgstr "의견 :"
 
 #. module: calendar
-#: selection:calendar.event,byday:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__byday__5
 msgid "Fifth"
 msgstr "다섯 번째"
 
 #. module: calendar
-#: selection:calendar.event,byday:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__byday__1
 msgid "First"
 msgstr "첫 번째"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:998
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "First you have to specify the date of the invitation."
 msgstr "먼저 초대할 날짜를 지정해야 합니다."
@@ -919,16 +899,16 @@ msgstr "팔로워 (채널)"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "팔로워 (협력사)"
+msgstr "팔로워 (파트너)"
 
 #. module: calendar
-#: selection:calendar.event,byday:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__byday__4
 msgid "Fourth"
 msgstr "네 번째"
 
 #. module: calendar
-#: selection:calendar.attendee,availability:0
-#: selection:calendar.event,show_as:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_attendee__availability__free
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__show_as__free
 msgid "Free"
 msgstr "한가함"
 
@@ -943,17 +923,17 @@ msgid "Fri"
 msgstr "금"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__fr
 msgid "Friday"
 msgstr "금요일"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_search
 msgid "Group By"
-msgstr "그룹별"
+msgstr "그룹화"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:1636
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "Group by date is not supported, use the calendar view instead."
 msgstr "날짜 기준으로 분류를 지원하지 않습니다, 대신 달력 화면을 이용하세요."
@@ -964,8 +944,8 @@ msgid "HTTP Routing"
 msgstr "HTTP 라우팅"
 
 #. module: calendar
-#: selection:calendar.alarm,interval:0
-msgid "Hour(s)"
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_alarm__interval__hours
+msgid "Hours"
 msgstr "시간"
 
 #. module: calendar
@@ -979,14 +959,10 @@ msgid "ID"
 msgstr "ID"
 
 #. module: calendar
-#: model:ir.model.fields,help:calendar.field_calendar_event__message_unread
-msgid "If checked new messages require your attention."
-msgstr "이 옵션을 선택하면 새 메시지가 나타납니다."
-
-#. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_event__message_needaction
+#: model:ir.model.fields,help:calendar.field_calendar_event__message_unread
 msgid "If checked, new messages require your attention."
-msgstr "이 옵션을 선택하면 새 메시지가 나타납니다."
+msgstr "선택하면 새로운 메시지를 주목할 필요가 있습니다."
 
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_event__message_has_error
@@ -1046,7 +1022,7 @@ msgid "Is the Event Highlighted"
 msgstr "일정 강조 표시 여부"
 
 #. module: calendar
-#: selection:calendar.event,byday:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__byday__-1
 msgid "Last"
 msgstr "최근"
 
@@ -1058,7 +1034,7 @@ msgstr "최근"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event____last_update
 #: model:ir.model.fields,field_description:calendar.field_calendar_event_type____last_update
 msgid "Last Modified on"
-msgstr "최근 수정"
+msgstr "최근 수정일"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_alarm__write_uid
@@ -1076,7 +1052,7 @@ msgstr "최근 갱신한 사람"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__write_date
 #: model:ir.model.fields,field_description:calendar.field_calendar_event_type__write_date
 msgid "Last Updated on"
-msgstr "최근 갱신 날짜"
+msgstr "최근 갱신일"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_res_partner__calendar_last_notif_ack
@@ -1116,14 +1092,14 @@ msgid "Me"
 msgstr "나"
 
 #. module: calendar
+#: model:ir.model.fields.selection,name:calendar.selection__mail_activity_type__category__meeting
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_search
-#: selection:mail.activity.type,category:0
 msgid "Meeting"
 msgstr "회의"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:942
-#: code:addons/calendar/models/calendar.py:947
+#: code:addons/calendar/models/calendar.py:0
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "Meeting '%s' starts '%s' and ends '%s'"
 msgstr "'%s' 회의는 '%s'에 시작하고 '%s'에 끝납니다"
@@ -1155,7 +1131,6 @@ msgstr "링크된 회의"
 #: model:ir.actions.act_window,name:calendar.action_calendar_event_notify
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
-#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_tree
 msgid "Meetings"
 msgstr "회의"
@@ -1163,12 +1138,12 @@ msgstr "회의"
 #. module: calendar
 #: model:ir.model,name:calendar.model_mail_message
 msgid "Message"
-msgstr "메세지"
+msgstr "메시지"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_has_error
 msgid "Message Delivery error"
-msgstr "메시지 배달 오류"
+msgstr "메시지 전송 오류"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_ids
@@ -1176,8 +1151,8 @@ msgid "Messages"
 msgstr "메시지"
 
 #. module: calendar
-#: selection:calendar.alarm,interval:0
-msgid "Minute(s)"
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_alarm__interval__minutes
+msgid "Minutes"
 msgstr "분"
 
 #. module: calendar
@@ -1191,13 +1166,13 @@ msgid "Mon"
 msgstr "월"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__mo
 msgid "Monday"
 msgstr "월요일"
 
 #. module: calendar
-#: selection:calendar.event,rrule_type:0
-msgid "Month(s)"
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__rrule_type__monthly
+msgid "Months"
 msgstr "월"
 
 #. module: calendar
@@ -1212,8 +1187,8 @@ msgid "Name"
 msgstr "이름"
 
 #. module: calendar
-#: selection:calendar.attendee,state:0
-#: selection:calendar.event,attendee_status:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_attendee__state__needsaction
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__attendee_status__needsaction
 msgid "Needs Action"
 msgstr "작업 필요"
 
@@ -1223,19 +1198,44 @@ msgid "No I'm not going."
 msgstr "참가하지 않습니다."
 
 #. module: calendar
-#: selection:calendar.alarm,type:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_alarm__alarm_type__notification
 msgid "Notification"
 msgstr "알림"
 
 #. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_notif_5
+msgid "Notification - 1 Days"
+msgstr "알림 - 1일 전"
+
+#. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_notif_3
+msgid "Notification - 1 Hours"
+msgstr "알림 - 1시간 전"
+
+#. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_notif_1
+msgid "Notification - 15 Minutes"
+msgstr "알림 - 15분 전"
+
+#. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_notif_4
+msgid "Notification - 2 Hours"
+msgstr "알림 - 2시간 전"
+
+#. module: calendar
+#: model:calendar.alarm,name:calendar.alarm_notif_2
+msgid "Notification - 30 Minutes"
+msgstr "알림 - 30분 전"
+
+#. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_needaction_counter
 msgid "Number of Actions"
-msgstr "작업 횟수"
+msgstr "작업 수"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_has_error_counter
-msgid "Number of error"
-msgstr "오류 횟수"
+msgid "Number of errors"
+msgstr "에러 수"
 
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_event__message_needaction_counter
@@ -1245,10 +1245,10 @@ msgstr "작업이 필요한 메시지 수"
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_event__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr "배달 오류 메시지 수"
+msgstr "전송 오류 메시지 수"
 
 #. module: calendar
-#: selection:calendar.event,end_type:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__end_type__count
 msgid "Number of repetitions"
 msgstr "반복횟수"
 
@@ -1259,18 +1259,18 @@ msgstr "읽지 않은 메시지 수"
 
 #. module: calendar
 #. openerp-web
-#: code:addons/calendar/static/src/xml/base_calendar.xml:17
+#: code:addons/calendar/static/src/xml/notification_calendar.xml:0
 #, python-format
 msgid "OK"
 msgstr "확인"
 
 #. module: calendar
-#: selection:calendar.event,privacy:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__privacy__confidential
 msgid "Only internal users"
 msgstr "내부 사용자 전용"
 
 #. module: calendar
-#: selection:calendar.event,privacy:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__privacy__private
 msgid "Only me"
 msgstr "개인용"
 
@@ -1290,11 +1290,6 @@ msgid "Options"
 msgstr "선택 사항"
 
 #. module: calendar
-#: selection:mail.activity.type,category:0
-msgid "Other"
-msgstr "기타"
-
-#. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__user_id
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "Owner"
@@ -1311,7 +1306,7 @@ msgid "Partner-related data of the user"
 msgstr "사용자의 협력사 관련 데이터"
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:1247
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "Please select a proper day of the month."
 msgstr "해당 달의 올바른 날짜를 선택하십시오."
@@ -1363,11 +1358,6 @@ msgid "Remind Before"
 msgstr "미리 알림"
 
 #. module: calendar
-#: selection:mail.activity.type,category:0
-msgid "Reminder"
-msgstr "알림"
-
-#. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__alarm_ids
 msgid "Reminders"
 msgstr "알림"
@@ -1404,17 +1394,12 @@ msgid "Responsible"
 msgstr "담당자"
 
 #. module: calendar
-#: selection:calendar.alarm,type:0
-msgid "SMS Text Message"
-msgstr "SMS 문자 메시지"
-
-#. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__sa
 msgid "Sat"
 msgstr "토"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__sa
 msgid "Saturday"
 msgstr "토요일"
 
@@ -1429,7 +1414,7 @@ msgid "Search Meetings"
 msgstr "회의 검색"
 
 #. module: calendar
-#: selection:calendar.event,byday:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__byday__2
 msgid "Second"
 msgstr "보조"
 
@@ -1450,7 +1435,7 @@ msgstr "상태 표시"
 
 #. module: calendar
 #. openerp-web
-#: code:addons/calendar/static/src/xml/base_calendar.xml:19
+#: code:addons/calendar/static/src/xml/notification_calendar.xml:0
 #, python-format
 msgid "Snooze"
 msgstr "다시 알림"
@@ -1478,7 +1463,6 @@ msgstr "하루 종일 진행되는 일정의  시작일"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
-#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 msgid "Starting at"
 msgstr "시작 시간"
 
@@ -1486,12 +1470,17 @@ msgstr "시작 시간"
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__state
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__state
 msgid "Status"
-msgstr "상태"
+msgstr "단계"
 
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_attendee__state
 msgid "Status of the attendee's participation"
 msgstr "참가자의 참석 여부"
+
+#. module: calendar
+#: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
+msgid "Status:"
+msgstr "상태:"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__stop
@@ -1514,14 +1503,14 @@ msgid "Sun"
 msgstr "일"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__su
 msgid "Sunday"
 msgstr "일요일"
 
 #. module: calendar
-#: sql_constraint:calendar.event.type:0
+#: model:ir.model.constraint,message:calendar.constraint_calendar_event_type_name_uniq
 msgid "Tag name already exists !"
-msgstr "태그명이 이미 존재합니다!"
+msgstr "동일한 태그명이 존재합니다!"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__categ_ids
@@ -1535,7 +1524,7 @@ msgstr "The"
 
 #. module: calendar
 #. openerp-web
-#: code:addons/calendar/static/src/js/mail_activity.js:42
+#: code:addons/calendar/static/src/js/mail_activity.js:0
 #, python-format
 msgid ""
 "The activity is linked to a meeting. Deleting it will remove the meeting as "
@@ -1553,20 +1542,32 @@ msgstr ""
 "                다른 응용 프로그램(예 : 직원 휴가 또는 비즈니스 기회)에 완전히 통합되었습니다."
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:941
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid ""
 "The ending date and time cannot be earlier than the starting date and time."
 msgstr "종료 날짜와 시간은 시작 날짜와 시간보다 빠를 수 없습니다."
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:946
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "The ending date cannot be earlier than the starting date."
 msgstr "종료 날짜는 시작 날짜보다 빠를 수 없습니다."
 
 #. module: calendar
-#: selection:calendar.event,byday:0
+#: code:addons/calendar/models/calendar.py:0
+#, python-format
+msgid "The interval cannot be negative."
+msgstr "간격은 음수가 될 수 없습니다."
+
+#. module: calendar
+#: code:addons/calendar/models/calendar.py:0
+#, python-format
+msgid "The number of repetitions  cannot be negative."
+msgstr "반복횟수는 음의 값이 될 수 없습니다."
+
+#. module: calendar
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__byday__3
 msgid "Third"
 msgstr "세 번째"
 
@@ -1581,12 +1582,17 @@ msgid "Thu"
 msgstr "목"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__th
 msgid "Thursday"
 msgstr "목요일"
 
 #. module: calendar
-#: code:addons/calendar/models/res_users.py:41
+#: model:ir.model.fields,field_description:calendar.field_calendar_event__event_tz
+msgid "Timezone"
+msgstr "시간대"
+
+#. module: calendar
+#: code:addons/calendar/models/res_users.py:0
 #, python-format
 msgid "Today's Meetings"
 msgstr "오늘의 회의"
@@ -1597,24 +1603,27 @@ msgid "Tue"
 msgstr "화"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__tu
 msgid "Tuesday"
 msgstr "화요일"
 
 #. module: calendar
-#: model:ir.model.fields,field_description:calendar.field_calendar_alarm__type
+#: model:ir.model.fields,field_description:calendar.field_calendar_alarm__alarm_type
 msgid "Type"
 msgstr "유형"
 
 #. module: calendar
-#: selection:calendar.attendee,state:0
-#: selection:calendar.event,attendee_status:0
+#. openerp-web
+#: code:addons/calendar/static/src/xml/base_calendar.xml:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_attendee__state__tentative
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__attendee_status__tentative
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
+#, python-format
 msgid "Uncertain"
 msgstr "불확실"
 
 #. module: calendar
-#: selection:calendar.event,state:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__state__draft
 msgid "Unconfirmed"
 msgstr "미확정됨"
 
@@ -1626,12 +1635,12 @@ msgstr "단위"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_unread
 msgid "Unread Messages"
-msgstr "읽지 않은 메세지"
+msgstr "읽지 않은 메시지"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr "읽지 않은 메세지 수"
+msgstr "읽지 않은 메시지 수"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
@@ -1654,14 +1663,9 @@ msgid "Wed"
 msgstr "수"
 
 #. module: calendar
-#: selection:calendar.event,week_list:0
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__week_list__we
 msgid "Wednesday"
 msgstr "수요일"
-
-#. module: calendar
-#: selection:calendar.event,rrule_type:0
-msgid "Week(s)"
-msgstr "주"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__week_list
@@ -1669,8 +1673,13 @@ msgid "Weekday"
 msgstr "평일"
 
 #. module: calendar
-#: selection:calendar.event,rrule_type:0
-msgid "Year(s)"
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__rrule_type__weekly
+msgid "Weeks"
+msgstr "주"
+
+#. module: calendar
+#: model:ir.model.fields.selection,name:calendar.selection__calendar_event__rrule_type__yearly
+msgid "Years"
 msgstr "년"
 
 #. module: calendar
@@ -1679,7 +1688,7 @@ msgid "Yes I'm going."
 msgstr "참가합니다."
 
 #. module: calendar
-#: code:addons/calendar/models/calendar.py:159
+#: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "You cannot duplicate a calendar attendee."
 msgstr "달력 참석자를 복제할 수 없습니다."
@@ -1688,9 +1697,3 @@ msgstr "달력 참석자를 복제할 수 없습니다."
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "e.g. Business Lunch"
 msgstr "예 : 비즈니스 점심"
-
-#. module: calendar
-#: code:addons/calendar/models/calendar.py:1232
-#, python-format
-msgid "interval cannot be negative."
-msgstr "주기는 마이너스일 수 없습니다."

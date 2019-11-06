@@ -2,17 +2,12 @@
 # This file contains the translation of the following modules:
 # * website_hr_recruitment
 # 
-# Translators:
-# Martin Trigaux, 2019
-# Matjaz Mozetic <m.mozetic@matmoz.si>, 2019
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 10.saas~18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-09 10:32+0000\n"
-"PO-Revision-Date: 2018-08-24 09:34+0000\n"
-"Last-Translator: Matjaz Mozetic <m.mozetic@matmoz.si>, 2019\n"
+"POT-Creation-Date: 2017-09-20 09:54+0000\n"
+"PO-Revision-Date: 2017-09-20 09:54+0000\n"
 "Language-Team: Slovenian (https://www.transifex.com/odoo/teams/41243/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,8 +21,18 @@ msgid "$15k"
 msgstr ""
 
 #. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "1/5"
+msgstr ""
+
+#. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "10  / 40 people"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "2/5"
 msgstr ""
 
 #. module: website_hr_recruitment
@@ -36,88 +41,56 @@ msgid "3 months"
 msgstr ""
 
 #. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "3/5"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "4/5"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "5/5"
+msgstr ""
+
+#. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "50% YoY"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
-msgid "<br/><i class=\"fa fa-phone\" role=\"img\" aria-label=\"Phone\" title=\"Phone\"/>"
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "<i class=\"fa fa-bolt\"/> Bolts"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "<i class=\"fa fa-heart\"/> Hearts"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "<i class=\"fa fa-star\"/> Stars"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "<i class=\"fa fa-tasks\"/> Bar"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid ""
-"<i class=\"fa fa-clock-o\" title=\"Publication date\" role=\"img\" aria-"
-"label=\"Publication date\"/>"
+"<span class=\"btn btn-primary btn-lg o_website_form_send\">Submit</span>\n"
+"                                <span id=\"o_website_form_result\"/>"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
-msgid "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Email\" title=\"Email\"/>"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-calendar\"/>\n"
-"                    Sponsored Events"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-car\"/>\n"
-"                    Save on commute"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-check-circle\"/>\n"
-"                    Discount Programs"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-coffee\"/>\n"
-"                    Eat &amp; Drink"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-futbol-o\"/>\n"
-"                    Sport Activity"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-heart\"/>\n"
-"                    Benefits"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-map-marker\"/>\n"
-"                    Prime location"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
-msgid ""
-"<span class=\"fa fa-2x fa-sun-o\"/>\n"
-"                    PTOs"
-msgstr ""
-
-#. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid ""
 "<span>\n"
 "                                            We usually reply between one and three days.<br/>\n"
@@ -153,27 +126,27 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.job_countries
 msgid "All Countries"
-msgstr "Vse države"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.job_departments
 msgid "All Departments"
-msgstr "Vsi oddelki"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.job_offices
 msgid "All Offices"
-msgstr "Vsi uradi"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model:ir.model,name:website_hr_recruitment.model_hr_applicant
 msgid "Applicant"
-msgstr "Kandidat"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Apply Job"
-msgstr "Prijavi delovno mesto"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.detail
@@ -183,6 +156,11 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Avg Deal Size:"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Benefits"
 msgstr ""
 
 #. module: website_hr_recruitment
@@ -203,21 +181,23 @@ msgid "Company Maturity:"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid "Congratulations!"
-msgstr "Čestitke"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
 msgid "Contact us"
-msgstr "Kontakt"
+msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid "Continue To Our Website"
-msgstr "Nadaljujte na našo spletno stran"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
@@ -234,8 +214,18 @@ msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Discount Programs"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Eat &amp; Drink"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Full sales cycle"
-msgstr "Celotni prodajni cikel"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -250,15 +240,16 @@ msgid "High commissions for good performers"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid "In the meantime,"
 msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Job Application Form"
-msgstr "Obrazec prijave na delovno mesto"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -268,34 +259,36 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.detail
 msgid "Job Detail"
-msgstr "Podrobnosti zaposlitve"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model:ir.model,name:website_hr_recruitment.model_hr_job
 msgid "Job Position"
-msgstr "Delovno mesto"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating
 msgid "Job Security:"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: code:addons/website_hr_recruitment/controllers/main.py:77
+#: code:addons/website_hr_recruitment/controllers/main.py:72
 #, python-format
 msgid "Job Title"
-msgstr "Naziv delovnega mesta"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.detail
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.job_footer_custom
 #: model:website.menu,name:website_hr_recruitment.menu_jobs
 msgid "Jobs"
-msgstr "Zaposlitve"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
 msgid "Join us and help disrupt the enterprise market!"
-msgstr "Pridružite se nam in nam pomagajte razbiti podjetniški trg!"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
@@ -304,9 +297,6 @@ msgid ""
 "                                    develop and to be part of an exciting experience and\n"
 "                                    team."
 msgstr ""
-"Pridružite se nam, ponujamo vam neverjetno priložnost\n"
-"                                    učenja, razvoja in biti del razburljive izkušnje in\n"
-"                                    ekipe."
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -315,14 +305,20 @@ msgid ""
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid "Look around on our website:"
 msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Need More Info?"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.content_new_job_offer
+msgid "New Job Offer"
 msgstr ""
 
 #. module: website_hr_recruitment
@@ -340,11 +336,16 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
 msgid "Our Job Offers"
-msgstr "Naše ponujene zaposlitve"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Overachieving Possibilities:"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "PTOs"
 msgstr ""
 
 #. module: website_hr_recruitment
@@ -369,23 +370,43 @@ msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Prime location"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Profitable"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "Rating type"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.s_hr_rating_options
+msgid "Rating value"
 msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Resume"
-msgstr "Nadaljevanje"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Sales Cycle:"
-msgstr "Prodajni cikel:"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Save on commute"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Short Introduction"
-msgstr "Kratek uvod"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -400,12 +421,17 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model:ir.model,name:website_hr_recruitment.model_hr_recruitment_source
 msgid "Source of Applicants"
-msgstr "Vir kandidatov"
+msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
-msgid "Submit"
-msgstr "Pošlji"
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Sponsored Events"
+msgstr ""
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
+msgid "Sport Activity"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -434,9 +460,9 @@ msgid "US + Canada Territory"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model:ir.model.fields,field_description:website_hr_recruitment.field_hr_recruitment_source__url
+#: model:ir.model.fields,field_description:website_hr_recruitment.field_hr_recruitment_source_url
 msgid "Url Parameters"
-msgstr "URL parametri"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -449,19 +475,14 @@ msgid "Variability of the Job:"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.hr_job_website_inherit
-msgid "Website Editor"
+#: model:ir.actions.act_url,name:website_hr_recruitment.action_open_website
+msgid "Website Recruitment Form"
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model:ir.actions.act_url,name:website_hr_recruitment.action_open_website
-msgid "Website Recruitment Form"
-msgstr "Spletni obrazec zaposlovanja"
-
-#. module: website_hr_recruitment
-#: model:ir.model.fields,field_description:website_hr_recruitment.field_hr_job__website_description
+#: model:ir.model.fields,field_description:website_hr_recruitment.field_hr_job_website_description
 msgid "Website description"
-msgstr "Opis spletne strani"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -478,27 +499,29 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Your Email"
-msgstr "Vaša e-pošta"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Your Name"
-msgstr "Vaše ime"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Your Phone Number"
-msgstr "Vaša telefonska številka"
+msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid "Your application has been posted successfully."
 msgstr ""
 
 #. module: website_hr_recruitment
-#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_ir_ui_view
-#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.thankyou_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_hr_recruitment.thankyou_page
 msgid "Your application has been sent to:"
 msgstr ""
 
@@ -510,7 +533,7 @@ msgstr ""
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index
 msgid "open positions"
-msgstr "odprta mesta"
+msgstr ""
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.index

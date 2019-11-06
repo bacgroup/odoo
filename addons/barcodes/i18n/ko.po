@@ -1,21 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * barcodes
+# 	* barcodes
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2018
-# Mark Lee <odoos@soti.33mail.com>, 2018
+# Martin Trigaux, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
+# Mark Lee <odoos@soti.33mail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-08-26 08:16+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: Mark Lee <odoos@soti.33mail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,25 +24,25 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: barcodes
-#: code:addons/barcodes/models/barcodes.py:204
+#: code:addons/barcodes/models/barcodes.py:0
 #, python-format
 msgid " '*' is not a valid Regex Barcode Pattern. Did you mean '.*' ?"
 msgstr "'*'는 유효한 일반 바코드 패턴이 아닙니다. '.*'을 의미합니까?"
 
 #. module: barcodes
-#: code:addons/barcodes/models/barcodes.py:202
+#: code:addons/barcodes/models/barcodes.py:0
 #, python-format
 msgid ": a rule can only contain one pair of braces."
 msgstr ": 규칙에는 한 쌍의 중괄호만 포함할 수 있습니다."
 
 #. module: barcodes
-#: code:addons/barcodes/models/barcodes.py:198
+#: code:addons/barcodes/models/barcodes.py:0
 #, python-format
 msgid ": braces can only contain N's followed by D's."
 msgstr ": 중괄호는 N 개의 시퀀스와 D 개의 시퀀스만 포함 할 수 있습니다."
 
 #. module: barcodes
-#: code:addons/barcodes/models/barcodes.py:200
+#: code:addons/barcodes/models/barcodes.py:0
 #, python-format
 msgid ": empty braces."
 msgstr ": 빈 괄호."
@@ -73,13 +73,13 @@ msgid "Add a new barcode nomenclature"
 msgstr "새 바코드 명칭 추가"
 
 #. module: barcodes
-#: selection:barcode.rule,type:0
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule__alias
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_rule__type__alias
 msgid "Alias"
 msgstr "별칭"
 
 #. module: barcodes
-#: selection:barcode.nomenclature,upc_ean_conv:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_nomenclature__upc_ean_conv__always
 msgid "Always"
 msgstr "항상"
 
@@ -94,7 +94,7 @@ msgid "An internal identification of the barcode nomenclature"
 msgstr "바코드 명칭의 내부 식별"
 
 #. module: barcodes
-#: selection:barcode.rule,encoding:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_rule__encoding__any
 msgid "Any"
 msgstr "전혀"
 
@@ -134,16 +134,6 @@ msgid "Barcode Scanned"
 msgstr "바코드 스캔됨"
 
 #. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Cashier"
-msgstr "계산원"
-
-#. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Client"
-msgstr "클라이언트"
-
-#. module: barcodes
 #: model:ir.model,name:barcodes.model_res_company
 msgid "Companies"
 msgstr "회사"
@@ -152,7 +142,7 @@ msgstr "회사"
 #: model:ir.model.fields,field_description:barcodes.field_barcode_nomenclature__create_uid
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule__create_uid
 msgid "Created by"
-msgstr "작성자"
+msgstr "작성인"
 
 #. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_barcode_nomenclature__create_date
@@ -161,41 +151,31 @@ msgid "Created on"
 msgstr "작성일"
 
 #. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Credit Card"
-msgstr "신용카드"
-
-#. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:390
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Discard"
 msgstr "작성 취소"
-
-#. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Discounted Product"
-msgstr "할인 상품"
 
 #. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_barcode_nomenclature__display_name
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule__display_name
 #: model:ir.model.fields,field_description:barcodes.field_barcodes_barcode_events_mixin__display_name
 msgid "Display Name"
-msgstr "제목"
+msgstr "표시 이름"
 
 #. module: barcodes
-#: selection:barcode.rule,encoding:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_rule__encoding__ean13
 msgid "EAN-13"
 msgstr "EAN-13"
 
 #. module: barcodes
-#: selection:barcode.nomenclature,upc_ean_conv:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_nomenclature__upc_ean_conv__ean2upc
 msgid "EAN-13 to UPC-A"
 msgstr "EAN-13에서 UPC-A로"
 
 #. module: barcodes
-#: selection:barcode.rule,encoding:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_rule__encoding__ean8
 msgid "EAN-8"
 msgstr "EAN-8"
 
@@ -206,31 +186,31 @@ msgstr "인코딩"
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:326
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Error: Barcode command is undefined"
 msgstr "오류 : 바코드 명령이 정의되지 않았습니다."
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:63
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Error: Document not editable"
 msgstr "오류 : 문서를 편집할 수 없습니다."
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:362
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Error: No last scanned barcode"
 msgstr "오류 : 최근 스캔된 바코드가 없습니다."
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:95
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:110
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:126
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:139
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Error: Pager not available"
 msgstr "오류 : 호출기를 사용할 수 없습니다."
@@ -252,7 +232,7 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule____last_update
 #: model:ir.model.fields,field_description:barcodes.field_barcodes_barcode_events_mixin____last_update
 msgid "Last Modified on"
-msgstr "최근 수정"
+msgstr "최근 수정일"
 
 #. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_barcode_nomenclature__write_uid
@@ -264,32 +244,17 @@ msgstr "최근 갱신한 사람"
 #: model:ir.model.fields,field_description:barcodes.field_barcode_nomenclature__write_date
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule__write_date
 msgid "Last Updated on"
-msgstr "최근 갱신 날짜"
+msgstr "최근 갱신일"
 
 #. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Location"
-msgstr "공간(위치)"
-
-#. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Lot"
-msgstr "LOT"
-
-#. module: barcodes
-#: selection:barcode.nomenclature,upc_ean_conv:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_nomenclature__upc_ean_conv__none
 msgid "Never"
-msgstr "절대"
+msgstr "하지않음"
 
 #. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_res_company__nomenclature_id
 msgid "Nomenclature"
 msgstr "명명법"
-
-#. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Package"
-msgstr "포장품"
 
 #. module: barcodes
 #: model_terms:ir.ui.view,arch_db:barcodes.view_barcode_nomenclature_form
@@ -308,11 +273,6 @@ msgstr ""
 "                               이러한 경우 관련 레코드의 바코드 필드는 이 숫자를 0으로 <i>표시해야 합니다</i>."
 
 #. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Priced Product"
-msgstr "가격이 책정된 제품"
-
-#. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule__name
 msgid "Rule Name"
 msgstr "규칙 이름"
@@ -324,7 +284,7 @@ msgstr "규칙"
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:382
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Select"
 msgstr "선택하기"
@@ -332,11 +292,11 @@ msgstr "선택하기"
 #. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_barcode_rule__sequence
 msgid "Sequence"
-msgstr "순차적"
+msgstr "순서"
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:381
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "Set quantity"
 msgstr "수량 설정"
@@ -362,9 +322,9 @@ msgid "The matched pattern will alias to this barcode"
 msgstr "일치하는 패턴이 이 바코드의 별칭이 됩니다."
 
 #. module: barcodes
-#: code:addons/barcodes/models/barcodes.py:198
-#: code:addons/barcodes/models/barcodes.py:200
-#: code:addons/barcodes/models/barcodes.py:202
+#: code:addons/barcodes/models/barcodes.py:0
+#: code:addons/barcodes/models/barcodes.py:0
+#: code:addons/barcodes/models/barcodes.py:0
 #, python-format
 msgid "There is a syntax error in the barcode pattern "
 msgstr "바코드 패턴에 구문 오류가 있습니다."
@@ -378,14 +338,14 @@ msgstr "이 규칙은 바코드가 지정된 인코딩으로 인코딩된 경우
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:64
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "To modify this document, please first start edition."
 msgstr "이 문서를 수정하려면 먼저 편집본을 만들어야 합니다."
 
 #. module: barcodes
 #. openerp-web
-#: code:addons/barcodes/static/src/js/barcode_form_view.js:363
+#: code:addons/barcodes/static/src/js/barcode_form_view.js:0
 #, python-format
 msgid "To set the quantity please scan a barcode first."
 msgstr "수량을 설정하려면 먼저 바코드를 스캔하세요."
@@ -406,12 +366,12 @@ msgstr ""
 " 한 방향으로 또는 다른 방식으로 자동 변환되어야 하는지 여부를 결정합니다."
 
 #. module: barcodes
-#: selection:barcode.rule,encoding:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_rule__encoding__upca
 msgid "UPC-A"
 msgstr "UPC-A"
 
 #. module: barcodes
-#: selection:barcode.nomenclature,upc_ean_conv:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_nomenclature__upc_ean_conv__upc2ean
 msgid "UPC-A to EAN-13"
 msgstr "UPC-A에서 EAN-13으로"
 
@@ -421,7 +381,7 @@ msgid "UPC/EAN Conversion"
 msgstr "UPC/EAN 변환"
 
 #. module: barcodes
-#: selection:barcode.rule,type:0
+#: model:ir.model.fields.selection,name:barcodes.selection__barcode_rule__type__product
 msgid "Unit Product"
 msgstr "단위 상품"
 
@@ -435,8 +395,3 @@ msgstr "순서가 작은 규칙이 먼저 일치하도록 규칙을 정렬하는
 #: model:ir.model.fields,help:barcodes.field_barcodes_barcode_events_mixin___barcode_scanned
 msgid "Value of the last barcode scanned."
 msgstr "스캔된 마지막 바코드의 값."
-
-#. module: barcodes
-#: selection:barcode.rule,type:0
-msgid "Weighted Product"
-msgstr "중량이 있는 상품"

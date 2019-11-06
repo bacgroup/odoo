@@ -1,23 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_automation
+# 	* base_automation
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Goh Gangtai <gangtai.goh@gmail.com>, 2018
-# heejun lee <tkm01b@gmail.com>, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Seongseok Shin <shinss61@hotmail.com>, 2018
-# Linkup <link-up@naver.com>, 2019
+# Martin Trigaux, 2019
+# Goh Gangtai <gangtai.goh@gmail.com>, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# heejun lee <tkm01b@gmail.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Seongseok Shin <shinss61@hotmail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 10:09+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-10-07 07:12+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: Linkup <link-up@naver.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,18 +29,6 @@ msgstr ""
 #: model:mail.template,body_html:base_automation.test_mail_template_automation
 msgid "<div>Email automation</div>"
 msgstr "<div>자동 이메일</div>"
-
-#. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation__website_published
-msgid ""
-"A code server action can be executed from the website, using a dedicated "
-"controller. The address is <base>/website/action/<website_path>. Set this "
-"field as True to allow users to run this action. If it is set to False the "
-"action cannot be run through the website."
-msgstr ""
-"전용 제어기를 사용하여 코드 서버 작업을 웹 사이트에서 실행할 수 있습니다. 주소는 <base>/website/action/ "
-"<website_path>입니다. 이 필드를 True로 설정하면 사용자가 이 작업을 실행할 수 있습니다. False로 설정하면 웹 "
-"사이트를 통해 작업을 실행할 수 없습니다."
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__help
@@ -94,13 +82,18 @@ msgid "Apply on"
 msgstr "적용"
 
 #. module: base_automation
+#: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_search
+msgid "Archived"
+msgstr "보관"
+
+#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__is_assigned_to_admin
 msgid "Assigned to admin user"
 msgstr "관리자에게 할당됨"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
 #: model:ir.model,name:base_automation.model_base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__ir_actions_server__usage__base_automation
 msgid "Automated Action"
 msgstr "자동 작업"
 
@@ -124,11 +117,6 @@ msgstr "자동 규칙 테스트"
 #: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_tree
 msgid "Automation"
 msgstr "자동화"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_published
-msgid "Available on the Website"
-msgstr "웹 사이트에서 사용 가능"
 
 #. module: base_automation
 #: model:ir.actions.server,name:base_automation.ir_cron_data_base_automation_check_ir_actions_server
@@ -174,18 +162,24 @@ msgid "Base Automation: test rule on write check context"
 msgstr "기본 자동화 : 쓰기 검사 문맥에 대한 규칙 테스트"
 
 #. module: base_automation
+#: model:base.automation,name:base_automation.test_rule_with_trigger
+#: model:ir.actions.server,name:base_automation.test_rule_with_trigger_ir_actions_server
+msgid "Base Automation: test rule with trigger"
+msgstr ""
+
+#. module: base_automation
 #: model:base.automation,name:base_automation.test_rule_on_write_recompute_send_email
 #: model:ir.actions.server,name:base_automation.test_rule_on_write_recompute_send_email_ir_actions_server
 msgid "Base Automation: test send an email"
 msgstr "기본 자동화 : 이메일 보내기 테스트"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_change
 msgid "Based on Form Modification"
 msgstr "양식 수정에 기반"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_time
 msgid "Based on Timed Condition"
 msgstr "시간 기반 조건"
 
@@ -205,21 +199,24 @@ msgid "Binding Type"
 msgstr "바인딩 유형"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
-msgid "Cancelled"
-msgstr "취소 됨"
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__binding_view_types
+msgid "Binding View Types"
+msgstr "View 유형을 연결"
 
 #. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation_lead_test__customer
-msgid ""
-"Check this box if this contact is a customer. It can be selected in sales "
-"orders."
-msgstr "이 연락처가 고객인 경우 이 확인란을 선택합니다. 판매 주문에서 선택할 수 있습니다."
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__cancel
+msgid "Cancelled"
+msgstr "취소됨"
+
+#. module: base_automation
+#: model:ir.model.fields,help:base_automation.field_base_automation_lead_test__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "직원 연락처인 경우 확인란을 선택하십시오."
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__child_ids
 msgid "Child Actions"
-msgstr "종속적인 작업"
+msgstr "하위 작업"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__child_ids
@@ -229,9 +226,9 @@ msgid ""
 msgstr "종속 서버 작업이 실행됩니다. 주의 : 전역 반환 값으로 사용할 반환된 작업 값을 마지막에 반환합니다."
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__done
 msgid "Closed"
-msgstr "닫음"
+msgstr "종료됨"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__on_change_fields
@@ -248,7 +245,7 @@ msgstr "대상 모델 생성/작성"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__create_uid
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__create_uid
 msgid "Created by"
-msgstr "작성자"
+msgstr "작성인"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__create_date
@@ -258,7 +255,7 @@ msgid "Created on"
 msgstr "작성일"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__day
 msgid "Days"
 msgstr "일"
 
@@ -298,7 +295,7 @@ msgstr "데모"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__display_name
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__display_name
 msgid "Display Name"
-msgstr "제목"
+msgstr "표시 이름"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__activity_date_deadline_range
@@ -316,12 +313,22 @@ msgid "Email Template"
 msgstr "이메일 서식"
 
 #. module: base_automation
+#: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__employee
+msgid "Employee"
+msgstr "직원"
+
+#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__xml_id
 msgid "External ID"
 msgstr "외부 ID"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__groups_id
+msgid "Groups"
+msgstr "그룹"
+
+#. module: base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__hour
 msgid "Hours"
 msgstr "시간"
 
@@ -352,26 +359,21 @@ msgid ""
 msgstr "레코드 갱신 전에 이 조건을 만족해야 합니다."
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__open
 msgid "In Progress"
-msgstr "진행중"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__customer
-msgid "Is a Customer"
-msgstr "고객?"
+msgstr "진행 중"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__date_action_last
 msgid "Last Action"
-msgstr "최근 동작"
+msgstr "최근 작업"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation____last_update
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test____last_update
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test____last_update
 msgid "Last Modified on"
-msgstr "최근 수정"
+msgstr "최근 수정일"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__last_run
@@ -390,7 +392,7 @@ msgstr "최근 갱신한 사람"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__write_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__write_date
 msgid "Last Updated on"
-msgstr "최근 갱신 날짜"
+msgstr "최근 갱신일"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__lead_id
@@ -405,10 +407,10 @@ msgstr "명세"
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__link_field_id
 msgid "Link using field"
-msgstr "필드를 사용하여 링크"
+msgstr "필드를 사용하여 연결"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__minutes
 msgid "Minutes"
 msgstr "분"
 
@@ -432,10 +434,10 @@ msgstr "생성 / 업데이트 된 모델을 기록하십시오. 이 필드를 �
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__model_id
 msgid "Model on which the server action runs."
-msgstr "서버 작업이 실행되는 모델"
+msgstr "서버 동작이 실행되는 모델"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__month
 msgid "Months"
 msgstr "월"
 
@@ -445,7 +447,7 @@ msgid "Name"
 msgstr "이름"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__draft
 msgid "New"
 msgstr "신규"
 
@@ -460,22 +462,22 @@ msgid "On Change Fields Trigger"
 msgstr "필드 변경을 위한 트리거"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_create
 msgid "On Creation"
 msgstr "생성할 때"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_create_or_write
 msgid "On Creation & Update"
 msgstr "생성 또는 갱신할 때"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_unlink
 msgid "On Deletion"
 msgstr "삭제할 때"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_write
 msgid "On Update"
 msgstr "갱신할 때"
 
@@ -484,7 +486,7 @@ msgstr "갱신할 때"
 msgid ""
 "Optional help text for the users with a description of the target view, such"
 " as its usage and purpose."
-msgstr "대상 보기에 대한 설명(예 : 사용 및 용도)이 있는 사용자를 위한 선택적 도움말."
+msgstr "대상 보기에 대한 설명, 예를 들면 사용 및 용도가 있는 사용자를 위한 선택적 도움말."
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__partner_id
@@ -492,14 +494,14 @@ msgid "Partner"
 msgstr "협력사"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__pending
 msgid "Pending"
 msgstr "보류"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__priority
 msgid "Priority"
-msgstr "우선순위"
+msgstr "우선 순위"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__link_field_id
@@ -520,25 +522,19 @@ msgid "Responsible"
 msgstr "담당자"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
-msgid "Scheduled Action"
-msgstr "예정된 행동"
-
-#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__sequence
 msgid "Sequence"
-msgstr "순차적"
+msgstr "순서"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
 #: model:ir.model,name:base_automation.model_ir_actions_server
 msgid "Server Action"
-msgstr "서버작업"
+msgstr "서버 작업"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__action_server_id
 msgid "Server Actions"
-msgstr "서버 동작"
+msgstr "서버 작업"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__binding_model_id
@@ -555,7 +551,7 @@ msgstr "새로운 자동화 시스템 구축"
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__state
 msgid "Status"
-msgstr "상태"
+msgstr "단계"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__name
@@ -578,7 +574,7 @@ msgid "Technical name of the user on the record"
 msgstr "레코드에 있는 사용자의 기술적 이름"
 
 #. module: base_automation
-#: code:addons/base_automation/models/base_automation.py:87
+#: code:addons/base_automation/models/base_automation.py:0
 #, python-format
 msgid ""
 "The \"%(trigger_value)s\" %(trigger_label)s can only be used with the "
@@ -588,9 +584,11 @@ msgstr ""
 "있습니다."
 
 #. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation__website_url
-msgid "The full URL to access the server action through the website."
-msgstr "웹사이트를 통해 서버 작업에 접근하는 전체 URL입니다."
+#: model:ir.model.fields,help:base_automation.field_base_automation__trigger_field_ids
+msgid ""
+"The action will be triggered if and only if one of these fields is "
+"updated.If empty, all fields are watched."
+msgstr ""
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__trigger
@@ -607,19 +605,13 @@ msgstr "작동일"
 msgid ""
 "Type of server action. The following values are available:\n"
 "- 'Execute Python Code': a block of python code that will be executed\n"
-"- 'Create or Copy a new Record': create a new record with new values, or copy an existing record in your database\n"
-"- 'Write on a Record': update the values of a record\n"
+"- 'Create': create a new record with new values\n"
+"- 'Update a Record': update the values of a record\n"
 "- 'Execute several actions': define an action that triggers several other server actions\n"
-"- 'Add Followers': add followers to a record (available in Discuss)\n"
-"- 'Send Email': automatically send an email (available in email_template)"
+"- 'Send Email': automatically send an email (Discuss)\n"
+"- 'Add Followers': add followers to a record (Discuss)\n"
+"- 'Create Next Activity': create an activity (Discuss)"
 msgstr ""
-"서버 조작의 유형. 다음 값을 사용할 수 있습니다 :\n"
-"- '파이썬 코드 실행' : 실행될 파이썬 코드 조각\n"
-"- '새 레코드 만들기 또는 복사' : 새 값으로 새 레코드 만들기 또는 데이터베이스의 기존 레코드 복사\n"
-"- '레코드에 쓰기' : 레코드 값 업데이트\n"
-"- '몇 가지 작업 실행' : 여러 가지 다른 서버 작업을 트리거하는 작업 정의\n"
-"- \"팔로워 추가\": 팔로워를 레코드에 추가합니다 (토론에서 사용 가능).)\n"
-"- '이메일 보내기': 자동으로 이메일 보내기 (email_template에서 사용 가능)"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__usage
@@ -634,7 +626,7 @@ msgid ""
 " 'Generic User From Record' to specify the field name of the user to choose "
 "on the record."
 msgstr ""
-"'특정 사용자'를 사용하여 항상 다음 활동에서 동일한 사용자를 지정하십시오 '레코드에서 일반 사용자'를 사용하여 레코드에서 선택할 "
+"다음 작업에서 항상 동일한 사용자를 할당하려면 '특정 사용자'를 사용합니다. '레코드에서 일반 사용자'를 사용하여 레코드에서 선택할 "
 "사용자의 필드 이름을 지정하십시오."
 
 #. module: base_automation
@@ -671,20 +663,15 @@ msgid "Value Mapping"
 msgstr "매핑된 값"
 
 #. module: base_automation
-#: code:addons/base_automation/models/base_automation.py:86
+#: code:addons/base_automation/models/base_automation.py:0
 #, python-format
 msgid "Warning"
 msgstr "경고"
 
 #. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_path
-msgid "Website Path"
-msgstr "웹사이트 경로"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_url
-msgid "Website Url"
-msgstr "웹사이트 URL"
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__trigger_field_ids
+msgid "Watched fields"
+msgstr ""
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__trg_date_calendar_id

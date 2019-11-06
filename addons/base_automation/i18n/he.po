@@ -1,20 +1,22 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_automation
+# 	* base_automation
 # 
 # Translators:
-# ExcaliberX <excaliberx@gmail.com>, 2018
-# Leandro Noijovich <eliel.sorcerer@gmail.com>, 2018
-# Yihya Hugirat <hugirat@gmail.com>, 2018
 # Martin Trigaux, 2019
+# ExcaliberX <excaliberx@gmail.com>, 2019
+# Leandro Noijovich <eliel.sorcerer@gmail.com>, 2019
+# Yihya Hugirat <hugirat@gmail.com>, 2019
+# hed shefetr <hed@laylinetech.com>, 2019
+# ZVI BLONDER <ZVIBLONDER@gmail.com>, 2019
 # דודי מלכה <Dudimalka6@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 10:09+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
+"POT-Creation-Date: 2019-10-07 07:12+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
 "Last-Translator: דודי מלכה <Dudimalka6@gmail.com>, 2019\n"
 "Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
@@ -27,18 +29,6 @@ msgstr ""
 #: model:mail.template,body_html:base_automation.test_mail_template_automation
 msgid "<div>Email automation</div>"
 msgstr "<div>דוא\"ל אוטומציה</div>"
-
-#. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation__website_published
-msgid ""
-"A code server action can be executed from the website, using a dedicated "
-"controller. The address is <base>/website/action/<website_path>. Set this "
-"field as True to allow users to run this action. If it is set to False the "
-"action cannot be run through the website."
-msgstr ""
-"ניתן לבצע פעולת קוד שרת מהאתר, באמצעות בקר ייעודי. הכתובת היא is <base>/אתר "
-"אינטרנט/פעולה<website_path>. הגדר שדה זה כ- True כדי לאפשר למשתמשים להפעיל "
-"פעולה זו. אם הוא מוגדר False הפעולה לא ניתן להפעיל באמצעות האתר."
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__help
@@ -92,13 +82,18 @@ msgid "Apply on"
 msgstr "החל על"
 
 #. module: base_automation
+#: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_search
+msgid "Archived"
+msgstr "התווסף לארכיון"
+
+#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__is_assigned_to_admin
 msgid "Assigned to admin user"
 msgstr "מוקצה למשתמש מנהל"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
 #: model:ir.model,name:base_automation.model_base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__ir_actions_server__usage__base_automation
 msgid "Automated Action"
 msgstr "פעולה אוטומטית"
 
@@ -122,11 +117,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_tree
 msgid "Automation"
 msgstr "אוטומציה"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_published
-msgid "Available on the Website"
-msgstr "זמין באתר האינטרנט"
 
 #. module: base_automation
 #: model:ir.actions.server,name:base_automation.ir_cron_data_base_automation_check_ir_actions_server
@@ -172,18 +162,24 @@ msgid "Base Automation: test rule on write check context"
 msgstr ""
 
 #. module: base_automation
+#: model:base.automation,name:base_automation.test_rule_with_trigger
+#: model:ir.actions.server,name:base_automation.test_rule_with_trigger_ir_actions_server
+msgid "Base Automation: test rule with trigger"
+msgstr ""
+
+#. module: base_automation
 #: model:base.automation,name:base_automation.test_rule_on_write_recompute_send_email
 #: model:ir.actions.server,name:base_automation.test_rule_on_write_recompute_send_email_ir_actions_server
 msgid "Base Automation: test send an email"
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_change
 msgid "Based on Form Modification"
 msgstr "מבוסס על שינוי צורה"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_time
 msgid "Based on Timed Condition"
 msgstr "מבוסס על תנאי מתוזמן"
 
@@ -203,16 +199,19 @@ msgid "Binding Type"
 msgstr "סוג מחייב"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
-msgid "Cancelled"
-msgstr "בוטלה"
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__binding_view_types
+msgid "Binding View Types"
+msgstr ""
 
 #. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation_lead_test__customer
-msgid ""
-"Check this box if this contact is a customer. It can be selected in sales "
-"orders."
-msgstr "סמן תיבה זו אם איש קשר זה הוא לקוח. ניתן לבחור בהוראות מכירה."
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__cancel
+msgid "Cancelled"
+msgstr "מבוטל"
+
+#. module: base_automation
+#: model:ir.model.fields,help:base_automation.field_base_automation_lead_test__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "נא לסמן את התיבה אם אשת\\איש קשר זו עובד\\ת בחברה"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__child_ids
@@ -227,7 +226,7 @@ msgid ""
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__done
 msgid "Closed"
 msgstr "סגור"
 
@@ -246,7 +245,7 @@ msgstr "צור/כתוב מודל יעד"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__create_uid
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__create_uid
 msgid "Created by"
-msgstr "נוצר על ידי"
+msgstr "נוצר על-ידי"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__create_date
@@ -256,7 +255,7 @@ msgid "Created on"
 msgstr "נוצר ב-"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__day
 msgid "Days"
 msgstr "ימים"
 
@@ -293,7 +292,7 @@ msgstr "דמו "
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__display_name
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__display_name
 msgid "Display Name"
-msgstr "השם המוצג"
+msgstr "הצג שם"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__activity_date_deadline_range
@@ -311,12 +310,22 @@ msgid "Email Template"
 msgstr "תבנית דוא\"ל"
 
 #. module: base_automation
+#: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__employee
+msgid "Employee"
+msgstr "עובד"
+
+#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__xml_id
 msgid "External ID"
 msgstr "מזהה חיצוני"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__groups_id
+msgid "Groups"
+msgstr "קבוצות"
+
+#. module: base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__hour
 msgid "Hours"
 msgstr "שעות"
 
@@ -325,7 +334,7 @@ msgstr "שעות"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__id
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__id
 msgid "ID"
-msgstr "מזהה"
+msgstr "תעודה מזהה"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__xml_id
@@ -347,14 +356,9 @@ msgid ""
 msgstr "אם קיים מצב זה צריכים להתקיים לפני העדכון של הרשומה"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__open
 msgid "In Progress"
 msgstr "בתהליך"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__customer
-msgid "Is a Customer"
-msgstr "הוא לקוח"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__date_action_last
@@ -366,7 +370,7 @@ msgstr "פעולה אחרונה"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test____last_update
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test____last_update
 msgid "Last Modified on"
-msgstr "תאריך שינוי אחרון"
+msgstr "שינוי אחרון ב"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__last_run
@@ -378,19 +382,19 @@ msgstr "ריצה אחרונה"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__write_uid
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__write_uid
 msgid "Last Updated by"
-msgstr "עודכן לאחרונה על ידי"
+msgstr "עודכן לאחרונה על-ידי"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__write_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__write_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__write_date
 msgid "Last Updated on"
-msgstr "תאריך עדכון אחרון"
+msgstr "עדכון אחרון ב"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__lead_id
 msgid "Lead"
-msgstr "ליד (Lead)"
+msgstr "ליד "
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__line_ids
@@ -403,7 +407,7 @@ msgid "Link using field"
 msgstr "קישור באמצעות שדה"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__minutes
 msgid "Minutes"
 msgstr "דקות"
 
@@ -432,7 +436,7 @@ msgid "Model on which the server action runs."
 msgstr "דגם שבו פועלת פעולת השרת."
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__month
 msgid "Months"
 msgstr "חודשים"
 
@@ -442,7 +446,7 @@ msgid "Name"
 msgstr "שם"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__draft
 msgid "New"
 msgstr "חדש"
 
@@ -457,22 +461,22 @@ msgid "On Change Fields Trigger"
 msgstr "על שינוי שדות טריגר"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_create
 msgid "On Creation"
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_create_or_write
 msgid "On Creation & Update"
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_unlink
 msgid "On Deletion"
 msgstr "במחיקה"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_write
 msgid "On Update"
 msgstr "על עדכון"
 
@@ -491,14 +495,14 @@ msgid "Partner"
 msgstr "שותף"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__pending
 msgid "Pending"
-msgstr "בהמתנה"
+msgstr "ממתין "
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__priority
 msgid "Priority"
-msgstr "עדיפות"
+msgstr "קְדִימוּת"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__link_field_id
@@ -521,17 +525,11 @@ msgid "Responsible"
 msgstr "אחראי"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
-msgid "Scheduled Action"
-msgstr "פעולה מתוזמנת"
-
-#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__sequence
 msgid "Sequence"
 msgstr "רצף"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
 #: model:ir.model,name:base_automation.model_ir_actions_server
 msgid "Server Action"
 msgstr "פעולת שרת"
@@ -566,7 +564,7 @@ msgstr "נושא"
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__activity_summary
 msgid "Summary"
-msgstr "סיכום"
+msgstr "תקציר"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__crud_model_name
@@ -579,7 +577,7 @@ msgid "Technical name of the user on the record"
 msgstr "השם הטכני של המשתמש באופן רשמי"
 
 #. module: base_automation
-#: code:addons/base_automation/models/base_automation.py:87
+#: code:addons/base_automation/models/base_automation.py:0
 #, python-format
 msgid ""
 "The \"%(trigger_value)s\" %(trigger_label)s can only be used with the "
@@ -589,9 +587,11 @@ msgstr ""
 "\"%(state_value)s\" סוג פעולה"
 
 #. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation__website_url
-msgid "The full URL to access the server action through the website."
-msgstr "הכתובת URL המלאה לגישה לפעולת שרת דרך האתר."
+#: model:ir.model.fields,help:base_automation.field_base_automation__trigger_field_ids
+msgid ""
+"The action will be triggered if and only if one of these fields is "
+"updated.If empty, all fields are watched."
+msgstr ""
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__trigger
@@ -608,11 +608,12 @@ msgstr "תאריך הפעלה"
 msgid ""
 "Type of server action. The following values are available:\n"
 "- 'Execute Python Code': a block of python code that will be executed\n"
-"- 'Create or Copy a new Record': create a new record with new values, or copy an existing record in your database\n"
-"- 'Write on a Record': update the values of a record\n"
+"- 'Create': create a new record with new values\n"
+"- 'Update a Record': update the values of a record\n"
 "- 'Execute several actions': define an action that triggers several other server actions\n"
-"- 'Add Followers': add followers to a record (available in Discuss)\n"
-"- 'Send Email': automatically send an email (available in email_template)"
+"- 'Send Email': automatically send an email (Discuss)\n"
+"- 'Add Followers': add followers to a record (Discuss)\n"
+"- 'Create Next Activity': create an activity (Discuss)"
 msgstr ""
 
 #. module: base_automation
@@ -660,20 +661,15 @@ msgid "Value Mapping"
 msgstr "מיפוי ערך"
 
 #. module: base_automation
-#: code:addons/base_automation/models/base_automation.py:86
+#: code:addons/base_automation/models/base_automation.py:0
 #, python-format
 msgid "Warning"
 msgstr "אזהרה"
 
 #. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_path
-msgid "Website Path"
-msgstr "אתר נתיב"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_url
-msgid "Website Url"
-msgstr "כתובת אתר"
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__trigger_field_ids
+msgid "Watched fields"
+msgstr ""
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__trg_date_calendar_id
@@ -711,5 +707,5 @@ msgid ""
 "Write Python code that the action will execute. Some variables are available"
 " for use; help about python expression is given in the help tab."
 msgstr ""
-"כתוב קוד Python כדי שפעולה תבוצע. כמה משתנים זמינים לשימוש; עזרה על הביטוי "
-"python ניתנת בכרטיסייה עזרה."
+"כתוב קוד פייתון כדי שפעולה תבוצע. כמה משתנים זמינים לשימוש; עזרה על הביטוי "
+"פייתון ניתנת בכרטיסייה עזרה."

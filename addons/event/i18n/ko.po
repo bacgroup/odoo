@@ -1,23 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * event
+# 	* event
 # 
 # Translators:
-# Seongseok Shin <shinss61@hotmail.com>, 2018
-# Martin Trigaux, 2018
-# Jongkwan, Yeom <jongkwanyeom@gmail.com>, 2018
-# Linda Stockelova <stockeloval@btlnet.com>, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2018
+# Martin Trigaux, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# Jongkwan, Yeom <jongkwanyeom@gmail.com>, 2019
+# Linda Stockelova <stockeloval@btlnet.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Seongseok Shin <shinss61@hotmail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 10:09+0000\n"
-"PO-Revision-Date: 2018-08-24 09:17+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-10-18 09:47+0000\n"
+"PO-Revision-Date: 2019-08-26 09:10+0000\n"
+"Last-Translator: Linkup <link-up@naver.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,21 +31,22 @@ msgid "${object.event_id.name}: ${object.get_date_range_str()}"
 msgstr "${object.event_id.name}: ${object.get_date_range_str()}"
 
 #. module: event
-#: code:addons/event/models/event.py:303
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (사본)"
+
+#. module: event
+#: model:ir.actions.report,print_report_name:event.report_event_registration_badge
+msgid ""
+"'Registration Event - %s' % (object.name or 'Attendee').replace('/','')"
+msgstr ""
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
 #: model_terms:ir.ui.view,arch_db:event.event_registration_report_template_badge
 msgid "( <i class=\"fa fa-clock-o\" aria-label=\"Period\" role=\"img\" title=\"Period\"/>"
 msgstr "( <i class=\"fa fa-clock-o\" aria-label=\"Period\" role=\"img\" title=\"Period\"/>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "5 Intensive Days"
-msgstr "5 집중일"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_kanban
@@ -55,6 +56,50 @@ msgid ""
 msgstr ""
 "<b><i class=\"fa fa-clock-o\"/>\n"
 "                                        까지</b>"
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"<b>Business Room</b> - To discuss implementation methodologies, best sales "
+"practices, etc."
+msgstr ""
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"<b>Technical Rooms</b> - One dedicated to advanced Odoo developers, one for "
+"new developers."
+msgstr ""
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"<b>The Design Fair is preceded by 2 days of Training Sessions for "
+"experts!</b><br> We propose 3 different training sessions, 2 days each."
+msgstr ""
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"<b>The plenary sessions in the morning will be shorter</b> and we will give "
+"more time for thematical meetings, conferences, workshops and tutorial "
+"sessions in the afternoon."
+msgstr ""
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"<b>The whole event is open to all public!</b> <br>We ask a participation fee"
+" of 49.50€ for the costs for the 3 days (coffee breaks, catering, drinks and"
+" a surprising concert and beer party).<br> For those who don't want to "
+"contribute, there is a free ticket, therefore, catering and access to "
+"evening events aren't included."
+msgstr ""
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid "<b>Workshop Room</b> - Mainly for developers."
+msgstr ""
 
 #. module: event
 #: model:mail.template,body_html:event.event_registration_mail_template_badge
@@ -84,50 +129,45 @@ msgstr ""
 "</div>"
 
 #. module: event
-#: model_terms:event.event,description:event.event_2
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
 msgid ""
-"<em>(Chamber Works reserves the right to cancel, re-name or re-locate<br>the"
-" event or change the dates on which it is held.)</em>"
-msgstr "<em>(챔버 웍스는 행사를 취소, 재명명 또는 재배치<br>하거나 개최 일자를 변경할 권리가 있습니다.)</em>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid ""
-"<font style=\"color: rgb(255, 255, 255); font-size: 24px;\">to learn <i>Odoo"
-" Programming</i></font>"
+"<i class=\"fa fa-check\" role=\"img\" aria-label=\"Confirm button\" "
+"title=\"Confirm Registration\"/>"
 msgstr ""
-"<font style=\"color: rgb(255, 255, 255); font-size: 24px;\"><i>Odoo "
-"프로그래밍</i> 배우기</font>"
 
 #. module: event
 #: model_terms:event.event,description:event.event_0
 msgid ""
-"<i>You will be able to create dynamic page interacting with the ORM.</i>"
-msgstr "<i>ORM과 상호 작용하는 동적 페이지를 만들 수 있습니다.</i>"
+"<i class=\"fa fa-info-circle mr-2\"></i>This event and all the conferences "
+"are in <b>English</b>!"
+msgstr ""
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
 msgid ""
-"<i>You will be able to develop a full application with backend and user "
-"interface.</i>"
-msgstr "<i>백엔드 및 사용자 인터페이스로 전체 응용 프로그램을 개발할 수 있습니다.</i>"
+"<i class=\"fa fa-level-down\" role=\"img\" aria-label=\"Attended button\" "
+"title=\"Attended the Event\"/>"
+msgstr ""
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
 msgid ""
-"<i>You will be able to develop simple dynamic components in HTML pages.</i>"
-msgstr "<i>HTML 페이지에서 간단한 동적 구성요소를 개발할 수 있습니다.</i>"
+"<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
+"title=\"Arrow\"/>"
+msgstr ""
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+msgid ""
+"<i class=\"fa fa-times\" role=\"img\" aria-label=\"Cancel button\" "
+"title=\"Cancel Registration\"/>"
+msgstr ""
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
 #: model_terms:ir.ui.view,arch_db:event.event_registration_report_template_badge
 msgid "<i>to</i>"
 msgstr "<i>시작일</i>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "<small>John Doe, CEO</small>"
-msgstr "<small>John Doe, CEO</small>"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
@@ -141,6 +181,22 @@ msgstr ""
 "                                    </span>"
 
 #. module: event
+#: model_terms:event.event,description:event.event_2
+msgid ""
+"<span class=\"badge badge-secondary o_wevent_badge float-"
+"right\">SPEAKER</span>"
+msgstr ""
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+
+#. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_confirm
 msgid ""
 "<span class=\"o_form_label\">Warning: This Event has not reached its Minimum"
@@ -150,61 +206,11 @@ msgstr ""
 "원하십니까?</span>"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid ""
-"<span style=\"text-align: -webkit-center; \">This course is dedicated to "
-"developers who need to grasp knowledge of the <strong>business applications "
-"development </strong>process. This course is for new developers or for IT "
-"professionals eager to learn more about technical aspects.</span>"
-msgstr ""
-"<span style=\"text-align: -webkit-center; \">이 과정은 <strong>비즈니스 애플리케이션 "
-"개발</strong> 프로세스에 대한 지식을 습득해야 하는 개발자 전용 과정입니다. 이 과정은 새로운 개발자 또는 기술 측면에 대해 "
-"자세히 알고자 하는 IT 전문가를 위한 것입니다.</span>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_2
-msgid "<strong>Conference for Architects</strong>"
-msgstr "<strong>건축가 회의</strong>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid ""
-"<strong>Having attended this course, participants should be able "
-"to:</strong>"
-msgstr "<strong>본 과정을 통해 참가자는 다음과 같은 역량을 갖추게 됩니다 : </strong>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-#: model_terms:event.event,description:event.event_2
-msgid "<strong>Objectives:</strong>"
-msgstr "<strong>목표 : </strong>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "<strong>Our prices include:</strong>"
-msgstr "<strong>포함된 가격 :</strong>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_2
-msgid "<strong>Program:</strong>"
-msgstr "<strong>프로그램 :</strong>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "<strong>Requirements:</strong>"
-msgstr "<strong>요구사항 :</strong>"
-
-#. module: event
-#: model_terms:event.event,description:event.event_2
-msgid "<strong>Where to find us:</strong>"
-msgstr "<strong>위치 안내 :</strong>"
-
-#. module: event
 #: model:mail.template,body_html:event.event_subscription
 msgid ""
 "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
-"% set date_begin = format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
-"% set date_end = format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
+"% set date_begin = format_datetime(object.event_id.date_begin, tz='UTC', dt_format='%Y%m%dT%H%M%SZ')\n"
+"% set date_end = format_datetime(object.event_id.date_end, tz='UTC', dt_format='%Y%m%dT%H%M%SZ')\n"
 "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
 "<tbody>\n"
 "    <!-- HEADER -->\n"
@@ -233,14 +239,14 @@ msgid ""
 "                    <div>\n"
 "                        Hello ${object.name or ''},<br/>\n"
 "                        We are happy to confirm your registration to the event\n"
-"                        % if 'website_url' in object.event_id and object.event_id.website_url:\n"
+"                        % if 'website_published' in object.event_id and object.event_id.website_published:\n"
 "                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>\n"
 "                        % else:\n"
 "                            <strong>${object.event_id.name}</strong>\n"
 "                        % endif\n"
 "                        for attendee ${object.name}.\n"
 "                    </div>\n"
-"                    % if 'website_url' in object.event_id and object.event_id.website_url:\n"
+"                    % if 'website_published' in object.event_id and object.event_id.website_published:\n"
 "                    <div style=\"margin: 16px 0px 16px 0px;\">\n"
 "                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">View Event</a><br/>\n"
 "                    </div>\n"
@@ -344,8 +350,8 @@ msgid ""
 "                            <td style=\"padding:25px 0px;\">\n"
 "                                <strong>Add this event to your calendar</strong>\n"
 "                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>\n"
-"                                <a href=\"https://bay02.calendar.live.com/calendar/calendar.aspx?rru=addevent&amp;summary=${object.event_id.name}&amp;dtstart=${date_begin}&amp;dtend=${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Outlook</a>\n"
-"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%S')}&amp;et=${format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%S')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">\n"
+"                                <a href=\"/event/${slug(object.event_id)}/ics\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> iCal/Outlook</a>\n"
+"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_datetime(object.event_id.date_begin, tz='UTC', dt_format='%Y%m%dT%H%M%S')}&amp;et=${format_datetime(object.event_id.date_end, tz='UTC', dt_format='%Y%m%dT%H%M%S')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">\n"
 "                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>\n"
 "                            </td>\n"
 "                        </tr>\n"
@@ -388,198 +394,13 @@ msgid ""
 "</table>\n"
 "            "
 msgstr ""
-"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
-"% set date_begin = format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
-"% set date_end = format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
-"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
-"<tbody>\n"
-"    <!-- HEADER -->\n"
-"    <tr>\n"
-"        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
-"                <tr><td valign=\"middle\">\n"
-"                    <span style=\"font-size: 10px;\">귀하의 등록사항</span><br/>\n"
-"                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
-"                        ${object.name}\n"
-"                    </span>\n"
-"                </td><td valign=\"middle\" align=\"right\">\n"
-"                    <img src=\"${'/logo.png?company=%s' % object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.company_id.name}\"/>\n"
-"                </td></tr>\n"
-"                <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"            </table>\n"
-"        </td>\n"
-"    </tr>\n"
-"    <!-- 행사 설명 -->\n"
-"    <tr>\n"
-"        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <div>\n"
-"                        ${object.name or ''}님 안녕하세요.<br/>\n"
-"                        등록하신 행사를 확인해 드리겠습니다.\n"
-"                        % if 'website_url' in object.event_id and object.event_id.website_url:\n"
-"                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>\n"
-"                        % else:\n"
-"                            <strong>${object.event_id.name}</strong>\n"
-"                        % endif\n"
-"                        for attendee ${object.name}.\n"
-"                    </div>\n"
-"                    % if 'website_url' in object.event_id and object.event_id.website_url:\n"
-"                    <div style=\"margin: 16px 0px 16px 0px;\">\n"
-"                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">행사 보기</a><br/>\n"
-"                    </div>\n"
-"                    % endif\n"
-"                    <div>\n"
-"                        곧 뵙겠습니다.<br/>\n"
-"                        <span style=\"color: #454748;\">\n"
-"                        -- <br/>\n"
-"                        % if object.event_id.organizer_id:\n"
-"                            ${object.event_id.organizer_id.name}\n"
-"                        % else:\n"
-"                            주최자.\n"
-"                        % endif\n"
-"                        </span>\n"
-"                    </div>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"            </table>\n"
-"        </td>\n"
-"    </tr>\n"
-"    <!-- 세부사항 -->\n"
-"    <tr>\n"
-"        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <table style=\"width:100%;\">\n"
-"                        <tr>\n"
-"                            <td style=\"vertical-align:top;\">\n"
-"                                <img src=\"/web_editor/font_to_img/61555/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>\n"
-"                            </td>\n"
-"                            <td style=\"padding: 0px 10px 0px 10px;width:50%;line-height:20px;vertical-align:top;\">\n"
-"                                <div><strong>시작일 </strong> ${object.event_id.date_begin_located}</div>\n"
-"                                <div><strong>종료일 </strong> ${object.event_id.date_end_located}</div>\n"
-"                                <div style=\"font-size:12px;color:#9e9e9e\"><i><strong>TZ</strong> ${object.event_id.date_tz}</i></div>\n"
-"                            </td>\n"
-"                            % if object.event_id.address_id.country_id.name:\n"
-"                                <td style=\"vertical-align:top;\">\n"
-"                                    <img src=\"/web_editor/font_to_img/61505/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>\n"
-"                                </td>\n"
-"                                <td style=\"padding: 0px 10px 0px 10px;width:50%;vertical-align:top;\">\n"
-"                                    % set location = ''\n"
-"                                    % if object.event_id.address_id.name:\n"
-"                                        <div>${object.event_id.address_id.name}</div>\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.street:\n"
-"                                        <div>${object.event_id.address_id.street}</div>\n"
-"                                        % set location = object.event_id.address_id.street\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.street2:\n"
-"                                        <div>${object.event_id.address_id.street2}</div>\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.street2)\n"
-"                                    % endif\n"
-"                                    <div>\n"
-"                                    % if object.event_id.address_id.city:\n"
-"                                        ${object.event_id.address_id.city},\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.city)\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.state_id.name:\n"
-"                                        ${object.event_id.address_id.state_id.name},\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.state_id.name)\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.zip:\n"
-"                                        ${object.event_id.address_id.zip}\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.zip)\n"
-"                                    % endif\n"
-"                                    </div>\n"
-"                                    % if object.event_id.address_id.country_id.name:\n"
-"                                        <div>${object.event_id.address_id.country_id.name}</div>\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.country_id.name)\n"
-"                                    % endif\n"
-"                                </td>\n"
-"                            % endif\n"
-"                        </tr>\n"
-"                    </table>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"                % if object.event_id.organizer_id:\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <div>\n"
-"                        <span style=\"font-weight:300;margin:10px 0px\">이 행사에 대한 질문이 있으십니까?</span>\n"
-"                        <div>주최자에게 문의해 주십시오 :</div>\n"
-"                        <ul>\n"
-"                            <li>${object.event_id.organizer_id.name}</li>\n"
-"                            % if object.event_id.organizer_id.email\n"
-"                                <li>이메일 : <a href=\"mailto:${object.event_id.organizer_id.email}\" style=\"text-decoration:none;color:#875A7B;\">${object.event_id.organizer_id.email}</a></li>\n"
-"                            % endif\n"
-"                            % if object.event_id.organizer_id.phone\n"
-"                                <li>전화 : ${object.event_id.organizer_id.phone}</li>\n"
-"                            % endif\n"
-"                        </ul>\n"
-"                    </div>\n"
-"                </td></tr>\n"
-"                % endif\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <table style=\"width:100%;border-top:1px solid #e1e1e1;\">\n"
-"                        <tr>\n"
-"                            <td style=\"padding:25px 0px;\">\n"
-"                                <strong>이 행사를 달력에 추가하십시오.</strong>\n"
-"                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>\n"
-"                                <a href=\"https://bay02.calendar.live.com/calendar/calendar.aspx?rru=addevent&amp;summary=${object.event_id.name}&amp;dtstart=${date_begin}&amp;dtend=${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Outlook</a>\n"
-"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%S')}&amp;et=${format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%S')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">\n"
-"                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>\n"
-"                            </td>\n"
-"                        </tr>\n"
-"                    </table>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"                % if object.event_id.address_id:\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <table style=\"width:100%;\"><tr><td>\n"
-"                        <div>\n"
-"                            <a href=\"https://maps.google.com/maps?q=${location}\" target=\"new\">\n"
-"                                <img src=\"http://maps.googleapis.com/maps/api/staticmap?autoscale=1&amp;size=598x200&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xa5117d%7Clabel:%7C${location}\" style=\"vertical-align:bottom; width: 100%;\" alt=\"Google Maps\"/>\n"
-"                            </a>\n"
-"                        </div>\n"
-"                    </td></tr></table>\n"
-"                </td></tr>\n"
-"                % endif\n"
-"            </table>\n"
-"        </td>\n"
-"    </tr>\n"
-"</tbody>\n"
-"</table>\n"
-"</td></tr>\n"
-"<!-- FOOTER BY -->\n"
-"% if object.company_id\n"
-"<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
-"    <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
-"      <tr><td style=\"text-align: center; font-size: 14px;\">\n"
-"        <a target=\"_blank\" href=\"${object.company_id.website}\" style=\"color: #875A7B;\">${object.company_id.name}</a>에서 발송되었습니다.\n"
-"        % if 'website_url' in object.event_id and object.event_id.website_url:\n"
-"        <br/>\n"
-"        <a href=\"/event\" style=\"text-decoration:none;color:#717188;\">다른 행사</a>도 살펴보십시오.\n"
-"        % endif\n"
-"      </td></tr>\n"
-"    </table>\n"
-"</td></tr>\n"
-"% endif\n"
-"</table>\n"
-"            "
 
 #. module: event
 #: model:mail.template,body_html:event.event_reminder
 msgid ""
 "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
-"% set date_begin = format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
-"% set date_end = format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
+"% set date_begin = format_datetime(object.event_id.date_begin, tz='UTC', dt_format='%Y%m%dT%H%M%SZ')\n"
+"% set date_end = format_datetime(object.event_id.date_end, tz='UTC', dt_format='%Y%m%dT%H%M%SZ')\n"
 "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
 "<tbody>\n"
 "    <!-- HEADER -->\n"
@@ -608,14 +429,14 @@ msgid ""
 "                    <div>\n"
 "                        Hello ${object.name},<br/>\n"
 "                        We are excited to remind you that the event\n"
-"                        % if 'website_url' in object.event_id and object.event_id.website_url:\n"
+"                        % if 'website_published' in object.event_id and object.event_id.website_published:\n"
 "                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>\n"
 "                        % else:\n"
 "                            <strong>${object.event_id.name}</strong>\n"
 "                        % endif\n"
 "                        is starting <strong>${object.get_date_range_str()}</strong>.\n"
 "                    </div>\n"
-"                    % if 'website_url' in object.event_id and object.event_id.website_url:\n"
+"                    % if 'website_published' in object.event_id and object.event_id.website_published:\n"
 "                    <div style=\"margin: 16px 0px 16px 0px;\">\n"
 "                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">View Event</a><br/>\n"
 "                    </div>\n"
@@ -719,7 +540,8 @@ msgid ""
 "                            <td style=\"padding:25px 0px;\">\n"
 "                                <strong>Add this event to your calendar</strong>\n"
 "                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>\n"
-"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%S')}&amp;et=${format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%S')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">\n"
+"                                <a href=\"/event/${slug(object.event_id)}/ics\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> iCal/Outlook</a>\n"
+"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_datetime(object.event_id.date_begin, tz='UTC', dt_format='%Y%m%dT%H%M%S')}&amp;et=${format_datetime(object.event_id.date_end, tz='UTC', dt_format='%Y%m%dT%H%M%S')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">\n"
 "                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>\n"
 "                            </td>\n"
 "                        </tr>\n"
@@ -762,190 +584,6 @@ msgid ""
 "</table>\n"
 "            "
 msgstr ""
-"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
-"% set date_begin = format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
-"% set date_end = format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%SZ')\n"
-"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
-"<tbody>\n"
-"    <!-- HEADER -->\n"
-"    <tr>\n"
-"        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
-"                <tr><td valign=\"middle\">\n"
-"                    <span style=\"font-size: 10px;\">귀하의 등록사항</span><br/>\n"
-"                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
-"                        ${object.name}\n"
-"                    </span>\n"
-"                </td><td valign=\"middle\" align=\"right\">\n"
-"                    <img src=\"${'/logo.png?company=%s' % object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${'%s' % object.company_id.name}\"/>\n"
-"                </td></tr>\n"
-"                <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"            </table>\n"
-"        </td>\n"
-"    </tr>\n"
-"    <!-- 행사 설명 -->\n"
-"    <tr>\n"
-"        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <div>\n"
-"                        Hello ${object.name},<br/>\n"
-"                        We are excited to remind you that the event\n"
-"                        % if 'website_url' in object.event_id and object.event_id.website_url:\n"
-"                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>\n"
-"                        % else:\n"
-"                            <strong>${object.event_id.name}</strong>\n"
-"                        % endif\n"
-"                        is starting <strong>${object.get_date_range_str()}</strong>.\n"
-"                    </div>\n"
-"                    % if 'website_url' in object.event_id and object.event_id.website_url:\n"
-"                    <div style=\"margin: 16px 0px 16px 0px;\">\n"
-"                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">행사 보기</a><br/>\n"
-"                    </div>\n"
-"                    % endif\n"
-"                    <div>\n"
-"                        우리는 당신의 등록을 확인하고 그곳에서 당신을 만나기를 희망합니다.<br/>\n"
-"                        <span style=\"color: #454748;\">\n"
-"                        -- <br/>\n"
-"                        % if object.event_id.organizer_id:\n"
-"                            ${object.event_id.organizer_id.name}\n"
-"                        % else:\n"
-"                            주최자.\n"
-"                        % endif\n"
-"                        </span>\n"
-"                    </div>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"            </table>\n"
-"        </td>\n"
-"    </tr>\n"
-"    <!-- 세부사항 -->\n"
-"    <tr>\n"
-"        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <table style=\"width:100%;\">\n"
-"                        <tr>\n"
-"                            <td style=\"vertical-align:top;\">\n"
-"                                <img src=\"/web_editor/font_to_img/61555/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>\n"
-"                            </td>\n"
-"                            <td style=\"padding: 0px 10px 0px 10px;width:50%;line-height:20px;vertical-align:top;\">\n"
-"                                <div><strong>시작일 </strong> ${object.event_id.date_begin_located}</div>\n"
-"                                <div><strong>종료일 </strong> ${object.event_id.date_end_located}</div>\n"
-"                                <div style=\"font-size:12px;color:#9e9e9e\"><i><strong>TZ</strong> ${object.event_id.date_tz}</i></div>\n"
-"                            </td>\n"
-"                            % if object.event_id.address_id.country_id.name:\n"
-"                                <td style=\"vertical-align:top;\">\n"
-"                                    <img src=\"/web_editor/font_to_img/61505/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>\n"
-"                                </td>\n"
-"                                <td style=\"padding: 0px 10px 0px 10px;width:50%;vertical-align:top;\">\n"
-"                                    % set location = ''\n"
-"                                    % if object.event_id.address_id.name:\n"
-"                                        <div>${object.event_id.address_id.name}</div>\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.street:\n"
-"                                        <div>${object.event_id.address_id.street}</div>\n"
-"                                        % set location = object.event_id.address_id.street\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.street2:\n"
-"                                        <div>${object.event_id.address_id.street2}</div>\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.street2)\n"
-"                                    % endif\n"
-"                                    <div>\n"
-"                                    % if object.event_id.address_id.city:\n"
-"                                        ${object.event_id.address_id.city},\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.city)\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.state_id.name:\n"
-"                                        ${object.event_id.address_id.state_id.name},\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.state_id.name)\n"
-"                                    % endif\n"
-"                                    % if object.event_id.address_id.zip:\n"
-"                                        ${object.event_id.address_id.zip}\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.zip)\n"
-"                                    % endif\n"
-"                                    </div>\n"
-"                                    % if object.event_id.address_id.country_id.name:\n"
-"                                        <div>${object.event_id.address_id.country_id.name}</div>\n"
-"                                        % set location = '%s, %s' % (location, object.event_id.address_id.country_id.name)\n"
-"                                    % endif\n"
-"                                </td>\n"
-"                            % endif\n"
-"                        </tr>\n"
-"                    </table>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"                % if object.event_id.organizer_id:\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <div>\n"
-"                        <span style=\"font-weight:300;margin:10px 0px\">이 행사에 대한 질문이 있으십니까?</span>\n"
-"                        <div>주최자에게 문의하십시오 :</div>\n"
-"                        <ul>\n"
-"                            <li>${object.event_id.organizer_id.name}</li>\n"
-"                            % if object.event_id.organizer_id.email\n"
-"                                <li>이메일 : <a href=\"mailto:${object.event_id.organizer_id.email}\" style=\"text-decoration:none;color:#875A7B;\">${object.event_id.organizer_id.email}</a></li>\n"
-"                            % endif\n"
-"                            % if object.event_id.organizer_id.phone\n"
-"                                <li>전화 : ${object.event_id.organizer_id.phone}</li>\n"
-"                            % endif\n"
-"                        </ul>\n"
-"                    </div>\n"
-"                </td></tr>\n"
-"                % endif\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <table style=\"width:100%;border-top:1px solid #e1e1e1;\">\n"
-"                        <tr>\n"
-"                            <td style=\"padding:25px 0px;\">\n"
-"                                <strong>이 행사를 달력에 추가하기</strong>\n"
-"                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>\n"
-"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_tz(object.event_id.date_begin, tz='UTC', format='%Y%m%dT%H%M%S')}&amp;et=${format_tz(object.event_id.date_end, tz='UTC', format='%Y%m%dT%H%M%S')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">\n"
-"                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>\n"
-"                            </td>\n"
-"                        </tr>\n"
-"                    </table>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"text-align:center;\">\n"
-"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
-"                </td></tr>\n"
-"                % if object.event_id.address_id:\n"
-"                <tr><td valign=\"top\" style=\"font-size: 14px;\">\n"
-"                    <table style=\"width:100%;\"><tr><td>\n"
-"                        <div>\n"
-"                            <a href=\"https://maps.google.com/maps?q=${location}\" target=\"new\">\n"
-"                                <img src=\"http://maps.googleapis.com/maps/api/staticmap?autoscale=1&amp;size=598x200&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xa5117d%7Clabel:%7C${location}\" style=\"vertical-align:bottom; width: 100%;\" alt=\"Google Maps\"/>\n"
-"                            </a>\n"
-"                        </div>\n"
-"                    </td></tr></table>\n"
-"                </td></tr>\n"
-"                % endif\n"
-"            </table>\n"
-"        </td>\n"
-"    </tr>\n"
-"</tbody>\n"
-"</table>\n"
-"</td></tr>\n"
-"<!-- FOOTER BY -->\n"
-"% if object.company_id\n"
-"<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
-"    <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
-"      <tr><td style=\"text-align: center; font-size: 14px;\">\n"
-"        <a target=\"_blank\" href=\"${object.company_id.website}\" style=\"color: #875A7B;\">${object.company_id.name}</a>에서 발송했습니다.\n"
-"        % if 'website_url' in object.event_id and object.event_id.website_url:\n"
-"        <br/>\n"
-"        <a href=\"/event\" style=\"text-decoration:none;color:#717188;\">다른 행사</a>도 살펴보십시오.\n"
-"        % endif\n"
-"      </td></tr>\n"
-"    </table>\n"
-"</td></tr>\n"
-"% endif\n"
-"</table>\n"
-"            "
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_needaction
@@ -957,6 +595,24 @@ msgstr "작업이 필요함"
 #: model:ir.model.fields,field_description:event.field_event_event__active
 msgid "Active"
 msgstr "활성"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_ids
+msgid "Activities"
+msgstr "활동"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_exception_decoration
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_state
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_state
+msgid "Activity State"
+msgstr "활동 상태"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
@@ -976,26 +632,31 @@ msgid "Add a new event"
 msgstr "행사 추가"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Advanced JQuery"
-msgstr "고급 JQuery"
+#: model:res.groups,name:event.group_event_manager
+msgid "Administrator"
+msgstr "관리자"
 
 #. module: event
-#: selection:event.mail,interval_type:0
-#: selection:event.type.mail,interval_type:0
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_type__after_sub
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_type__after_sub
 msgid "After each registration"
 msgstr "개별 등록 후"
 
 #. module: event
-#: selection:event.mail,interval_type:0
-#: selection:event.type.mail,interval_type:0
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_type__after_event
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_type__after_event
 msgid "After the event"
 msgstr "행사 후"
 
 #. module: event
+#: model:event.event,name:event.event_6
+msgid "An unpublished event"
+msgstr ""
+
+#. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 msgid "Archived"
-msgstr "보관됨"
+msgstr "보관"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
@@ -1005,9 +666,13 @@ msgid ""
 msgstr "이 행사를 취소하시겠습니까? 연결된 모든 참석자들도 취소됩니다."
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Arrays"
-msgstr "정렬"
+#: model_terms:event.event,description:event.event_2
+msgid ""
+"At just 13 years old, John DOE was already starting to develop his first "
+"business applications for customers. After mastering civil engineering, he "
+"founded TinyERP. This was the first phase of OpenERP which would later "
+"became Odoo, the most installed open-source business software worldwide."
+msgstr ""
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_attachment_count
@@ -1018,10 +683,10 @@ msgstr "첨부 파일 수"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
 msgid "Attendance"
-msgstr "참석"
+msgstr "근태"
 
 #. module: event
-#: selection:event.registration,state:0
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__done
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Attended"
@@ -1034,6 +699,7 @@ msgid "Attended Date"
 msgstr "참석 날짜"
 
 #. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
 msgid "Attended the Event"
 msgstr "행사에 참석함"
@@ -1042,7 +708,7 @@ msgstr "행사에 참석함"
 #: model:ir.model.fields,field_description:event.field_event_mail_registration__registration_id
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
 msgid "Attendee"
-msgstr "참석자"
+msgstr "참가자"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_registration__name
@@ -1058,7 +724,7 @@ msgstr "참석자 이름"
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
 #: model_terms:ir.ui.view,arch_db:event.view_event_type_form
 msgid "Attendees"
-msgstr "참석자"
+msgstr "참가자"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__auto_confirm
@@ -1106,35 +772,22 @@ msgid "Barcode"
 msgstr "바코드"
 
 #. module: event
-#: selection:event.mail,interval_type:0
-#: selection:event.type.mail,interval_type:0
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_type__before_event
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_type__before_event
 msgid "Before the event"
 msgstr "행사 전"
 
 #. module: event
-#: model_terms:event.event,description:event.event_2
-msgid "Best regards,"
-msgstr "감사합니다."
+#: model:event.event,subtitle:event.event_5
+msgid ""
+"Bring your outdoor field hockey season to the next level by taking the field"
+" at this 9th annual Field Hockey tournament."
+msgstr ""
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Bootstrap CSS"
-msgstr "부트스트랩 CSS"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Bring your own laptop."
-msgstr "자신의 노트북을 가져 오십시오."
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Building a Full Application"
-msgstr "응용 프로그램 전체 구축"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Calling the ORM"
-msgstr "ORM 호출하기"
+#: model:event.event,name:event.event_4
+msgid "Business workshops"
+msgstr ""
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_confirm
@@ -1147,13 +800,15 @@ msgid "Cancel Event"
 msgstr "행사 취소"
 
 #. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
 msgid "Cancel Registration"
 msgstr "등록 취소"
 
 #. module: event
-#: selection:event.event,state:0 selection:event.registration,state:0
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__cancel
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__cancel
 msgid "Cancelled"
 msgstr "취소됨"
 
@@ -1164,22 +819,26 @@ msgstr "범주"
 
 #. module: event
 #: model_terms:event.event,description:event.event_2
-msgid "Chamber Works 60, Rosewood Court Detroit, MI 48212 (United States)"
-msgstr "Chamber Works 60, Rosewood Court Detroit, MI 48212 (United States)"
+msgid ""
+"Chamber Works reserves the right to cancel, re-name or re-locate the event "
+"or change the dates on which it is held."
+msgstr ""
 
 #. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
 #: model_terms:ir.ui.view,arch_db:event.view_event_type_form
 msgid "Communication"
 msgstr "의사소통"
 
 #. module: event
+#: model_terms:event.event,description:event.event_2
 #: model:ir.model.fields,field_description:event.field_event_event__company_id
 #: model:ir.model.fields,field_description:event.field_event_registration__company_id
 msgid "Company"
 msgstr "회사"
 
 #. module: event
-#: code:addons/event/models/event.py:504
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "Compose Email"
 msgstr "이메일 작성"
@@ -1190,14 +849,20 @@ msgid "Conference"
 msgstr "회의"
 
 #. module: event
+#: model_terms:event.event,description:event.event_2
 #: model:event.event,name:event.event_2
 msgid "Conference for Architects"
 msgstr "건축가 회의"
 
 #. module: event
+#: model_terms:event.event,description:event.event_0
+msgid "Conferences, workshops and trainings will be organized in 6 rooms:"
+msgstr ""
+
+#. module: event
 #: model:ir.model,name:event.model_res_config_settings
 msgid "Config Settings"
-msgstr "설정 구성"
+msgstr "설정"
 
 #. module: event
 #: model:ir.ui.menu,name:event.menu_event_configuration
@@ -1220,12 +885,14 @@ msgid "Confirm Event"
 msgstr "행사 확정"
 
 #. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
 msgid "Confirm Registration"
 msgstr "등록 확인"
 
 #. module: event
-#: selection:event.event,state:0 selection:event.registration,state:0
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__confirm
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__open
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Confirmed"
@@ -1248,19 +915,9 @@ msgid "Contact"
 msgstr "연락처"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Controllers and Views"
-msgstr "컨트롤러 및 뷰"
-
-#. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__country_id
 msgid "Country"
 msgstr "국가"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Course Summary"
-msgstr "코스 요약"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_confirm__create_uid
@@ -1271,7 +928,7 @@ msgstr "코스 요약"
 #: model:ir.model.fields,field_description:event.field_event_type__create_uid
 #: model:ir.model.fields,field_description:event.field_event_type_mail__create_uid
 msgid "Created by"
-msgstr "작성자"
+msgstr "작성인"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_confirm__create_date
@@ -1285,36 +942,26 @@ msgid "Created on"
 msgstr "작성일"
 
 #. module: event
-#: code:addons/event/models/event.py:455
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "Customer"
 msgstr "고객"
 
 #. module: event
-#: code:addons/event/models/event.py:457
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "Customer Email"
 msgstr "고객 이메일"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Day 1"
-msgstr "1일"
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Date"
+msgstr "날짜"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Day 2"
-msgstr "2일"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Day 3"
-msgstr "3일"
-
-#. module: event
-#: selection:event.mail,interval_unit:0
-#: selection:event.type.mail,interval_unit:0
-msgid "Day(s)"
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__days
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__days
+msgid "Days"
 msgstr "일"
 
 #. module: event
@@ -1325,7 +972,7 @@ msgstr "삭제"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__description
 msgid "Description"
-msgstr "내용"
+msgstr "설명"
 
 #. module: event
 #: model:event.event,name:event.event_0
@@ -1333,9 +980,9 @@ msgid "Design Fair Los Angeles"
 msgstr "로스앤젤레스 디자인 페어"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Develop a new module for a particular application."
-msgstr "특정 애플리케이션을 위한 신규 모듈 개발."
+#: model:event.event,subtitle:event.event_4
+msgid "Discover how to grow a sustainable business with our experts."
+msgstr ""
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_confirm__display_name
@@ -1346,7 +993,7 @@ msgstr "특정 애플리케이션을 위한 신규 모듈 개발."
 #: model:ir.model.fields,field_description:event.field_event_type__display_name
 #: model:ir.model.fields,field_description:event.field_event_type_mail__display_name
 msgid "Display Name"
-msgstr "제목"
+msgstr "표시 이름"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail__sequence
@@ -1354,12 +1001,7 @@ msgid "Display order"
 msgstr "표시 순서"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Dive into Strings"
-msgstr "Dive into Strings"
-
-#. module: event
-#: selection:event.event,state:0
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__done
 msgid "Done"
 msgstr "완료"
 
@@ -1383,12 +1025,6 @@ msgid "Email"
 msgstr "이메일"
 
 #. module: event
-#: model_terms:ir.ui.view,arch_db:event.view_event_form
-#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
-msgid "Email Schedule"
-msgstr "이메일 일정"
-
-#. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail__template_id
 #: model:ir.model.fields,field_description:event.field_event_type_mail__template_id
 msgid "Email Template"
@@ -1405,11 +1041,17 @@ msgid "End Date Located"
 msgstr "종료일 위치"
 
 #. module: event
+#: model:event.event,subtitle:event.event_2
+msgid "Enhance your architectural business and improve professional skills."
+msgstr ""
+
+#. module: event
 #: model:ir.model,name:event.model_event_event
 #: model:ir.model.fields,field_description:event.field_event_event__name
 #: model:ir.model.fields,field_description:event.field_event_mail__event_id
 #: model:ir.model.fields,field_description:event.field_event_registration__event_id
 #: model_terms:ir.ui.view,arch_db:event.event_event_view_pivot
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Event"
 msgstr "행사"
@@ -1491,7 +1133,7 @@ msgid "Event Registration"
 msgstr "행사 등록"
 
 #. module: event
-#: code:addons/event/models/event_mail.py:143
+#: code:addons/event/models/event_mail.py:0
 #, python-format
 msgid ""
 "Event Scheduler for:\n"
@@ -1551,7 +1193,7 @@ msgstr "행사 : 메일 계획표"
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_event_tree
 msgid "Events"
-msgstr "행사"
+msgstr "행사 관리"
 
 #. module: event
 #: model:ir.actions.act_window,name:event.event_event_action_pivot
@@ -1585,6 +1227,15 @@ msgid "Events in New state"
 msgstr "새로운 상태의 행사"
 
 #. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"Every year we invite our community, partners and end-users to come and meet "
+"us! It's the ideal event to get together and present new features, roadmap "
+"of future versions, achievements of the software, workshops, training "
+"sessions, etc...."
+msgstr ""
+
+#. module: event
 #: model:event.type,name:event.event_type_1
 msgid "Exhibition"
 msgstr "전시회"
@@ -1592,12 +1243,17 @@ msgstr "전시회"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Expected"
-msgstr "예상"
+msgstr "예상됨"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_kanban
 msgid "Expected attendees"
 msgstr "예상 참석자"
+
+#. module: event
+#: model:event.event,subtitle:event.event_3
+msgid "Experience live music, local food and beverages."
+msgstr ""
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
@@ -1623,6 +1279,7 @@ msgid "Followers (Partners)"
 msgstr "팔로워 (협력사)"
 
 #. module: event
+#: model_terms:event.event,description:event.event_0
 #: model_terms:event.event,description:event.event_2
 msgid "For any additional information, please contact us at"
 msgstr "추가 정보는 다음 주소로 문의하시기 바랍니다."
@@ -1650,15 +1307,26 @@ msgid "Functional flow of the main applications;"
 msgstr "주요 응용 프로그램의 기능적 흐름 ;"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Functions"
-msgstr "기능"
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Future Activities"
+msgstr "향후 활동"
+
+#. module: event
+#: model:event.event,subtitle:event.event_0
+msgid "Get Inspired • Stay Connected • Have Fun"
+msgstr ""
+
+#. module: event
+#: model:event.event,name:event.event_1
+msgid "Great Reno Ballon Race"
+msgstr ""
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Group By"
-msgstr "그룹별"
+msgstr "그룹화"
 
 #. module: event
 #: model_terms:event.event,description:event.event_2
@@ -1666,27 +1334,15 @@ msgid "Having attended this conference, participants should be able to:"
 msgstr "이 회의에 참석한 참가자들은 다음과 같은 역량을 갖추어야 합니다 :"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Hello World"
-msgstr "Hello World"
+#: model:event.event,name:event.event_5
+msgid "Hockey Tournament"
+msgstr ""
 
 #. module: event
-#: selection:event.mail,interval_unit:0
-#: selection:event.type.mail,interval_unit:0
-msgid "Hour(s)"
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__hours
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__hours
+msgid "Hours"
 msgstr "시간"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "How to Debug"
-msgstr "디버깅 방법"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid ""
-"I did not expect such a great learning experience. I feel like I can develop"
-" anything now."
-msgstr "나는 그런 훌륭한 학습 경험을 기대하지 않았습니다. 지금은 무엇이든 개발할 수 있을 것처럼 느껴집니다."
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_confirm__id
@@ -1700,22 +1356,32 @@ msgid "ID"
 msgstr "ID"
 
 #. module: event
-#: model:ir.model.fields,help:event.field_event_event__message_unread
-#: model:ir.model.fields,help:event.field_event_registration__message_unread
-msgid "If checked new messages require your attention."
-msgstr "선택하면 새로운 메시지를 주목할 필요가 있습니다."
+#: model:ir.model.fields,field_description:event.field_event_event__activity_exception_icon
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_exception_icon
+msgid "Icon"
+msgstr "아이콘"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__activity_exception_icon
+#: model:ir.model.fields,help:event.field_event_registration__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "예외활동을 표시하기 위한 아이콘"
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_event__message_needaction
+#: model:ir.model.fields,help:event.field_event_event__message_unread
 #: model:ir.model.fields,help:event.field_event_registration__message_needaction
+#: model:ir.model.fields,help:event.field_event_registration__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "선택하면 새로운 메시지를 주목할 필요가 있습니다."
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_event__message_has_error
+#: model:ir.model.fields,help:event.field_event_event__message_has_sms_error
 #: model:ir.model.fields,help:event.field_event_registration__message_has_error
+#: model:ir.model.fields,help:event.field_event_registration__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "이 옵션을 선택하면 일부 메시지에 배달 오류가 발생합니다."
+msgstr "이 옵션을 선택하면 일부 정보가 전달 오류를 생성합니다."
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_event__state
@@ -1729,41 +1395,26 @@ msgstr ""
 "상태입니다.'취소'는 행사를 취소한 상태입니다."
 
 #. module: event
-#: selection:event.mail,interval_unit:0
-#: selection:event.type.mail,interval_unit:0
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"If you wish to make a presentation, please send your topic proposal as soon "
+"as possible for approval to Mr. Famke Jenssens at ngh (a) yourcompany (dot) "
+"com. The presentations should be, for example, a presentation of a community"
+" module, a case study, methodology feedback, technical, etc. Each "
+"presentation must be in English."
+msgstr ""
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__now
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__now
 msgid "Immediately"
 msgstr "즉시"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Install and administer your own server;"
-msgstr "자체 서버를 설치하고 관리합니다 ;"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Integrated Help"
-msgstr "통합 도움말"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail__interval_nbr
 #: model:ir.model.fields,field_description:event.field_event_type_mail__interval_nbr
 msgid "Interval"
 msgstr "간격"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Introduction to JQuery"
-msgstr "JQuery 소개"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Introduction to Javascript"
-msgstr "자바스크립트 소개"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Introduction to QWeb"
-msgstr "QWeb 소개"
 
 #. module: event
 #: model_terms:event.event,description:event.event_2
@@ -1777,6 +1428,11 @@ msgid "Is Follower"
 msgstr "팔로워 여부"
 
 #. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__is_one_day
+msgid "Is One Day"
+msgstr ""
+
+#. module: event
 #: model:ir.model.fields,help:event.field_event_type__default_registration_max
 msgid "It will select this default maximum value when you choose this event"
 msgstr "행사 선택시 기본 최대 값을 선택합니다."
@@ -1785,6 +1441,16 @@ msgstr "행사 선택시 기본 최대 값을 선택합니다."
 #: model:ir.model.fields,help:event.field_event_type__default_registration_min
 msgid "It will select this default minimum value when you choose this event"
 msgstr "행사 선택시 기본 최소 값을 선택합니다."
+
+#. module: event
+#: model_terms:event.event,description:event.event_2
+msgid "John DOE"
+msgstr ""
+
+#. module: event
+#: model_terms:event.event,description:event.event_0
+msgid "Join us for this 3-day Event"
+msgstr ""
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__color
@@ -1800,7 +1466,7 @@ msgstr "칸반 색인"
 #: model:ir.model.fields,field_description:event.field_event_type____last_update
 #: model:ir.model.fields,field_description:event.field_event_type_mail____last_update
 msgid "Last Modified on"
-msgstr "최근 수정"
+msgstr "최근 수정일"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_confirm__write_uid
@@ -1822,10 +1488,16 @@ msgstr "최근 갱신한 사람"
 #: model:ir.model.fields,field_description:event.field_event_type__write_date
 #: model:ir.model.fields,field_description:event.field_event_type_mail__write_date
 msgid "Last Updated on"
-msgstr "최근 갱신 날짜"
+msgstr "최근 갱신일"
 
 #. module: event
-#: selection:event.event,seats_availability:0
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Late Activities"
+msgstr "지연된 활동"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__seats_availability__limited
 msgid "Limited"
 msgstr "제한"
 
@@ -1833,6 +1505,11 @@ msgstr "제한"
 #: model:ir.model.fields,field_description:event.field_event_type__has_seats_limitation
 msgid "Limited Seats"
 msgstr "제한석"
+
+#. module: event
+#: model:event.event,name:event.event_3
+msgid "Live Music Festival"
+msgstr ""
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__address_id
@@ -1847,14 +1524,10 @@ msgid "Logo"
 msgstr "로고"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Loops"
-msgstr "반복"
-
-#. module: event
-#: model_terms:event.event,description:event.event_2
-msgid "Luigi Roni, Senior Event Manager"
-msgstr "Luigi Roni, Senior Event Manager"
+#: model:ir.model.fields.selection,name:event.selection__event_mail__notification_type__mail
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__notification_type__mail
+msgid "Mail"
+msgstr "메일"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail__mail_registration_ids
@@ -1904,11 +1577,6 @@ msgid "Manage &amp; publish a schedule with tracks"
 msgstr "관리 &amp; 트랙이 있는 계획표 게시"
 
 #. module: event
-#: model:res.groups,name:event.group_event_manager
-msgid "Manager"
-msgstr "관리자"
-
-#. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__seats_availability
 msgid "Maximum Attendees"
 msgstr "최대 참석자"
@@ -1924,7 +1592,7 @@ msgid "Maximum Registrations"
 msgstr "최대 등록"
 
 #. module: event
-#: code:addons/event/models/event.py:258
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid ""
 "Maximum attendees number should be greater than minimum attendees number."
@@ -1934,7 +1602,7 @@ msgstr "최대 참석자 수는 최소 참석자 수보다 커야 합니다."
 #: model:ir.model.fields,field_description:event.field_event_event__message_has_error
 #: model:ir.model.fields,field_description:event.field_event_registration__message_has_error
 msgid "Message Delivery error"
-msgstr "메시지 배달 오류"
+msgstr "메시지 전송 오류"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_ids
@@ -1953,14 +1621,14 @@ msgid "Minimum Registrations"
 msgstr "최소 등록"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Modules"
-msgstr "모듈"
+#: model:ir.model.fields,field_description:event.field_event_registration__mobile
+msgid "Mobile"
+msgstr "휴대전화"
 
 #. module: event
-#: selection:event.mail,interval_unit:0
-#: selection:event.type.mail,interval_unit:0
-msgid "Month(s)"
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__months
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__months
+msgid "Months"
 msgstr "월"
 
 #. module: event
@@ -1969,13 +1637,31 @@ msgid "My Events"
 msgstr "내 행사"
 
 #. module: event
-#: code:addons/event/models/event.py:263
+#: model:ir.model.fields,field_description:event.field_event_event__activity_date_deadline
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "다음 활동 마감일"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_summary
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_summary
+msgid "Next Activity Summary"
+msgstr "다음 활동 요약"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_type_id
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_type_id
+msgid "Next Activity Type"
+msgstr "다음 활동 유형"
+
+#. module: event
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "No more available seats."
 msgstr "사용 가능한 좌석이 없습니다."
 
 #. module: event
-#: code:addons/event/models/event.py:369
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "No more seats available for this event."
 msgstr "이 행사에는 더 이상 좌석이 없습니다."
@@ -1984,7 +1670,7 @@ msgstr "이 행사에는 더 이상 좌석이 없습니다."
 #: model:ir.model.fields,field_description:event.field_event_event__message_needaction_counter
 #: model:ir.model.fields,field_description:event.field_event_registration__message_needaction_counter
 msgid "Number of Actions"
-msgstr "작업 횟수"
+msgstr "작업 수"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__seats_expected
@@ -1999,8 +1685,8 @@ msgstr "참석 인원수"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_has_error_counter
 #: model:ir.model.fields,field_description:event.field_event_registration__message_has_error_counter
-msgid "Number of error"
-msgstr "오류 횟수"
+msgid "Number of errors"
+msgstr "에러 수"
 
 #. module: event
 #: model:ir.model.fields,help:event.field_res_partner__event_count
@@ -2018,7 +1704,7 @@ msgstr "작업이 필요한 메시지 수"
 #: model:ir.model.fields,help:event.field_event_event__message_has_error_counter
 #: model:ir.model.fields,help:event.field_event_registration__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr "배달 오류 메시지 수"
+msgstr "전송 오류 메시지 수"
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_event__message_unread_counter
@@ -2027,14 +1713,9 @@ msgid "Number of unread messages"
 msgstr "읽지 않은 메시지 수"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Odoo Official Website"
-msgstr "Odoo 공식 웹사이트"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Odoo Web Client"
-msgstr "Odoo 웹 클라이언트"
+#: model_terms:event.event,description:event.event_2
+msgid "Objectives"
+msgstr "목표"
 
 #. module: event
 #: model:event.type,name:event.event_type_data_online
@@ -2076,6 +1757,13 @@ msgid ""
 msgstr "웹 세미나와 같은 온라인 행사는 특정 위치를 요구하지 않으며  온라인 상에서 진행됩니다."
 
 #. module: event
+#: model_terms:event.event,description:event.event_0
+msgid ""
+"OpenElec Applications reserves the right to cancel, re-name or re-locate the"
+" event or change the dates on which it is held."
+msgstr ""
+
+#. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__organizer_id
 msgid "Organizer"
 msgstr "주최자"
@@ -2084,20 +1772,6 @@ msgstr "주최자"
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Participant"
 msgstr "참석자"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid ""
-"Participants are expected to have some knowledge in programming. A basic "
-"knowledge of the Python programming is recommended."
-msgstr "참가자는 프로그래밍에 대한 지식이 있어야합니다.  Python 프로그래밍에 대한 기본 지식을 권장합니다."
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid ""
-"Participants preferably have a functional knowledge of our software (see "
-"Functional Training)."
-msgstr "참가자는 우리 소프트웨어에 대한 기능적 지식이 있는 것이 바람직합니다 (기능 훈련 참조)."
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
@@ -2120,6 +1794,12 @@ msgid "Point of Sale (POS), Introduction to report customization."
 msgstr "POS(Point of Sale), 보고서 사용자 정의 소개."
 
 #. module: event
+#: model_terms:event.event,description:event.event_0
+#: model_terms:event.event,description:event.event_2
+msgid "Program"
+msgstr ""
+
+#. module: event
 #: model_terms:event.event,description:event.event_2
 msgid "Project management, Human resources, Contract management."
 msgstr "프로젝트 관리, 인사, 계약 관리."
@@ -2128,16 +1808,6 @@ msgstr "프로젝트 관리, 인사, 계약 관리."
 #: model_terms:event.event,description:event.event_2
 msgid "Purchase, Sales &amp; Purchase management, Financial accounting."
 msgstr "구매, 판매 &amp; 구매 관리, 재무 회계."
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Python Objects"
-msgstr "파이썬 객체"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Read Great Contents"
-msgstr "훌륭한 내용 읽기"
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_registration__origin
@@ -2197,19 +1867,9 @@ msgid "Registration mail"
 msgstr "등록 메일"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Report Engine"
-msgstr "보고서 엔진"
-
-#. module: event
 #: model:ir.ui.menu,name:event.menu_reporting_events
 msgid "Reporting"
 msgstr "보고"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Requirements"
-msgstr "요구 사항"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__seats_reserved
@@ -2221,6 +1881,18 @@ msgstr "예약석"
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 msgid "Responsible"
 msgstr "담당자"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_user_id
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_user_id
+msgid "Responsible User"
+msgstr "담당 사용자"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_has_sms_error
+#: model:ir.model.fields,field_description:event.field_event_registration__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS메시지 전송 에러"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
@@ -2267,6 +1939,12 @@ msgid "Seminar"
 msgstr "세미나"
 
 #. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__notification_type
+#: model:ir.model.fields,field_description:event.field_event_type_mail__notification_type
+msgid "Send"
+msgstr "전송"
+
+#. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
 msgid "Send by Email"
 msgstr "이메일로 전송"
@@ -2275,6 +1953,11 @@ msgstr "이메일로 전송"
 #: model:ir.model.fields,field_description:event.field_event_mail__done
 msgid "Sent"
 msgstr "전송됨"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__sequence
+msgid "Sequence"
+msgstr "순서"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
@@ -2290,7 +1973,7 @@ msgstr "미확정으로 설정"
 #: model:ir.actions.act_window,name:event.action_event_configuration
 #: model:ir.ui.menu,name:event.menu_event_global_settings
 msgid "Settings"
-msgstr "설정"
+msgstr "환경 설정"
 
 #. module: event
 #: model:event.type,name:event.event_type_3
@@ -2298,9 +1981,20 @@ msgid "Show"
 msgstr "보기"
 
 #. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Show all records which has next action date is before today"
+msgstr "다음 활동 일자가 오늘 이전인 모든 자료 조회"
+
+#. module: event
 #: model:ir.model.fields,field_description:event.field_event_registration__origin
 msgid "Source Document"
 msgstr "원본 문서"
+
+#. module: event
+#: model:event.type,name:event.event_type_5
+msgid "Sport"
+msgstr ""
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_begin
@@ -2319,16 +2013,37 @@ msgstr "시작일 위치"
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Status"
-msgstr "상태"
+msgstr "단계"
 
 #. module: event
-#: code:addons/event/models/event.py:269
+#: model:ir.model.fields,help:event.field_event_event__activity_state
+#: model:ir.model.fields,help:event.field_event_registration__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"활동별 현황\n"
+"기한 초과 : 이미 기한이 지났습니다\n"
+"오늘 : 활동 날짜가 오늘입니다\n"
+"계획 : 향후 활동입니다."
+
+#. module: event
+#: model:event.event,subtitle:event.event_1
+msgid ""
+"The Great Reno Balloon Race is the world's largest free hot-air ballooning "
+"event."
+msgstr ""
+
+#. module: event
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "The closing date cannot be earlier than the beginning date."
 msgstr "마감일은 시작일보다 빠를 수 없습니다."
 
 #. module: event
-#: code:addons/event/models/event.py:313
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid ""
 "There are already attendees who attended this event. Please reset it to "
@@ -2338,9 +2053,10 @@ msgstr "이미 이 행사에 참석한 참석자들이 있습니다. 이 행사�
 #. module: event
 #: model_terms:event.event,description:event.event_0
 msgid ""
-"This course help me build my first application within a month. Definetly "
-"worth its price."
-msgstr "이 과정은 한 달 안에 첫 번째 응용 프로그램을 만드는 데 도움을 줍니다. 확실히 값어치가 있습니다."
+"This event is also an opportunity to showcase our partners' case studies, "
+"methodology or developments. Be there and see directly from the source the "
+"features of the version 12!"
+msgstr ""
 
 #. module: event
 #: model:ir.model.fields,help:event.field_event_mail__template_id
@@ -2361,9 +2077,15 @@ msgid "Timezone"
 msgstr "시간대"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "To get more information, visit the"
-msgstr "더 많은 정보를 원하시면 다음을 방문하세요 :"
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Today Activities"
+msgstr "오늘 활동"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_tree
+msgid "Total"
+msgstr "합계"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_res_config_settings__module_website_event_track
@@ -2374,11 +2096,6 @@ msgstr "트랙과 과제"
 #: model:event.type,name:event.event_type_4
 msgid "Training"
 msgstr "훈련"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Training Center Module"
-msgstr "훈련 센터 모듈"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_type_mail__interval_type
@@ -2397,7 +2114,14 @@ msgid "Twitter Hashtag"
 msgstr "트위터 해시태그"
 
 #. module: event
-#: selection:event.event,state:0 selection:event.registration,state:0
+#: model:ir.model.fields,help:event.field_event_event__activity_exception_decoration
+#: model:ir.model.fields,help:event.field_event_registration__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__draft
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__draft
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Unconfirmed"
@@ -2409,16 +2133,6 @@ msgid "Unconfirmed Seat Reservations"
 msgstr "미확정 좌석 예약"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Underscore"
-msgstr "밑줄"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Understand the development concepts and architecture;"
-msgstr "개발 개념 및 아키텍처 이해 ;"
-
-#. module: event
 #: model_terms:event.event,description:event.event_2
 msgid "Understand the various modules;"
 msgstr "다양한 모듈 이해 ;"
@@ -2427,12 +2141,12 @@ msgstr "다양한 모듈 이해 ;"
 #: model:ir.model.fields,field_description:event.field_event_mail__interval_unit
 #: model:ir.model.fields,field_description:event.field_event_type_mail__interval_unit
 msgid "Unit"
-msgstr "유닛"
+msgstr "단위"
 
 #. module: event
-#: selection:event.event,seats_availability:0
+#: model:ir.model.fields.selection,name:event.selection__event_event__seats_availability__unlimited
 msgid "Unlimited"
-msgstr "무한"
+msgstr "무제한"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_unread
@@ -2440,13 +2154,13 @@ msgstr "무한"
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Unread Messages"
-msgstr "읽지 않은 메세지"
+msgstr "읽지 않은 메시지"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_unread_counter
 #: model:ir.model.fields,field_description:event.field_event_registration__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr "읽지 않은 메세지 수"
+msgstr "읽지 않은 메시지 수"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
@@ -2474,17 +2188,12 @@ msgid "User"
 msgstr "사용자"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Variables &amp; Operators"
-msgstr "변수 &amp; 연산자"
-
-#. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_type_form
 msgid "Visibility"
 msgstr "표시"
 
 #. module: event
-#: code:addons/event/models/event_mail.py:130
+#: code:addons/event/models/event_mail.py:0
 #, python-format
 msgid "WARNING: Event Scheduler Error for event: %s"
 msgstr "경고 : 다음 행사에 대한 행사 계획표 오류 : %s"
@@ -2507,34 +2216,24 @@ msgid "Website communication history"
 msgstr "웹사이트 의사소통 이력"
 
 #. module: event
-#: selection:event.mail,interval_unit:0
-#: selection:event.type.mail,interval_unit:0
-msgid "Week(s)"
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__weeks
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__weeks
+msgid "Weeks"
 msgstr "주"
 
 #. module: event
 #: model_terms:event.event,description:event.event_0
-msgid "What do people say about this course?"
-msgstr "이 과정에 대해 사람들은 무엇을 말합니까?"
+msgid "What's new?"
+msgstr ""
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "What you will learn?"
-msgstr "무엇을 배울 것인가?"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "Workflows"
-msgstr "업무 순서"
-
-#. module: event
-#: code:addons/event/models/event.py:426
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "You must wait the event confirmation before doing this action."
 msgstr "이 작업을 수행하기 전에 행사가 확정되길 기다려야 합니다."
 
 #. module: event
-#: code:addons/event/models/event.py:428
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "You must wait the event starting day before doing this action."
 msgstr "이 작업을 수행하려면 행사 시작일이 되어야 합니다."
@@ -2555,52 +2254,47 @@ msgid "badge_of_${(object.event_id.name or '').replace('/','_')}"
 msgstr "badge_of_${(object.event_id.name or '').replace('/','_')}"
 
 #. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "drinks and lunch;"
-msgstr "음료 및 점심 ;"
-
-#. module: event
 #: model_terms:event.event,description:event.event_2
 msgid "events@odoo.com"
 msgstr "events@odoo.com"
 
 #. module: event
-#: code:addons/event/models/event.py:526
+#: model_terms:event.event,description:event.event_0
+msgid "events@yourcompany.com"
+msgstr ""
+
+#. module: event
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "in %d days"
 msgstr "%d일 후에"
 
 #. module: event
-#: code:addons/event/models/event.py:530
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "next month"
 msgstr "다음 달"
 
 #. module: event
-#: code:addons/event/models/event.py:528
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "next week"
 msgstr "다음 주"
 
 #. module: event
-#: code:addons/event/models/event.py:532
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "on "
 msgstr "on "
 
 #. module: event
-#: code:addons/event/models/event.py:522
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "today"
 msgstr "오늘"
 
 #. module: event
-#: code:addons/event/models/event.py:524
+#: code:addons/event/models/event.py:0
 #, python-format
 msgid "tomorrow"
 msgstr "내일"
-
-#. module: event
-#: model_terms:event.event,description:event.event_0
-msgid "training material."
-msgstr "교육 자료."

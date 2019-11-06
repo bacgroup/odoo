@@ -29,18 +29,13 @@ class TestPartnerAssign(TransactionCase):
             'partner_id': self.customer_uk.id
         })
 
-        def geo_find(addr, apikey):
+        def geo_find(addr, **kw):
             return {
                 'Wavre, Belgium': (50.7158956, 4.6128075),
                 'Cannon Hill Park, B46 3AG Birmingham, United Kingdom': (52.45216, -1.898578),
             }.get(addr)
 
-        patcher = patch('odoo.addons.base_geolocalize.models.res_partner.geo_find', wraps=geo_find)
-        patcher.start()
-        self.addCleanup(patcher.stop)
-
-        patcher = patch('odoo.addons.website_crm_partner_assign.models.crm_lead.geo_find',
-                        wraps=geo_find)
+        patcher = patch('odoo.addons.base_geolocalize.models.base_geocoder.GeoCoder.geo_find', wraps=geo_find)
         patcher.start()
         self.addCleanup(patcher.stop)
 
@@ -106,7 +101,7 @@ class TestPartnerLeadPortal(TestCrmCases):
             'name': 'Super Customer Odoo Intregrating Partner',
             'email': 'super.partner@ododo.com',
             'login': 'superpartner',
-            'groups_id': [(4, self.env.ref('base.group_portal').id)],
+            'groups_id': [(6, 0, [self.env.ref('base.group_portal').id])],
             'user_id': self.crm_salesman.id,
             'grade_id': self.grade.id,
         })
@@ -124,7 +119,6 @@ class TestPartnerLeadPortal(TestCrmCases):
         self.team = self.env['crm.team'].with_context(mail_notrack=True).create({
             'name': 'Test Team FOR THE WIN',
             'use_leads': True,
-            'use_opportunities': True,
             'member_ids': [(6, 0, [self.crm_salesman.id])],
         })
 
@@ -133,7 +127,7 @@ class TestPartnerLeadPortal(TestCrmCases):
         team_before = self.lead.team_id
         user_before = self.lead.user_id
 
-        self.lead.sudo(self.portal_user.id).partner_interested(comment="Oh yeah, I take that lead !")
+        self.lead.with_user(self.portal_user).partner_interested(comment="Oh yeah, I take that lead !")
 
         self.assertEqual(self.lead.type, 'opportunity', 'Bad Type: accepted lead by portal user should become an opportunity.')
         self.assertEqual(self.lead.team_id, team_before, 'Accepting lead does not change the sales team.')
@@ -141,7 +135,7 @@ class TestPartnerLeadPortal(TestCrmCases):
 
     def test_partner_lead_decline(self):
         """ Test an integrating partner decline the lead """
-        self.lead.sudo(self.portal_user.id).partner_desinterested(comment="No thanks, I have enough leads !", contacted=True, spam=False)
+        self.lead.with_user(self.portal_user).partner_desinterested(comment="No thanks, I have enough leads !", contacted=True, spam=False)
 
         self.assertFalse(self.lead.partner_assigned_id.id, 'The partner_assigned_id of the declined lead should be False.')
         self.assertTrue(self.portal_user.partner_id in self.lead.sudo().partner_declined_ids, 'Partner who has declined the lead should be in the declined_partner_ids.')
@@ -153,15 +147,15 @@ class TestPartnerLeadPortal(TestCrmCases):
             'name': 'Poor Partner (not integrating one)',
             'email': 'poor.partner@ododo.com',
             'login': 'poorpartner',
-            'groups_id': [(4, self.env.ref('base.group_portal').id)],
+            'groups_id': [(6, 0, [self.env.ref('base.group_portal').id])],
         })
         # try to accept a lead that is not mine
         with self.assertRaises(AccessError):
-            self.lead.sudo(poor_portal_user.id).partner_interested(comment="Oh yeah, I take that lead !")
+            self.lead.with_user(poor_portal_user).partner_interested(comment="Oh yeah, I take that lead !")
 
     def test_lead_creation(self):
         """ Test the opportinuty creation from portal """
-        data = self.env['crm.lead'].sudo(self.portal_user.id).create_opp_portal({
+        data = self.env['crm.lead'].with_user(self.portal_user).create_opp_portal({
             'title': "L'ours bleu",
             'description': 'A good joke',
             'contact_name': 'Renaud Rutten',

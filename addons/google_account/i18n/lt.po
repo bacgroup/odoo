@@ -1,18 +1,18 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * google_account
+# 	* google_account
 # 
 # Translators:
-# Martin Trigaux, 2018
-# UAB "Draugiški sprendimai" <transifex@draugiskisprendimai.lt>, 2018
+# Martin Trigaux, 2019
+# UAB "Draugiški sprendimai" <transifex@draugiskisprendimai.lt>, 2019
 # Linas Versada <linaskrisiukenas@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2018-08-24 09:18+0000\n"
+"POT-Creation-Date: 2019-08-12 11:32+0000\n"
+"PO-Revision-Date: 2019-08-26 09:10+0000\n"
 "Last-Translator: Linas Versada <linaskrisiukenas@gmail.com>, 2019\n"
 "Language-Team: Lithuanian (https://www.transifex.com/odoo/teams/41243/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -35,12 +35,6 @@ msgstr "Sukurta"
 #: model:ir.model.fields,field_description:google_account.field_google_service__display_name
 msgid "Display Name"
 msgstr "Rodomas pavadinimas"
-
-#. module: google_account
-#: code:addons/google_account/models/google_service.py:196
-#, python-format
-msgid "Error while requesting Google Services: %s"
-msgstr ""
 
 #. module: google_account
 #: model:ir.model,name:google_account.model_google_service
@@ -105,10 +99,10 @@ msgstr ""
 "nebegalioja ar yra neteisingas [%s]"
 
 #. module: google_account
-#: code:addons/google_account/models/google_service.py:197
+#: code:addons/google_account/models/google_service.py:193
 #, python-format
-msgid "Something went wrong with your request to google: %s"
-msgstr ""
+msgid "Something went wrong with your request to google"
+msgstr "Siunčiant užklausą \"Google\" įvyko klaida"
 
 #. module: google_account
 #: code:addons/google_account/models/google_service.py:131

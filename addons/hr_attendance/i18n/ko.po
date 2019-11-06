@@ -1,21 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * hr_attendance
+# 	* hr_attendance
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2018
-# Seongseok Shin <shinss61@hotmail.com>, 2018
+# Martin Trigaux, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Seongseok Shin <shinss61@hotmail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-09 10:31+0000\n"
-"PO-Revision-Date: 2018-08-24 09:18+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-08-26 08:16+0000\n"
+"PO-Revision-Date: 2019-08-26 09:10+0000\n"
+"Last-Translator: Linkup <link-up@naver.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +24,26 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_attendance.py:52
+#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid "\"Check Out\" time cannot be earlier than \"Check In\" time."
 msgstr "\"퇴근\" 시간은 \"출근\" 시간보다 빠를 수 없습니다."
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_attendance.py:27
+#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid "%(empl_name)s from %(check_in)s"
 msgstr "%(empl_name)s %(check_in)s 출근"
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_attendance.py:32
+#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid "%(empl_name)s from %(check_in)s to %(check_out)s"
 msgstr "%(empl_name)s %(check_in)s 출근 %(check_out)s 퇴근"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:110
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid ""
 "<b>Warning! Last check in was over 12 hours ago.</b><br/>If this isn't "
@@ -61,13 +61,37 @@ msgid "<span class=\"o_form_label\">Employee PIN</span>"
 msgstr "<span class=\"o_form_label\">사원번호</span>"
 
 #. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
+#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            Last Month\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            지난 달\n"
+"                        </span>"
+
+#. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
 msgid "<span class=\"o_stat_text\">Attendance</span>"
 msgstr "<span class=\"o_stat_text\">근태</span>"
 
 #. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
+#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
+msgid "<span class=\"o_stat_text\">Attended Since</span>"
+msgstr ""
+
+#. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
+#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
+msgid "<span class=\"o_stat_text\">Not Attended Since</span>"
+msgstr ""
+
+#. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_employees_view_kanban
-#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_kanban_inherit_hr_attendance
 msgid ""
 "<span id=\"oe_hr_attendance_status\" class=\"fa fa-circle "
 "oe_hr_attendance_status_green\" role=\"img\" aria-label=\"Available\" "
@@ -79,7 +103,6 @@ msgstr ""
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_employees_view_kanban
-#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_kanban_inherit_hr_attendance
 msgid ""
 "<span id=\"oe_hr_attendance_status\" class=\"fa fa-circle "
 "oe_hr_attendance_status_red\" role=\"img\" aria-label=\"Not available\" "
@@ -99,15 +122,20 @@ msgstr ""
 "              직원을 생성하려면 직원 메뉴로 이동합니다."
 
 #. module: hr_attendance
+#: model:res.groups,name:hr_attendance.group_hr_attendance_manager
+msgid "Administrator"
+msgstr "관리자"
+
+#. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:140
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "An apple a day keeps the doctor away"
 msgstr "하루 사과 한 알이면 의사가 필요 없어요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:129
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Another good day's work! See you soon!"
 msgstr "또 좋은 하루 되세요! 곧 뵙죠!"
@@ -116,9 +144,10 @@ msgstr "또 좋은 하루 되세요! 곧 뵙죠!"
 #: model:ir.actions.client,name:hr_attendance.hr_attendance_action_my_attendances
 #: model:ir.model,name:hr_attendance.model_hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__attendance_ids
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__attendance_ids
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__attendance_ids
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_graph
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_pivot
-#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
 msgid "Attendance"
 msgstr "근태"
 
@@ -130,6 +159,9 @@ msgstr "근태 분석"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__attendance_state
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__attendance_state
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__attendance_state
+#: model:ir.model.fields,field_description:hr_attendance.field_res_users__attendance_state
 msgid "Attendance Status"
 msgstr "근태 상황"
 
@@ -146,19 +178,20 @@ msgstr "근태 관리"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:4
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
 #, python-format
 msgid "Available"
 msgstr "사용 가능"
 
 #. module: hr_attendance
-#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__barcode
-msgid "Badge ID"
-msgstr "배지 ID"
+#: model:ir.model,name:hr_attendance.model_hr_employee_base
+msgid "Basic Employee"
+msgstr ""
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_attendance.py:82
+#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid ""
 "Cannot create new attendance record for %(empl_name)s, the employee hasn't "
@@ -167,8 +200,8 @@ msgstr ""
 "%(empl_name)s에 대한 새 근태 기록을 작성할 수 없습니다. %(datetime)s 이후 직원이 퇴근하지 않았습니다."
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_attendance.py:69
-#: code:addons/hr_attendance/models/hr_attendance.py:95
+#: code:addons/hr_attendance/models/hr_attendance.py:0
+#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid ""
 "Cannot create new attendance record for %(empl_name)s, the employee was "
@@ -176,13 +209,7 @@ msgid ""
 msgstr "%(empl_name)s에 대한 새 근태 기록을 작성할 수 없습니다. 직원이 이미 %(datetime)s에 출근하였습니다."
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_employee.py:109
-#, python-format
-msgid "Cannot perform check in or check out on multiple employees."
-msgstr "여러 명의 직원을 출근시키거나 퇴근시킬 수 없습니다."
-
-#. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_employee.py:123
+#: code:addons/hr_attendance/models/hr_employee.py:0
 #, python-format
 msgid ""
 "Cannot perform check out on %(empl_name)s, could not find corresponding "
@@ -194,6 +221,11 @@ msgstr ""
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__check_in
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__last_check_in
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__last_check_in
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__last_check_in
+#: model:ir.model.fields,field_description:hr_attendance.field_res_users__last_check_in
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
 msgid "Check In"
 msgstr "출근"
 
@@ -203,19 +235,14 @@ msgid "Check In / Check Out"
 msgstr "출근 / 퇴근"
 
 #. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
-msgid "Check In Date"
-msgstr "출근일"
-
-#. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__check_out
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__last_check_out
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__last_check_out
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__last_check_out
+#: model:ir.model.fields,field_description:hr_attendance.field_res_users__last_check_out
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
 msgid "Check Out"
 msgstr "퇴근"
-
-#. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
-msgid "Check Out Date"
-msgstr "퇴근일"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
@@ -223,41 +250,44 @@ msgid "Check-In/Out"
 msgstr "출퇴근"
 
 #. module: hr_attendance
-#: selection:hr.employee,attendance_state:0
+#: model:ir.model.fields.selection,name:hr_attendance.selection__hr_employee__attendance_state__checked_in
+#: model:ir.model.fields.selection,name:hr_attendance.selection__hr_employee_base__attendance_state__checked_in
+#: model:ir.model.fields.selection,name:hr_attendance.selection__hr_employee_public__attendance_state__checked_in
 msgid "Checked in"
 msgstr "출근함"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:124
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Checked in at"
 msgstr "출근시간"
 
 #. module: hr_attendance
-#: selection:hr.employee,attendance_state:0
+#: model:ir.model.fields.selection,name:hr_attendance.selection__hr_employee__attendance_state__checked_out
+#: model:ir.model.fields.selection,name:hr_attendance.selection__hr_employee_base__attendance_state__checked_out
+#: model:ir.model.fields.selection,name:hr_attendance.selection__hr_employee_public__attendance_state__checked_out
 msgid "Checked out"
 msgstr "퇴근함"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:115
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Checked out at"
 msgstr "퇴근시간"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:47
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:75
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Click to"
 msgstr "클릭하면"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:14
-#: model_terms:ir.ui.view,arch_db:hr_attendance.print_employee_badge
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Company Logo"
 msgstr "회사 로고"
@@ -265,7 +295,7 @@ msgstr "회사 로고"
 #. module: hr_attendance
 #: model:ir.model,name:hr_attendance.model_res_config_settings
 msgid "Config Settings"
-msgstr "설정 구성"
+msgstr "설정"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_settings
@@ -280,7 +310,7 @@ msgstr "새 직원 추가"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__create_uid
 msgid "Created by"
-msgstr "작성자"
+msgstr "작성인"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__create_date
@@ -295,34 +325,28 @@ msgstr "부서"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__display_name
 msgid "Display Name"
-msgstr "제목"
+msgstr "표시 이름"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:146
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Early to bed and early to rise, makes a man healthy, wealthy and wise"
 msgstr "일찍 일어나고 일찍 자는 것은 남자를 건강하게 하고, 부자로 만들고, 현명하게 합니다."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:138
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Eat breakfast as a king, lunch as a merchant and supper as a beggar"
 msgstr "아침은 왕으로, 점심은 상인으로, 저녁은 거지로 먹습니다."
 
 #. module: hr_attendance
-#: model:ir.model,name:hr_attendance.model_hr_employee
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__employee_id
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_employees_view_kanban
 msgid "Employee"
 msgstr "직원"
-
-#. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.print_employee_badge
-msgid "Employee Image"
-msgstr "직원 사진"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_res_config_settings__group_attendance_use_pin
@@ -334,11 +358,6 @@ msgstr "사원번호"
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_attendance_tree
 msgid "Employee attendances"
 msgstr "직원 근태"
-
-#. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_kanban_inherit_hr_attendance
-msgid "Employee's Name"
-msgstr "직원 이름"
 
 #. module: hr_attendance
 #: model:ir.actions.act_window,name:hr_attendance.hr_employee_attendance_action_kanban
@@ -353,67 +372,67 @@ msgstr "사원번호 사용 활성화"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:96
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Error: could not find corresponding employee."
 msgstr "오류 : 해당 직원을 찾을 수 없습니다."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:93
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "First come, first served"
 msgstr "선착순 우선"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:108
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Glad to have you back, it's been a while!"
 msgstr "다시 오셔서 기뻐요, 오랜만이에요!"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:63
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:64
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:137
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Go back"
 msgstr "돌아가기"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:99
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Good afternoon"
 msgstr "좋은 오후예요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:101
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Good evening"
 msgstr "안녕하세요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:96
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Good morning"
 msgstr "좋은 아침이에요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:87
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:103
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Good night"
 msgstr "안녕히 주무세요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:113
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:131
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Goodbye"
 msgstr "잘가요."
@@ -421,35 +440,64 @@ msgstr "잘가요."
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
 msgid "Group By"
-msgstr "그룹별"
+msgstr "그룹화"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:143
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Have a good afternoon"
 msgstr "좋은 오후 되세요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:134
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Have a good day!"
 msgstr "좋은 하루 보내세요!"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:148
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Have a good evening"
 msgstr "좋은 밤 되세요."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:136
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "Have a nice lunch!"
 msgstr "점심 맛있게 드세요!"
+
+#. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
+#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
+msgid "Hours"
+msgstr "시간"
+
+#. module: hr_attendance
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__hours_last_month
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__hours_last_month
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__hours_last_month
+#: model:ir.model.fields,field_description:hr_attendance.field_res_users__hours_last_month
+msgid "Hours Last Month"
+msgstr ""
+
+#. module: hr_attendance
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__hours_last_month_display
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__hours_last_month_display
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__hours_last_month_display
+#: model:ir.model.fields,field_description:hr_attendance.field_res_users__hours_last_month_display
+msgid "Hours Last Month Display"
+msgstr ""
+
+#. module: hr_attendance
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__hours_today
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__hours_today
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__hours_today
+msgid "Hours Today"
+msgstr ""
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
@@ -462,20 +510,22 @@ msgid "ID"
 msgstr "ID"
 
 #. module: hr_attendance
-#: model:ir.model.fields,help:hr_attendance.field_hr_employee__barcode
-msgid "ID used for employee identification."
-msgstr "직원 식별에 사용되는 ID입니다."
+#. openerp-web
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Identify"
+msgstr ""
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:111
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "If a job is worth doing, it is worth doing well!"
 msgstr "만약 어떤 일이 할 가치가 있다면, 그것은 잘할 가치가 있어요!"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:136
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Invalid request, please return to the main menu."
 msgstr "잘못된 요청입니다. 주 메뉴로 돌아가십시오."
@@ -487,13 +537,15 @@ msgstr "키오스크 모드"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__last_attendance_id
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_base__last_attendance_id
+#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__last_attendance_id
 msgid "Last Attendance"
 msgstr "최근 근태"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance____last_update
 msgid "Last Modified on"
-msgstr "최근 수정"
+msgstr "최근 수정일"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__write_uid
@@ -503,28 +555,29 @@ msgstr "최근 갱신한 사람"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__write_date
 msgid "Last Updated on"
-msgstr "최근 갱신 날짜"
+msgstr "최근 갱신일"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_manage_attendances
-msgid "Manage Attendances"
-msgstr "근태 관리"
-
-#. module: hr_attendance
-#: model:res.groups,name:hr_attendance.group_hr_attendance_manager
 msgid "Manager"
 msgstr "관리자"
 
 #. module: hr_attendance
-#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__manual_attendance
 #: model:res.groups,name:hr_attendance.group_hr_attendance
 msgid "Manual Attendance"
 msgstr "근태 수동 관리"
 
 #. module: hr_attendance
+#. openerp-web
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Manually"
+msgstr "수동"
+
+#. module: hr_attendance
 #: model:ir.actions.client,name:hr_attendance.hr_attendance_action_greeting_message
 msgid "Message"
-msgstr "메세지"
+msgstr "메시지"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
@@ -547,19 +600,20 @@ msgid "No attendance records to display"
 msgstr "표시할 근태 기록이 없습니다."
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_employee.py:73
+#: code:addons/hr_attendance/models/hr_employee.py:0
 #, python-format
 msgid "No employee corresponding to barcode %(barcode)s"
 msgstr "%(barcode)s 바코드에 해당하는 직원이 없습니다."
 
 #. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
 msgid "Not available"
 msgstr "사용할 수 없음"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:132
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "OK"
 msgstr "확인"
@@ -570,33 +624,18 @@ msgid "Officer"
 msgstr "부서장"
 
 #. module: hr_attendance
-#: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__pin
-msgid "PIN"
-msgstr "사원번호"
-
-#. module: hr_attendance
-#: model:ir.model.fields,help:hr_attendance.field_hr_employee__pin
-msgid "PIN used to Check In/Out in Kiosk Mode (if enabled in Configuration)."
-msgstr "키오스크 모드에서 출근/퇴근하는 데 사용되는 사원번호입니다(환경 설정에서 활성화된 경우)."
-
-#. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:78
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Please enter your PIN to"
 msgstr "사원번호를 입력해 주십시오."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:96
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Please return to the main menu."
 msgstr "주 메뉴로 돌아가 주세요."
-
-#. module: hr_attendance
-#: model:ir.actions.report,name:hr_attendance.hr_employee_print_badge
-msgid "Print Badge"
-msgstr "배지 출력"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_report
@@ -605,17 +644,10 @@ msgstr "보고"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:18
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Scan your badge"
 msgstr "배치 검색"
-
-#. module: hr_attendance
-#. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:25
-#, python-format
-msgid "Select Employee"
-msgstr "직원 선택"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
@@ -625,47 +657,30 @@ msgstr "직원 상세 양식에서 사원번호 선택(인사 설정 탭에서).
 #. module: hr_attendance
 #: model:ir.actions.act_window,name:hr_attendance.action_hr_attendance_settings
 msgid "Settings"
-msgstr "설정"
+msgstr "환경 설정"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:46
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:74
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Sign in"
 msgstr "출근"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:45
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:73
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:98
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Sign out"
 msgstr "퇴근"
 
 #. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_filter_inherit_hr_attendance
-msgid "Signed In"
-msgstr "로그인함"
-
-#. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_filter_inherit_hr_attendance
-msgid "Signed Out"
-msgstr "로그아웃함"
-
-#. module: hr_attendance
-#: sql_constraint:hr.employee:0
-msgid ""
-"The Badge ID must be unique, this one is already assigned to another "
-"employee."
-msgstr "배지 ID는 고유해야 합니다. 이 ID는 이미 다른 직원에게 할당되었습니다."
-
-#. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_employee.py:64
+#: code:addons/hr_attendance/models/hr_employee.py:155
 #, python-format
-msgid "The PIN must be a sequence of digits."
-msgstr "사원번호는 숫자로 이루어져야 합니다."
+msgid "Such grouping is not allowed."
+msgstr ""
 
 #. module: hr_attendance
 #: model_terms:ir.actions.act_window,help:hr_attendance.hr_attendance_action
@@ -675,17 +690,10 @@ msgstr "직원들의 출석 기록이 여기에 표시됩니다."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/js/greeting_message.js:91
+#: code:addons/hr_attendance/static/src/js/greeting_message.js:0
 #, python-format
 msgid "The early bird catches the worm"
 msgstr "일찍 일어나는 새가 벌레를 잡아요."
-
-#. module: hr_attendance
-#: model:ir.model.fields,help:hr_attendance.field_hr_employee__manual_attendance
-msgid ""
-"The employee will have access to the \"My Attendances\" menu to check in and"
-" out from his session"
-msgstr "직원은 \"내 근태\" 메뉴에 접속하여 해당 세션에서 출근 및 퇴근을 할 수 있습니다."
 
 #. module: hr_attendance
 #: model:res.groups,comment:hr_attendance.group_hr_attendance
@@ -702,21 +710,34 @@ msgid ""
 msgstr "회사 화면에서 수동으로 출근하거나 퇴근하려면 사용자가 사원번호를 입력해야 합니다."
 
 #. module: hr_attendance
+#. openerp-web
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Today's work hours:"
+msgstr "오늘 근무 시간"
+
+#. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
 msgid "Use PIN codes to check in in Kiosk Mode"
 msgstr "사원번호를 사용하여 키오스크 모드에서 출근합니다."
 
 #. module: hr_attendance
+#: model:ir.model,name:hr_attendance.model_res_users
+msgid "Users"
+msgstr "사용자"
+
+#. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:44
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:71
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Want to check out?"
 msgstr "퇴근하실래요?"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:49
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid ""
 "Warning : Your user should be linked to an employee to use attendance. "
@@ -725,25 +746,30 @@ msgstr "경고 : 근태를 사용하려면 사용자가 직원과 연결돼야 �
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:122
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Welcome"
 msgstr "환영합니다."
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:13
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Welcome to"
 msgstr "환영합니다"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:44
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:71
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "Welcome!"
 msgstr "환영합니다!"
+
+#. module: hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_attendance.view_attendance_tree
+msgid "Work Hours"
+msgstr "근무 시간"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__worked_hours
@@ -751,48 +777,51 @@ msgid "Worked Hours"
 msgstr "근무시간"
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_employee.py:80
+#: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
+#: model_terms:ir.ui.view,arch_db:hr_attendance.view_employee_form_inherit_hr_attendance
+msgid "Worked hours last month"
+msgstr ""
+
+#. module: hr_attendance
+#: code:addons/hr_attendance/models/hr_employee.py:0
 #, python-format
 msgid "Wrong PIN"
 msgstr "사원번호가 잘못되었습니다."
 
 #. module: hr_attendance
-#: code:addons/hr_attendance/models/hr_attendance.py:103
+#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid "You cannot duplicate an attendance."
 msgstr "근태는 복제할 수 없습니다."
 
 #. module: hr_attendance
-#: model_terms:ir.ui.view,arch_db:hr_attendance.print_employee_badge
-msgid "barcode"
-msgstr "바코드"
-
-#. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:47
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:75
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:78
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "check in"
 msgstr "출근"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:47
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:75
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:78
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "check out"
 msgstr "퇴근"
 
 #. module: hr_attendance
 #: model:ir.model.fields,help:hr_attendance.field_hr_employee__attendance_ids
+#: model:ir.model.fields,help:hr_attendance.field_hr_employee_base__attendance_ids
+#: model:ir.model.fields,help:hr_attendance.field_hr_employee_public__attendance_ids
 msgid "list of attendances for the employee"
 msgstr "직원 근태 명단"
 
 #. module: hr_attendance
 #. openerp-web
-#: code:addons/hr_attendance/static/src/xml/attendance.xml:21
+#: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #, python-format
 msgid "or"
 msgstr "또는"

@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models
+from odoo import api, models
 
 
 class IrAttachment(models.Model):
     _inherit = 'ir.attachment'
 
-    @api.multi
     def _post_add_create(self):
         """ Overrides behaviour when the attachment is created through the controller
         """

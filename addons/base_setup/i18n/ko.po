@@ -1,21 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_setup
+# 	* base_setup
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Goh Gangtai <gangtai.goh@gmail.com>, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2019
+# Martin Trigaux, 2019
+# Goh Gangtai <gangtai.goh@gmail.com>, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Seongseok Shin <shinss61@hotmail.com>, 2019
+# Mark Lee <odoos@soti.33mail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-09-13 11:27+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: Linkup <link-up@naver.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,25 +26,67 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "(Community Edition)"
+msgstr "(커뮤니티 에디션)"
+
+#. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"<i class=\"fa fa-lg fa-building-o\"/>\n"
-"                                            <span class=\"text-muted\">\n"
-"                                                the creation of documents between your companies\n"
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&gt;', '1')]}\">\n"
+"                                            Active User\n"
+"                                        </span>\n"
+"                                        <span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&lt;=', '1')]}\">\n"
+"                                            Active Users\n"
+"                                        </span>\n"
+"\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                                Languages\n"
 "                                            </span>"
 msgstr ""
-"<i class=\"fa fa-lg fa-building-o\"/>\n"
-"                                            <span class=\"text-muted\">\n"
-"                                                회사간 문서 작성\n"
+"<span class=\"o_form_label\">\n"
+"                                                언어\n"
 "                                            </span>"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"<span class=\"o_form_label\">Document Template</span>\n"
+"<span class=\"o_form_label\">\n"
+"                                            Companies\n"
+"                                        </span>\n"
+"                                        <br/>"
+msgstr ""
+"<span class=\"o_form_label\">\n"
+"                                            회사\n"
+"                                        </span>\n"
+"                                        <br/>"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Document Layout</span>\n"
 "                                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
-"<span class=\"o_form_label\">문서 서식</span>\n"
+"<span class=\"o_form_label\">문서 양식</span>\n"
 "                                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: base_setup
@@ -57,13 +101,47 @@ msgstr ""
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
+"<strong>Save</strong> this page and come back here to choose your Geo "
+"Provider."
+msgstr "이 페이지를 <strong>저장</strong> 한뒤 다시 돌아와서 지리정보 제공자를 선택하십시오."
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
 "<strong>Save</strong> this page and come back here to set up the feature."
 msgstr "이 페이지를 <strong>저장</strong>한 후 여기로 돌아와 기능을 설정합니다."
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Access Rights"
-msgstr "사용 권한"
+msgid "About"
+msgstr ""
+
+#. module: base_setup
+#: code:addons/base_setup/controllers/main.py:0
+#, python-format
+msgid "Access Denied"
+msgstr "접근이 거부되었습니다"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode"
+msgstr "개발자모드 활성화하기"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode (with assets)"
+msgstr "개발자모드 활성화하기(정보 포함) "
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode (with tests assets)"
+msgstr "개발자모드 활성화하기(테스트 자료포함)"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -89,7 +167,7 @@ msgstr "다중 통화 환경에서의 작업 허용"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_voip
 msgid "Asterisk (VoIP)"
-msgstr "별표 (VoIP)"
+msgstr "Asterisk (VoIP)"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_google_drive
@@ -97,14 +175,16 @@ msgid "Attach Google documents to any record"
 msgstr "Google 문서 도구를 첨부하여 기록하기"
 
 #. module: base_setup
-#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_partner_autocomplete
-msgid "Auto-populate company data"
-msgstr "회사 데이터 자동 입력"
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Automatically enrich your contact base with company data"
+msgstr "자동으로 회사정보와 함께 연락처정보를 확장합니다"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Autocomplete company data (name, logo, address, etc.)"
-msgstr "회사 데이터 자동 완성 (이름, 로고, 주소 등)"
+msgid ""
+"Automatically generate counterpart documents for orders/invoices between "
+"companies"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -119,29 +199,13 @@ msgstr "기본적으로 새 사용자는 설치된 모든 앱에 대해 가장 �
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Change Document Template"
-msgstr "문서 서식 변경"
-
-#. module: base_setup
-#: code:addons/base_setup/models/res_config_settings.py:100
-#, python-format
-msgid "Choose Your Document Layout"
-msgstr "문서 유형 선택"
-
-#. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Choose your document's header and footer layout"
-msgstr "문서의 머리말 및 꼬리말 유형 선택"
+msgid "Choose the layout of your documents"
+msgstr "문서에 사용할 서식을 선택하세요"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_pad
 msgid "Collaborative Pads"
-msgstr "협업 패드"
-
-#. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Common Contact Book"
-msgstr "공통 주소록"
+msgstr "공동문서 편집도구"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -154,9 +218,24 @@ msgid "Company"
 msgstr "회사"
 
 #. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_informations
+msgid "Company Informations"
+msgstr "회사 정보"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_name
+msgid "Company Name"
+msgstr "회사명"
+
+#. module: base_setup
 #: model:ir.model,name:base_setup.model_res_config_settings
 msgid "Config Settings"
-msgstr "설정 구성"
+msgstr "설정"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Configure Document Layout"
+msgstr "문서 양식 설정"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -164,6 +243,18 @@ msgid ""
 "Configure company rules to automatically create SO/PO when one of your "
 "company sells/buys to another of your company."
 msgstr "회사가 다른 회사에 제품을 판매/구매할 때 판매 주문서/구매 주문서를 자동으로 생성하도록 회사 규칙을 구성합니다."
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Contacts"
+msgstr "연락처 관리"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Copyright © 2004"
+msgstr "Copyright © 2004"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -176,10 +267,24 @@ msgid "Custom Report Footer"
 msgstr "사용자 정의 보고서 꼬리말"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Deactivate the developer mode"
+msgstr "개발자모드 비활성화하기"
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__user_default_rights
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Default Access Rights"
 msgstr "기본 사용 권한"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Developer Tools"
+msgstr "개발자 도구"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__external_report_layout_id
@@ -192,6 +297,13 @@ msgid "Edit Layout"
 msgstr "배치 편집"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Enter e-mail address"
+msgstr "이메일 주소를 입력하세요"
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__external_email_server_default
 msgid "External Email Servers"
 msgstr "외부 이메일 서버"
@@ -199,9 +311,7 @@ msgstr "외부 이메일 서버"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Extract and analyze Odoo data from Google Spreadsheet"
-msgstr ""
-"31\n"
-"Google 스프레드 시트에서 Odoo 데이터 추출 및 분석"
+msgstr "Google 스프레드 시트에서 Odoo 데이터 추출 및 분석"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -219,6 +329,13 @@ msgid "Format"
 msgstr "형식"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "GNU LGPL Licensed"
+msgstr "GNU LGPL로 라이센스됨"
+
+#. module: base_setup
 #: model:ir.ui.menu,name:base_setup.menu_config
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "General Settings"
@@ -228,6 +345,21 @@ msgstr "일반 설정"
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Gengo Translations"
 msgstr "Gengo 번역"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Geo Localization"
+msgstr ""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_geolocalize
+msgid "GeoLocalize"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "GeoLocalize your partners"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -242,7 +374,7 @@ msgstr "구글 드라이브"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_google_spreadsheet
 msgid "Google Spreadsheet"
-msgstr "구글 스프레드쉬트"
+msgstr "구글 스프레드시트"
 
 #. module: base_setup
 #: model:ir.model,name:base_setup.model_ir_http
@@ -261,8 +393,22 @@ msgstr "연동"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Inter Company Flows"
-msgstr "회사간 업무 흐름"
+msgid "Inter-Company Transactions"
+msgstr "회사간 자료교환"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Invite"
+msgstr "초대"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Invite New Users"
+msgstr "새로운 사용자 초대"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_auth_ldap
@@ -271,19 +417,46 @@ msgid "LDAP Authentication"
 msgstr "LDAP 인증"
 
 #. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Languages"
+msgstr "언어"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Layout"
+msgstr "배치"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Load demo data"
+msgstr "시연 데이터 불러오기"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Companies"
+msgstr "회사 관리"
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_inter_company_rules
 msgid "Manage Inter Company"
 msgstr "회사 간 거래 관리"
 
 #. module: base_setup
-#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__group_multi_company
-msgid "Manage multiple companies"
-msgstr "복수 회사 관리"
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Languages"
+msgstr "언어 관리"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Manage multiple legal entities with separate accounting"
-msgstr "별도의 회계 처리를 통해 여러 법인을 관리합니다."
+msgid "Manage Users"
+msgstr "사용자 관리"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Multi-Company"
+msgstr "다중 회사"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__group_multi_currency
@@ -291,9 +464,19 @@ msgid "Multi-Currencies"
 msgstr "복수 통화"
 
 #. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Multi-companies"
-msgstr "복수 회사"
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__active_user_count
+msgid "Number of Active Users"
+msgstr "활성화된 사용자 수"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_count
+msgid "Number of Companies"
+msgstr "회사 수"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__language_count
+msgid "Number of Languages"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -301,14 +484,60 @@ msgid "OAuth Authentication"
 msgstr "OAuth 인증"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Odoo S.A."
+msgstr "Odoo S.A."
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "On Apple Store"
+msgstr "애플 앱스토어"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "On Google Play"
+msgstr "구글 플레이"
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__paperformat_id
 msgid "Paper format"
 msgstr "용지 형식"
 
 #. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_partner_autocomplete
+msgid "Partner Autocomplete"
+msgstr "협력사 자동 완성"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Pending Invitations:"
+msgstr "보류중인 초대:"
+
+#. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Preview Document"
 msgstr "문서 미리보기"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Send SMS"
+msgstr "SMS 보내기"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Send texts to your contacts"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -323,23 +552,7 @@ msgstr "인쇄 문서의 용지 형식 설정"
 #. module: base_setup
 #: model:ir.actions.act_window,name:base_setup.action_general_configuration
 msgid "Settings"
-msgstr "설정"
-
-#. module: base_setup
-#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_share_partner
-msgid "Share partners to all companies"
-msgstr "협력사를 모든 회사와 공유"
-
-#. module: base_setup
-#: model:ir.model.fields,help:base_setup.field_res_config_settings__company_share_partner
-msgid ""
-"Share your partners to all companies defined in your instance.\n"
-" * Checked : Partners are visible for every companies, even if a company is defined on the partner.\n"
-" * Unchecked : Each company can see only its partner (partners where company is defined). Partners not related to a company are visible for all companies."
-msgstr ""
-"이 예에서 파트너 (고객 또는 공급 업체)는 모든 회사에서 공유하도록 설정됩니다.\n"
-"* 선택 : 모든 파트너가 모든 회사에 표시됩니다.\n"
-"* 선택 취소 : 각 회사는 자체 정의 파트너만 볼 수 있습니다. 그러나 어떤 회사와도 제휴 관계가 없는 파트너는 모든 회사에서 보입니다."
+msgstr "환경 설정"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__show_effect
@@ -348,13 +561,27 @@ msgstr "효과 표시"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Statistics"
+msgstr "통계"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Synchronize your calendar with Google Calendar"
 msgstr "Google 캘린더와 내부 캘린더 동기화"
 
 #. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Template"
-msgstr "서식"
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#, python-format
+msgid "The following email addresses already exist: %s."
+msgstr "요청하신 이메일주소가 이미 존재합니다:%s."
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#, python-format
+msgid "The following email addresses are invalid: %s."
+msgstr "요청하신 이메일주소를 사용할 수 없습니다:%s."
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_gengo
@@ -370,6 +597,11 @@ msgstr "Gengo로 웹사이트를 번역합니다"
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_web_unsplash
 msgid "Unsplash Image Library"
 msgstr "Unsplash 이미지 라이브러리"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Update Info"
+msgstr "업데이트 정보"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -389,10 +621,14 @@ msgstr "외부 인증 공급자 (OAuth) 사용"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Use external pads in Odoo Notes"
-msgstr "Odoo Notes에서 외부 패드 사용"
+msgstr "Odoo Notes에서 외부 문서편집도구 사용"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#: model:ir.model,name:base_setup.model_res_users
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+#, python-format
 msgid "Users"
 msgstr "사용자"
 
@@ -403,3 +639,10 @@ msgid ""
 "companies. When selecting one item, the company data and logo are auto-"
 "filled."
 msgstr "주소록을 게시하면 시스템이 일치하는 회사 목록을 제공합니다. 하나를 선택하면 회사 데이터와 로고가 자동으로 채워집니다."
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "more"
+msgstr "더보기"

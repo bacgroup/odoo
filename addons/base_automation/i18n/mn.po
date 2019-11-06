@@ -1,17 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_automation
+# 	* base_automation
 # 
 # Translators:
+# Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2019
 # Martin Trigaux, 2019
+# nurbakhit nurka <nurbakhit@bumanit.mn>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 10:09+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
-"Last-Translator: Martin Trigaux, 2019\n"
+"POT-Creation-Date: 2019-10-07 07:12+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: nurbakhit nurka <nurbakhit@bumanit.mn>, 2019\n"
 "Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,19 +25,6 @@ msgstr ""
 #: model:mail.template,body_html:base_automation.test_mail_template_automation
 msgid "<div>Email automation</div>"
 msgstr ""
-
-#. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation__website_published
-msgid ""
-"A code server action can be executed from the website, using a dedicated "
-"controller. The address is <base>/website/action/<website_path>. Set this "
-"field as True to allow users to run this action. If it is set to False the "
-"action cannot be run through the website."
-msgstr ""
-"Зориулагдсан хянагчийг ашиглан кодын сервер үйлдлийг вэбсайтаас гүйцэтгэх "
-"боломжтой. Хаяг нь <base>/website/action/<website_path>. Энэ үйлдлийг "
-"хэрэглэгчид хийхийг зөвшөөрөхийн тулд энэ талбарыг True болгоорой. Хэрэв "
-"False байвал энэ үйлдлийг вэбсайтаас хийх боломжгүй болно."
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__help
@@ -50,7 +39,7 @@ msgstr "Үйлдлийн нэр"
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__state
 msgid "Action To Do"
-msgstr "Хийх Ажил"
+msgstr "Хийх ажил"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__type
@@ -89,15 +78,20 @@ msgid "Apply on"
 msgstr "Дараахад хэрэглэх"
 
 #. module: base_automation
+#: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_search
+msgid "Archived"
+msgstr "Архивласан"
+
+#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__is_assigned_to_admin
 msgid "Assigned to admin user"
 msgstr "Админ хэрэглэгчид оноосон"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
 #: model:ir.model,name:base_automation.model_base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__ir_actions_server__usage__base_automation
 msgid "Automated Action"
-msgstr ""
+msgstr "Автомат үйлдэл"
 
 #. module: base_automation
 #: model:ir.actions.act_window,name:base_automation.base_automation_act
@@ -119,11 +113,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_tree
 msgid "Automation"
 msgstr "Автоматжуулалт"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_published
-msgid "Available on the Website"
-msgstr "Вебсайт дээр бэлэн байгаа"
 
 #. module: base_automation
 #: model:ir.actions.server,name:base_automation.ir_cron_data_base_automation_check_ir_actions_server
@@ -169,18 +158,24 @@ msgid "Base Automation: test rule on write check context"
 msgstr ""
 
 #. module: base_automation
+#: model:base.automation,name:base_automation.test_rule_with_trigger
+#: model:ir.actions.server,name:base_automation.test_rule_with_trigger_ir_actions_server
+msgid "Base Automation: test rule with trigger"
+msgstr ""
+
+#. module: base_automation
 #: model:base.automation,name:base_automation.test_rule_on_write_recompute_send_email
 #: model:ir.actions.server,name:base_automation.test_rule_on_write_recompute_send_email_ir_actions_server
 msgid "Base Automation: test send an email"
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_change
 msgid "Based on Form Modification"
 msgstr "Маягтын өөрчлөлт дээр суурилсан"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_time
 msgid "Based on Timed Condition"
 msgstr "Хугацаат Нөхцөлд Суурилсан"
 
@@ -200,16 +195,19 @@ msgid "Binding Type"
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__binding_view_types
+msgid "Binding View Types"
+msgstr ""
+
+#. module: base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__cancel
 msgid "Cancelled"
 msgstr "Цуцлагдсан"
 
 #. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation_lead_test__customer
-msgid ""
-"Check this box if this contact is a customer. It can be selected in sales "
-"orders."
-msgstr ""
+#: model:ir.model.fields,help:base_automation.field_base_automation_lead_test__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Хэрэв холбогч нь ажилтан бол үүнийг тэмдэглэ."
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__child_ids
@@ -226,7 +224,7 @@ msgstr ""
 "бүгдэд хэрэглэгдэх ерөнхий буцах утга болж хэрэглэгдэнэ."
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__done
 msgid "Closed"
 msgstr "Хаагдсан"
 
@@ -245,17 +243,17 @@ msgstr "Эцсийн моделийг үүсгэх/бичих"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__create_uid
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__create_uid
 msgid "Created by"
-msgstr "Үүсгэгч"
+msgstr "Үүсгэсэн этгээд"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__create_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__create_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__create_date
 msgid "Created on"
-msgstr "Үүсгэсэн"
+msgstr "Үүсгэсэн огноо"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__day
 msgid "Days"
 msgstr "Өдөр"
 
@@ -295,7 +293,7 @@ msgstr "Туршилтын хувилбар"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__display_name
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__display_name
 msgid "Display Name"
-msgstr "Дэлгэцийн Нэр"
+msgstr "Дэлгэрэнгүй нэр"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__activity_date_deadline_range
@@ -310,7 +308,12 @@ msgstr ""
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__template_id
 msgid "Email Template"
-msgstr "Э-мэйл үлгэр"
+msgstr "Имэйл загвар"
+
+#. module: base_automation
+#: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__employee
+msgid "Employee"
+msgstr "Ажилтан"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__xml_id
@@ -318,7 +321,12 @@ msgid "External ID"
 msgstr "Гадаад ID"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__groups_id
+msgid "Groups"
+msgstr "Группүүд"
+
+#. module: base_automation
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__hour
 msgid "Hours"
 msgstr "Цаг"
 
@@ -351,14 +359,9 @@ msgid ""
 msgstr "Байгаа бол энэ нөхцөл нь бичлэгийг шинэчлэхийн биелж байх ёстой."
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__open
 msgid "In Progress"
-msgstr "Боловсруулагдаж буй"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__customer
-msgid "Is a Customer"
-msgstr "Захиалагч эсэх"
+msgstr "Явагдаж буй"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__date_action_last
@@ -370,7 +373,7 @@ msgstr "Сүүлийн арга хэмжээ"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test____last_update
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test____last_update
 msgid "Last Modified on"
-msgstr "Сүүлийн засвар хийсэн огноо"
+msgstr "Сүүлд зассан огноо"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__last_run
@@ -382,19 +385,19 @@ msgstr "Сүүлд Ажилласан"
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__write_uid
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__write_uid
 msgid "Last Updated by"
-msgstr "Сүүлийн засвар хийсэн"
+msgstr "Сүүлд зассан этгээд"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__write_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__write_date
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__write_date
 msgid "Last Updated on"
-msgstr "Сүүлийн засвар хийсэн огноо"
+msgstr "Сүүлд зассан огноо"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_line_test__lead_id
 msgid "Lead"
-msgstr "Удирдах"
+msgstr "Сэжим"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation_lead_test__line_ids
@@ -407,7 +410,7 @@ msgid "Link using field"
 msgstr "Талбарыг ашиглан холбох"
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__minutes
 msgid "Minutes"
 msgstr "Минут"
 
@@ -436,7 +439,7 @@ msgid "Model on which the server action runs."
 msgstr ""
 
 #. module: base_automation
-#: selection:base.automation,trg_date_range_type:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__month
 msgid "Months"
 msgstr "Сар"
 
@@ -446,7 +449,7 @@ msgid "Name"
 msgstr "Нэр"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__draft
 msgid "New"
 msgstr "Шинэ"
 
@@ -461,22 +464,22 @@ msgid "On Change Fields Trigger"
 msgstr "Өөрчлөлт дээр талбаруудын өдөөгч"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_create
 msgid "On Creation"
 msgstr "Үүсгэхэд"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_create_or_write
 msgid "On Creation & Update"
 msgstr "Үүсгэх болон шинэчлэхэд"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_unlink
 msgid "On Deletion"
 msgstr "Устгахад"
 
 #. module: base_automation
-#: selection:base.automation,trigger:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_write
 msgid "On Update"
 msgstr "Шинэчлэхэд"
 
@@ -495,7 +498,7 @@ msgid "Partner"
 msgstr "Харилцагч"
 
 #. module: base_automation
-#: selection:base.automation.lead.test,state:0
+#: model:ir.model.fields.selection,name:base_automation.selection__base_automation_lead_test__state__pending
 msgid "Pending"
 msgstr "Хүлээгдэж буй"
 
@@ -523,17 +526,11 @@ msgid "Responsible"
 msgstr "Хариуцагч"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
-msgid "Scheduled Action"
-msgstr "Товлосон Үйлдэл"
-
-#. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__sequence
 msgid "Sequence"
-msgstr "Дараалал"
+msgstr "Дугаарлалт"
 
 #. module: base_automation
-#: selection:ir.actions.server,usage:0
 #: model:ir.model,name:base_automation.model_ir_actions_server
 msgid "Server Action"
 msgstr "Сервер үйлдэл"
@@ -581,7 +578,7 @@ msgid "Technical name of the user on the record"
 msgstr ""
 
 #. module: base_automation
-#: code:addons/base_automation/models/base_automation.py:87
+#: code:addons/base_automation/models/base_automation.py:0
 #, python-format
 msgid ""
 "The \"%(trigger_value)s\" %(trigger_label)s can only be used with the "
@@ -589,9 +586,11 @@ msgid ""
 msgstr ""
 
 #. module: base_automation
-#: model:ir.model.fields,help:base_automation.field_base_automation__website_url
-msgid "The full URL to access the server action through the website."
-msgstr "Вебсайтан дамжин хандах сервер үйлдлийн бүтэн URL."
+#: model:ir.model.fields,help:base_automation.field_base_automation__trigger_field_ids
+msgid ""
+"The action will be triggered if and only if one of these fields is "
+"updated.If empty, all fields are watched."
+msgstr ""
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__trigger
@@ -608,11 +607,12 @@ msgstr "Гол огноо"
 msgid ""
 "Type of server action. The following values are available:\n"
 "- 'Execute Python Code': a block of python code that will be executed\n"
-"- 'Create or Copy a new Record': create a new record with new values, or copy an existing record in your database\n"
-"- 'Write on a Record': update the values of a record\n"
+"- 'Create': create a new record with new values\n"
+"- 'Update a Record': update the values of a record\n"
 "- 'Execute several actions': define an action that triggers several other server actions\n"
-"- 'Add Followers': add followers to a record (available in Discuss)\n"
-"- 'Send Email': automatically send an email (available in email_template)"
+"- 'Send Email': automatically send an email (Discuss)\n"
+"- 'Add Followers': add followers to a record (Discuss)\n"
+"- 'Create Next Activity': create an activity (Discuss)"
 msgstr ""
 
 #. module: base_automation
@@ -660,20 +660,15 @@ msgid "Value Mapping"
 msgstr "Утга харгалзуулалт"
 
 #. module: base_automation
-#: code:addons/base_automation/models/base_automation.py:86
+#: code:addons/base_automation/models/base_automation.py:0
 #, python-format
 msgid "Warning"
 msgstr "Анхааруулга"
 
 #. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_path
-msgid "Website Path"
-msgstr "Вебсайтын зам"
-
-#. module: base_automation
-#: model:ir.model.fields,field_description:base_automation.field_base_automation__website_url
-msgid "Website Url"
-msgstr "Вебсайтын Url"
+#: model:ir.model.fields,field_description:base_automation.field_base_automation__trigger_field_ids
+msgid "Watched fields"
+msgstr ""
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__trg_date_calendar_id

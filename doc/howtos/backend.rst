@@ -53,11 +53,18 @@ Business objects
     Declared as Python classes, these resources are automatically persisted
     by Odoo based on their configuration
 
-Data files
-    XML or CSV files declaring metadata (views or reports), configuration
-    data (modules parameterization), demonstration data and more
+:ref:`Object views <reference/views>`
+    Definition of business objects UI display
 
-Web controllers
+:ref:`Data files <reference/data>`
+    XML or CSV files declaring the model metadata :
+
+    * :ref:`views <reference/views>` or :ref:`reports <reference/reports>`,
+    * configuration data (modules parametrization, :ref:`security rules <reference/security>`),
+    * demonstration data
+    * and more
+
+:ref:`Web controllers <reference/controllers>`
     Handle requests from web browsers
 
 Static web data
@@ -789,7 +796,6 @@ method should simply set the value of the field to compute on every record in
 
         name = fields.Char(compute='_compute_name')
 
-        @api.multi
         def _compute_name(self):
             for record in self:
                 record.name = str(random.randint(1, 1e6))
@@ -1386,7 +1392,7 @@ Wizards are launched by ``ir.actions.act_window`` records, with the field
 popup window. The action may be triggered by a menu item.
 
 There is another way to launch the wizard: using an ``ir.actions.act_window``
-record like above, but with an extra field ``src_model`` that specifies in the
+record like above, but with an extra field ``binding_model_id`` that specifies in the
 context of which model the action is available. The wizard will appear in the
 contextual actions of the model, above the main view. Because of some internal
 hooks in the ORM, such an action is declared in XML with the tag ``act_window``.
@@ -1395,11 +1401,10 @@ hooks in the ORM, such an action is declared in XML with the tag ``act_window``.
 
     <act_window id="launch_the_wizard"
                 name="Launch the Wizard"
-                src_model="context.model.name"
+                binding_model="context.model.name"
                 res_model="wizard.model.name"
                 view_mode="form"
-                target="new"
-                key2="client_action_multi"/>
+                target="new"/>
 
 Wizards use regular views and their buttons may use the attribute
 ``special="cancel"`` to close the wizard window without saving.

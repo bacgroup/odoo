@@ -48,6 +48,9 @@ var AbstractMessage =  Class.extend({
         this._type = data.message_type || undefined;
 
         this._processAttachmentURL();
+        this._attachmentIDs.forEach(function (attachment) {
+            attachment.filename = attachment.filename || attachment.name || _t("unnamed");
+        });
     },
 
     //--------------------------------------------------------------------------
@@ -74,6 +77,14 @@ var AbstractMessage =  Class.extend({
             return -1;
         }
         return this._serverAuthorID[0];
+    },
+    /**
+     * Threads do not have an im status by default
+     *
+     * @return {undefined}
+     */
+    getAuthorImStatus: function () {
+        return undefined;
     },
     /**
      * Get the relative url of the avatar to display next to the message
@@ -239,6 +250,16 @@ var AbstractMessage =  Class.extend({
      */
     hasSubject: function () {
         return false;
+    },
+    /**
+     * State whether this message is empty
+     *
+     * @return {boolean}
+     */
+    isEmpty: function () {
+        return !this.hasTrackingValues() &&
+        !this.hasAttachments() &&
+        !this.getBody();
     },
     /**
      * By default, messages do not have any subtype description

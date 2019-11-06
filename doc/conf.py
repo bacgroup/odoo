@@ -9,7 +9,7 @@ DIR = os.path.dirname(__file__)
 sys.path.insert(0,
     os.path.abspath(
         os.path.join(DIR, '_extensions')))
-# autodoc
+# put current odoo's source on PYTHONPATH for autodoc
 sys.path.insert(0, os.path.abspath(os.path.join(DIR, '..')))
 
 # -- General configuration -----------------------------------------------------
@@ -25,7 +25,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.linkcode',
-    'autojsdoc.ext',
+    # 'autojsdoc.ext',
     'github_link',
     'odoo_ext',
     'html_domain',
@@ -54,9 +54,9 @@ copyright = u'Odoo S.A.'
 # built documents.
 #
 # The short X.Y version.
-version = '12.0'
+version = '13.0'
 # The full version, including alpha/beta/rc tags.
-release = '12.0'
+release = '13.0'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:

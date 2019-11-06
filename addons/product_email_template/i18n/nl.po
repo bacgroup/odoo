@@ -1,18 +1,18 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * product_email_template
+# 	* product_email_template
 # 
 # Translators:
-# Yenthe Van Ginneken <yenthespam@gmail.com>, 2018
 # Martin Trigaux, 2019
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2019
 # Erwin van der Ploeg <erwin@odooexperts.nl>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2018-08-24 09:23+0000\n"
+"POT-Creation-Date: 2019-08-12 11:32+0000\n"
+"PO-Revision-Date: 2019-08-26 09:13+0000\n"
 "Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>, 2019\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -38,9 +38,9 @@ msgid "Email Template"
 msgstr "E-mailsjabloon"
 
 #. module: product_email_template
-#: model:ir.model,name:product_email_template.model_account_invoice
-msgid "Invoice"
-msgstr "Factuur"
+#: model:ir.model,name:product_email_template.model_account_move
+msgid "Journal Entries"
+msgstr "Boekingen"
 
 #. module: product_email_template
 #: model:ir.model.fields,field_description:product_email_template.field_product_product__email_template_id
@@ -67,6 +67,6 @@ msgid ""
 "this template. The customer will receive an email for each product linked to"
 " an email template."
 msgstr ""
-"Wanneer u een factuur valideert wordt er een e-mail verzonden naar de klant "
+"Wanneer u een factuur bevestigd wordt er een e-mail verzonden naar de klant "
 "gebaseerd op het sjabloon. De klant ontvangt een e-mail voor elk product "
 "gelinkt aan een e-mailsjabloon."

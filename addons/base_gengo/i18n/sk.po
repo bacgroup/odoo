@@ -1,20 +1,20 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_gengo
+# 	* base_gengo
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2018
-# gebri <gebri@inmail.sk>, 2018
-# Jan Prokop, 2018
+# Martin Trigaux, 2019
+# Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2019
+# gebri <gebri@inmail.sk>, 2019
+# Jan Prokop, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 11:11+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
-"Last-Translator: Jan Prokop, 2018\n"
+"POT-Creation-Date: 2019-08-26 08:16+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: Jan Prokop, 2019\n"
 "Language-Team: Slovak (https://www.transifex.com/odoo/teams/41243/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,7 +70,7 @@ msgid "Base Gengo Translations"
 msgstr ""
 
 #. module: base_gengo
-#: selection:base.gengo.translations,sync_type:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__base_gengo_translations__sync_type__both
 msgid "Both"
 msgstr "Obe"
 
@@ -173,7 +173,7 @@ msgid "Gengo Translation Service Level"
 msgstr "Úroveň Gengo prekladateľskej služby"
 
 #. module: base_gengo
-#: code:addons/base_gengo/wizard/base_gengo_translations.py:85
+#: code:addons/base_gengo/wizard/base_gengo_translations.py:0
 #, python-format
 msgid ""
 "Gengo `Public Key` or `Private Key` are missing. Enter your Gengo "
@@ -183,7 +183,7 @@ msgstr ""
 " parametre pod 'Nastavenia > Spoločnosti > Gengo parametre'."
 
 #. module: base_gengo
-#: code:addons/base_gengo/wizard/base_gengo_translations.py:96
+#: code:addons/base_gengo/wizard/base_gengo_translations.py:0
 #, python-format
 msgid ""
 "Gengo connection failed with this message:\n"
@@ -254,7 +254,7 @@ msgid "Private Key"
 msgstr "Súkromný kľúč"
 
 #. module: base_gengo
-#: selection:ir.translation,gengo_translation:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__ir_translation__gengo_translation__pro
 msgid "Pro"
 msgstr "Pro"
 
@@ -264,7 +264,7 @@ msgid "Public Key"
 msgstr "Verejný kľúč"
 
 #. module: base_gengo
-#: selection:base.gengo.translations,sync_type:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__base_gengo_translations__sync_type__receive
 msgid "Receive Translation"
 msgstr "Obdržať preklad"
 
@@ -281,12 +281,12 @@ msgid "Send"
 msgstr "Poslať"
 
 #. module: base_gengo
-#: selection:base.gengo.translations,sync_type:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__base_gengo_translations__sync_type__send
 msgid "Send New Terms"
 msgstr "Poslať nové výrazy"
 
 #. module: base_gengo
-#: selection:ir.translation,gengo_translation:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__ir_translation__gengo_translation__standard
 msgid "Standard"
 msgstr "Štandard"
 
@@ -296,7 +296,7 @@ msgid "Sync Type"
 msgstr "Typ synchronizácie"
 
 #. module: base_gengo
-#: code:addons/base_gengo/wizard/base_gengo_translations.py:115
+#: code:addons/base_gengo/wizard/base_gengo_translations.py:0
 #, python-format
 msgid ""
 "The number of terms to sync should be between 1 to 200 to work with Gengo "
@@ -321,7 +321,7 @@ msgstr ""
 "Gengo"
 
 #. module: base_gengo
-#: code:addons/base_gengo/wizard/base_gengo_translations.py:110
+#: code:addons/base_gengo/wizard/base_gengo_translations.py:0
 #, python-format
 msgid "This language is not supported by the Gengo translation services."
 msgstr "Tento jazyk nie je podporovaný Gengo prekladovými službami,"
@@ -337,12 +337,12 @@ msgid "Translation"
 msgstr "Preklad"
 
 #. module: base_gengo
-#: selection:ir.translation,gengo_translation:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__ir_translation__gengo_translation__machine
 msgid "Translation By Machine"
 msgstr "Strojový preklad"
 
 #. module: base_gengo
-#: selection:ir.translation,gengo_translation:0
+#: model:ir.model.fields.selection,name:base_gengo.selection__ir_translation__gengo_translation__ultra
 msgid "Ultra"
 msgstr "Ultra"
 

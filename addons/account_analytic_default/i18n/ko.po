@@ -1,20 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * account_analytic_default
+# 	* account_analytic_default
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Link Up링크업 <linkup.way@gmail.com>, 2018
-# Linkup <link-up@naver.com>, 2019
+# Martin Trigaux, 2019
 # JH CHOI <hwangtog@gmail.com>, 2019
+# Link Up링크업 <linkup.way@gmail.com>, 2019
+# Linkup <link-up@naver.com>, 2019
+# Mark Lee <odoos@soti.33mail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-18 09:49+0000\n"
-"PO-Revision-Date: 2018-08-24 09:15+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-08-12 11:31+0000\n"
+"PO-Revision-Date: 2019-08-26 09:07+0000\n"
+"Last-Translator: Mark Lee <odoos@soti.33mail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,12 +39,18 @@ msgid "<strong>Product</strong>"
 msgstr "<strong>제품</strong>"
 
 #. module: account_analytic_default
+#: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__account_id
+#: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form
+msgid "Account"
+msgstr "계정"
+
+#. module: account_analytic_default
 #: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Accounts"
 msgstr "계정"
 
 #. module: account_analytic_default
-#: code:addons/account_analytic_default/models/account_analytic_default.py:27
+#: code:addons/account_analytic_default/models/account_analytic_default.py:28
 #, python-format
 msgid ""
 "An analytic default requires at least an analytic account or an analytic "
@@ -54,7 +61,12 @@ msgstr "분석 기본값에는 최소한 분석 계정 또는 분석 태그가 �
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__analytic_id
 #: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Analytic Account"
-msgstr "분석 계정"
+msgstr "분석적 계정"
+
+#. module: account_analytic_default
+#: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form
+msgid "Analytic Default Rule"
+msgstr ""
 
 #. module: account_analytic_default
 #: model:ir.actions.act_window,name:account_analytic_default.action_analytic_default_list
@@ -94,7 +106,7 @@ msgstr "조건"
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__create_uid
 msgid "Created by"
-msgstr "작성자"
+msgstr "작성인"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__create_date
@@ -119,7 +131,7 @@ msgstr "이 분석 계정의 기본 시작일입니다."
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__display_name
 msgid "Display Name"
-msgstr "제목"
+msgstr "표시 이름"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__date_stop
@@ -135,7 +147,7 @@ msgstr "분석 분포 목록을 표시할 때 순서를 부여합니다."
 #. module: account_analytic_default
 #: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Group By"
-msgstr "그룹별"
+msgstr "그룹화"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__id
@@ -143,9 +155,9 @@ msgid "ID"
 msgstr "ID"
 
 #. module: account_analytic_default
-#: model:ir.model,name:account_analytic_default.model_account_invoice_line
-msgid "Invoice Line"
-msgstr "청구서 항목"
+#: model:ir.model,name:account_analytic_default.model_account_move_line
+msgid "Journal Item"
+msgstr "분개 항목"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default____last_update
@@ -160,7 +172,7 @@ msgstr "최근 갱신한 사람"
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__write_date
 msgid "Last Updated on"
-msgstr "최근 갱신 날짜"
+msgstr "최근 갱신일"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__partner_id
@@ -173,11 +185,6 @@ msgstr "협력사"
 #: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form_search
 msgid "Product"
 msgstr "상품"
-
-#. module: account_analytic_default
-#: model:ir.model,name:account_analytic_default.model_sale_order_line
-msgid "Sales Order Line"
-msgstr "판매 주문 명세"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default__company_id
@@ -216,14 +223,27 @@ msgid ""
 msgstr "분석 기본값에 지정된 분석 계정을 사용할 사용자를 선택합니다."
 
 #. module: account_analytic_default
+#: model:ir.model.fields,help:account_analytic_default.field_account_analytic_default__account_id
+msgid ""
+"Select an accounting account which will use analytic account specified in "
+"analytic default (e.g. create new customer invoice or Sales order if we "
+"select this account, it will automatically take this as an analytic account)"
+msgstr ""
+
+#. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__sequence
 msgid "Sequence"
-msgstr "순차적"
+msgstr "순서"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__date_start
 msgid "Start Date"
 msgstr "시작일"
+
+#. module: account_analytic_default
+#: model_terms:ir.ui.view,arch_db:account_analytic_default.view_account_analytic_default_form
+msgid "Tags"
+msgstr "태그"
 
 #. module: account_analytic_default
 #: model:ir.model.fields,field_description:account_analytic_default.field_account_analytic_default__user_id

@@ -1,17 +1,18 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * fetchmail
+# 	* fetchmail
 # 
 # Translators:
-# Martin Trigaux, 2018
+# Martin Trigaux, 2019
+# Leon Grill <leg@odoo.com>, 2019
 # Chris Egal <sodaswed@web.de>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-18 09:49+0000\n"
-"PO-Revision-Date: 2018-08-24 09:17+0000\n"
+"POT-Creation-Date: 2019-08-26 08:16+0000\n"
+"PO-Revision-Date: 2019-08-26 09:10+0000\n"
 "Last-Translator: Chris Egal <sodaswed@web.de>, 2019\n"
 "Language-Team: German (https://www.transifex.com/odoo/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
@@ -41,18 +42,23 @@ msgid "Advanced Options"
 msgstr "Erweiterte Optionen"
 
 #. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "Archived"
+msgstr "Archiviert"
+
+#. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__configuration
 #: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
 msgid "Configuration"
 msgstr "Konfiguration"
 
 #. module: fetchmail
-#: selection:fetchmail.server,state:0
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__state__done
 msgid "Confirmed"
 msgstr "Bestätigt"
 
 #. module: fetchmail
-#: code:addons/fetchmail/models/fetchmail.py:136
+#: code:addons/fetchmail/models/fetchmail.py:0
 #, python-format
 msgid "Connection test failed: %s"
 msgstr "Verbindungstest scheiterte: %s"
@@ -119,7 +125,7 @@ msgid "IMAP"
 msgstr "IMAP"
 
 #. module: fetchmail
-#: selection:fetchmail.server,type:0
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__server_type__imap
 msgid "IMAP Server"
 msgstr "IMAP Server"
 
@@ -139,6 +145,7 @@ msgid "Incoming Email Servers"
 msgstr "Eingehender Mail-Server"
 
 #. module: fetchmail
+#: model:ir.model,name:fetchmail.model_fetchmail_server
 #: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
 #: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
 msgid "Incoming Mail Server"
@@ -181,7 +188,7 @@ msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
 #. module: fetchmail
-#: selection:fetchmail.server,type:0
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__server_type__local
 msgid "Local Server"
 msgstr "Lokaler Server"
 
@@ -209,7 +216,7 @@ msgid "Name"
 msgstr "Name"
 
 #. module: fetchmail
-#: selection:fetchmail.server,state:0
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__state__draft
 msgid "Not Confirmed"
 msgstr "Nicht bestätigt"
 
@@ -229,14 +236,9 @@ msgid "POP"
 msgstr "POP"
 
 #. module: fetchmail
-#: selection:fetchmail.server,type:0
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__server_type__pop
 msgid "POP Server"
 msgstr "POP Server"
-
-#. module: fetchmail
-#: model:ir.model,name:fetchmail.model_fetchmail_server
-msgid "POP/IMAP Server"
-msgstr "POP/IMAP Server"
 
 #. module: fetchmail
 #: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_tree
@@ -310,7 +312,7 @@ msgid "Server Priority"
 msgstr "Server-Priorität"
 
 #. module: fetchmail
-#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__type
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__server_type
 msgid "Server Type"
 msgstr "Servertyp"
 

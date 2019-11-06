@@ -1,21 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_setup
+# 	* base_setup
 # 
 # Translators:
-# Martin Trigaux, 2018
-# ExcaliberX <excaliberx@gmail.com>, 2018
-# Yihya Hugirat <hugirat@gmail.com>, 2018
-# hed shefetr <hed@laylinetech.com>, 2018
+# Martin Trigaux, 2019
+# Fishfur A Banter <fishfurbanter@gmail.com>, 2019
+# ExcaliberX <excaliberx@gmail.com>, 2019
+# Yihya Hugirat <hugirat@gmail.com>, 2019
+# hed shefetr <hed@laylinetech.com>, 2019
 # דודי מלכה <Dudimalka6@gmail.com>, 2019
+# Amit Spilman <amit@laylinetech.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2018-08-24 09:16+0000\n"
-"Last-Translator: דודי מלכה <Dudimalka6@gmail.com>, 2019\n"
+"POT-Creation-Date: 2019-09-13 11:27+0000\n"
+"PO-Revision-Date: 2019-08-26 09:09+0000\n"
+"Last-Translator: Amit Spilman <amit@laylinetech.com>, 2019\n"
 "Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +26,59 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
 #. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid ""
-"<i class=\"fa fa-lg fa-building-o\"/>\n"
-"                                            <span class=\"text-muted\">\n"
-"                                                the creation of documents between your companies\n"
-"                                            </span>"
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "(Community Edition)"
 msgstr ""
-"<i class=\"fa fa-lg fa-building-o\"/>\n"
-"                                            <span class=\"text-muted\">\n"
-"                                                יצירת מסמכים בין החברות שלך\n"
-"                                            </span>"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
-"<span class=\"o_form_label\">Document Template</span>\n"
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&gt;', '1')]}\">\n"
+"                                            Active User\n"
+"                                        </span>\n"
+"                                        <span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&lt;=', '1')]}\">\n"
+"                                            Active Users\n"
+"                                        </span>\n"
+"\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                                Languages\n"
+"                                            </span>"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                            Companies\n"
+"                                        </span>\n"
+"                                        <br/>"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Document Layout</span>\n"
 "                                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
-"<span class=\"o_form_label\">תבנית מסמך</span>\n"
-"                                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -57,13 +92,47 @@ msgstr ""
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid ""
+"<strong>Save</strong> this page and come back here to choose your Geo "
+"Provider."
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
 "<strong>Save</strong> this page and come back here to set up the feature."
 msgstr "<strong>שמור</strong> דף זה וחזור לכאן כדי להגדיר את התכונה."
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Access Rights"
-msgstr "זכויות גישה"
+msgid "About"
+msgstr ""
+
+#. module: base_setup
+#: code:addons/base_setup/controllers/main.py:0
+#, python-format
+msgid "Access Denied"
+msgstr "הגישה נדחתה"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode"
+msgstr "הפעלת מצב פיתוח"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode (with assets)"
+msgstr ""
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode (with tests assets)"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -97,14 +166,16 @@ msgid "Attach Google documents to any record"
 msgstr "צרף את מסמכי Google לכל רשומה"
 
 #. module: base_setup
-#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_partner_autocomplete
-msgid "Auto-populate company data"
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Automatically enrich your contact base with company data"
 msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Autocomplete company data (name, logo, address, etc.)"
-msgstr "השלמה אוטומטית של נתוני החברה (שם, לוגו, כתובת וכו ')"
+msgid ""
+"Automatically generate counterpart documents for orders/invoices between "
+"companies"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -121,28 +192,12 @@ msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Change Document Template"
-msgstr "שינוי תבנית מסמך"
-
-#. module: base_setup
-#: code:addons/base_setup/models/res_config_settings.py:100
-#, python-format
-msgid "Choose Your Document Layout"
-msgstr "בחר את פריסת המסמכים שלך"
-
-#. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Choose your document's header and footer layout"
-msgstr "בחר פריסת כותרת עליונה וכותרת תחתונה של המסמך שלך"
+msgid "Choose the layout of your documents"
+msgstr ""
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_pad
 msgid "Collaborative Pads"
-msgstr ""
-
-#. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Common Contact Book"
 msgstr ""
 
 #. module: base_setup
@@ -156,9 +211,24 @@ msgid "Company"
 msgstr "חברה"
 
 #. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_informations
+msgid "Company Informations"
+msgstr ""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_name
+msgid "Company Name"
+msgstr "שם החברה"
+
+#. module: base_setup
 #: model:ir.model,name:base_setup.model_res_config_settings
 msgid "Config Settings"
 msgstr "הגדרות תצורה"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Configure Document Layout"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -171,6 +241,18 @@ msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Contacts"
+msgstr "אנשי קשר"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Copyright © 2004"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Create and attach Google Drive documents to any record"
 msgstr "צור וצרף מסמכים של Google Drive לכל רשומה"
 
@@ -180,10 +262,24 @@ msgid "Custom Report Footer"
 msgstr "כותרת תחתונה מותאמת אישית"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Deactivate the developer mode"
+msgstr ""
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__user_default_rights
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Default Access Rights"
 msgstr "זכויות גישה המוגדרות כברירת מחדל"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Developer Tools"
+msgstr ""
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__external_report_layout_id
@@ -193,6 +289,13 @@ msgstr "תבנית מסמך"
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Edit Layout"
+msgstr ""
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Enter e-mail address"
 msgstr ""
 
 #. module: base_setup
@@ -221,6 +324,13 @@ msgid "Format"
 msgstr "תבנית"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "GNU LGPL Licensed"
+msgstr ""
+
+#. module: base_setup
 #: model:ir.ui.menu,name:base_setup.menu_config
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "General Settings"
@@ -230,6 +340,21 @@ msgstr "הגדרות כלליות"
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Gengo Translations"
 msgstr "תרגומים של Gengo"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Geo Localization"
+msgstr ""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_geolocalize
+msgid "GeoLocalize"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "GeoLocalize your partners"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -263,8 +388,22 @@ msgstr "אינטגרציות"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Inter Company Flows"
-msgstr "תזרימי חברה"
+msgid "Inter-Company Transactions"
+msgstr ""
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Invite"
+msgstr ""
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Invite New Users"
+msgstr ""
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_auth_ldap
@@ -273,19 +412,46 @@ msgid "LDAP Authentication"
 msgstr "אימות LDAP"
 
 #. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Languages"
+msgstr "שפות"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Layout"
+msgstr "פריסה"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Load demo data"
+msgstr "טען נתוני הדגמה"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Companies"
+msgstr ""
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_inter_company_rules
 msgid "Manage Inter Company"
 msgstr ""
 
 #. module: base_setup
-#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__group_multi_company
-msgid "Manage multiple companies"
-msgstr "נהל חברות מרובות"
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Languages"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Manage multiple legal entities with separate accounting"
-msgstr "ניהול מספר ישויות משפטיות עם חשבונאות נפרדת"
+msgid "Manage Users"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Multi-Company"
+msgstr ""
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__group_multi_currency
@@ -293,9 +459,19 @@ msgid "Multi-Currencies"
 msgstr "מטבעות מרובים"
 
 #. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Multi-companies"
-msgstr "ריבוי חברות"
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__active_user_count
+msgid "Number of Active Users"
+msgstr ""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_count
+msgid "Number of Companies"
+msgstr "כמות חברות"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__language_count
+msgid "Number of Languages"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -303,14 +479,60 @@ msgid "OAuth Authentication"
 msgstr "אימות OAuth"
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Odoo S.A."
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "On Apple Store"
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "On Google Play"
+msgstr ""
+
+#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__paperformat_id
 msgid "Paper format"
 msgstr "פורמט נייר"
 
 #. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_partner_autocomplete
+msgid "Partner Autocomplete"
+msgstr ""
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Pending Invitations:"
+msgstr ""
+
+#. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
 msgid "Preview Document"
 msgstr "תצוגה מקדימה של מסמך"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Send SMS"
+msgstr "שלח SMS"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Send texts to your contacts"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -328,22 +550,14 @@ msgid "Settings"
 msgstr "הגדרות"
 
 #. module: base_setup
-#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_share_partner
-msgid "Share partners to all companies"
-msgstr "שתף שותפים לכל החברות"
-
-#. module: base_setup
-#: model:ir.model.fields,help:base_setup.field_res_config_settings__company_share_partner
-msgid ""
-"Share your partners to all companies defined in your instance.\n"
-" * Checked : Partners are visible for every companies, even if a company is defined on the partner.\n"
-" * Unchecked : Each company can see only its partner (partners where company is defined). Partners not related to a company are visible for all companies."
-msgstr ""
-
-#. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__show_effect
 msgid "Show Effect"
 msgstr "הצג אפקט"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Statistics"
+msgstr "סטטיסטיקה"
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -351,9 +565,18 @@ msgid "Synchronize your calendar with Google Calendar"
 msgstr "סנכרן את היומן עם יומן Google"
 
 #. module: base_setup
-#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
-msgid "Template"
-msgstr "תבנית"
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#, python-format
+msgid "The following email addresses already exist: %s."
+msgstr ""
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#, python-format
+msgid "The following email addresses are invalid: %s."
+msgstr ""
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_gengo
@@ -369,6 +592,11 @@ msgstr "תרגם את האתר שלך עם Gengo"
 #: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_web_unsplash
 msgid "Unsplash Image Library"
 msgstr "ספריית תמונות Unplash"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Update Info"
+msgstr ""
 
 #. module: base_setup
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
@@ -391,7 +619,11 @@ msgid "Use external pads in Odoo Notes"
 msgstr ""
 
 #. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#: model:ir.model,name:base_setup.model_res_users
 #: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+#, python-format
 msgid "Users"
 msgstr "משתמשים"
 
@@ -404,3 +636,10 @@ msgid ""
 msgstr ""
 "בעת אכלוס פנקס הכתובות שלך, Odoo מספק רשימה של חברות תואמות. בעת בחירת פריט "
 "אחד, נתוני החברה והלוגו מלאים אוטומטית."
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "more"
+msgstr "עוד"

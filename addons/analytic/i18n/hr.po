@@ -1,24 +1,25 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * analytic
+# 	* analytic
 # 
 # Translators:
 # Martin Trigaux, 2019
+# Bole <bole@dajmi5.com>, 2019
 # Vladimir Olujić <olujic.vladimir@storm.hr>, 2019
 # Đurđica Žarković <durdica.zarkovic@storm.hr>, 2019
 # Ivica Dimjašević <ivica.dimjasevic@storm.hr>, 2019
 # Karolina Tonković <karolina.tonkovic@storm.hr>, 2019
 # Tina Milas, 2019
 # Stjepan Lovasić <stjepan.lovasic@gmail.com>, 2019
-# Bole <bole@dajmi5.com>, 2019
+# Milan Tribuson <one.mile.code@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 10:09+0000\n"
-"PO-Revision-Date: 2018-08-24 09:15+0000\n"
-"Last-Translator: Bole <bole@dajmi5.com>, 2019\n"
+"POT-Creation-Date: 2019-09-09 12:17+0000\n"
+"PO-Revision-Date: 2019-08-26 09:08+0000\n"
+"Last-Translator: Milan Tribuson <one.mile.code@gmail.com>, 2019\n"
 "Language-Team: Croatian (https://www.transifex.com/odoo/teams/41243/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -146,6 +147,7 @@ msgid "Analytic Tags"
 msgstr "Oznake analitike"
 
 #. module: analytic
+#: model_terms:ir.ui.view,arch_db:analytic.account_analytic_tag_view_search
 #: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_account_search
 msgid "Archived"
 msgstr "Arhivirano"
@@ -170,6 +172,11 @@ msgstr "Saldo"
 #: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_account_kanban
 msgid "Balance:"
 msgstr "Saldo"
+
+#. module: analytic
+#: model:ir.model.fields,field_description:analytic.field_account_analytic_line__product_uom_category_id
+msgid "Category"
+msgstr "Kategorija"
 
 #. module: analytic
 #: model:ir.actions.act_window,name:analytic.action_analytic_account_form
@@ -203,6 +210,16 @@ msgstr "Tvrtka"
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_group__complete_name
 msgid "Complete Name"
 msgstr "Puni naziv"
+
+#. module: analytic
+#: model:ir.model.fields,help:analytic.field_account_analytic_line__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"Konverzija jedinica mjere može se vršiti samo za jedinice mjere koje "
+"pripadaju istoj kategoriji. Konverzija će se izvršiti temeljem omjera "
+"jedinica mjere."
 
 #. module: analytic
 #: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_account_form
@@ -261,6 +278,7 @@ msgstr "Kupac"
 
 #. module: analytic
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_line__date
+#: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_line_filter
 msgid "Date"
 msgstr "Datum"
 
@@ -283,7 +301,7 @@ msgstr "Opis"
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_line__display_name
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_tag__display_name
 msgid "Display Name"
-msgstr "Naziv za prikaz"
+msgstr "Naziv"
 
 #. module: analytic
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_account__message_follower_ids
@@ -322,19 +340,15 @@ msgid "ID"
 msgstr "ID"
 
 #. module: analytic
-#: model:ir.model.fields,help:analytic.field_account_analytic_account__message_unread
-msgid "If checked new messages require your attention."
-msgstr "Ako je odabrano, nove poruke zahtijevaju Vašu pažnju."
-
-#. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_account__message_needaction
+#: model:ir.model.fields,help:analytic.field_account_analytic_account__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Ako je označeno, nove poruke zahtijevaju Vašu pažnju."
 
 #. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_account__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "Ako je označeno neke poruke mogu imati grešku u dostavi."
 
 #. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_account__active
@@ -425,7 +439,7 @@ msgstr "Broj akcija"
 
 #. module: analytic
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_account__message_has_error_counter
-msgid "Number of error"
+msgid "Number of errors"
 msgstr "Broj grešaka"
 
 #. module: analytic
@@ -498,6 +512,11 @@ msgid "Search Analytic Lines"
 msgstr "Traži analitičke linije"
 
 #. module: analytic
+#: model_terms:ir.ui.view,arch_db:analytic.account_analytic_tag_view_search
+msgid "Search Analytic Tags"
+msgstr ""
+
+#. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_tag__active
 msgid "Set active to false to hide the Analytic Tag without removing it."
 msgstr ""
@@ -509,18 +528,13 @@ msgid "Tags"
 msgstr "Oznake"
 
 #. module: analytic
-#: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_line_filter
-msgid "Tasks Date"
-msgstr ""
-
-#. module: analytic
-#: sql_constraint:account.analytic.distribution:0
+#: model:ir.model.constraint,message:analytic.constraint_account_analytic_distribution_check_percentage
 msgid ""
 "The percentage of an analytic distribution should be between 0 and 100."
 msgstr ""
 
 #. module: analytic
-#: code:addons/analytic/models/analytic_account.py:195
+#: code:addons/analytic/models/analytic_account.py:0
 #, python-format
 msgid ""
 "The selected account belongs to another company that the one you're trying "
@@ -556,16 +570,6 @@ msgstr "Brojač nepročitanih poruka"
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_line__user_id
 msgid "User"
 msgstr "Korisnik"
-
-#. module: analytic
-#: model:ir.model.fields,field_description:analytic.field_account_analytic_account__website_message_ids
-msgid "Website Messages"
-msgstr "Poruke webstranica"
-
-#. module: analytic
-#: model:ir.model.fields,help:analytic.field_account_analytic_account__website_message_ids
-msgid "Website communication history"
-msgstr "Povijest komunikacije Web stranice"
 
 #. module: analytic
 #: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_account_form

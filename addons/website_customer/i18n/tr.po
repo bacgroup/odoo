@@ -1,23 +1,24 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_customer
+# 	* website_customer
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Levent Karakaş <levent@mektup.at>, 2018
-# Murat Kaplan <muratk@projetgrup.com>, 2018
-# Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2018
-# Ramiz Deniz Öner <deniz@denizoner.com>, 2018
-# Umur Akın <umura@projetgrup.com>, 2018
-# Buket Şeker <buket_skr@hotmail.com>, 2018
+# Martin Trigaux, 2019
+# Levent Karakaş <levent@mektup.at>, 2019
+# Murat Kaplan <muratk@projetgrup.com>, 2019
+# Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2019
+# Ramiz Deniz Öner <deniz@denizoner.com>, 2019
+# Umur Akın <umura@projetgrup.com>, 2019
+# Buket Şeker <buket_skr@hotmail.com>, 2019
+# Cécile Collart <cco@odoo.com>, 2019
 # Ediz Duman <neps1192@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-09 10:32+0000\n"
-"PO-Revision-Date: 2018-08-24 09:34+0000\n"
+"POT-Creation-Date: 2019-08-26 08:17+0000\n"
+"PO-Revision-Date: 2019-08-26 09:15+0000\n"
 "Last-Translator: Ediz Duman <neps1192@gmail.com>, 2019\n"
 "Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +38,8 @@ msgid ""
 "<span class=\"fa fa-external-link\" role=\"img\" aria-label=\"External "
 "link\" title=\"External link\"/>"
 msgstr ""
+"<span class=\"fa fa-external-link\" role=\"img\" aria-label=\"External "
+"link\" title=\"External link\"/>"
 
 #. module: website_customer
 #: model:ir.model.fields,field_description:website_customer.field_res_partner_tag__active
@@ -44,21 +47,31 @@ msgid "Active"
 msgstr "Etkin"
 
 #. module: website_customer
-#: code:addons/website_customer/controllers/main.py:100
+#: code:addons/website_customer/controllers/main.py:0
 #, python-format
 msgid "All Countries"
 msgstr "Tüm Ülkeler"
 
 #. module: website_customer
-#: code:addons/website_customer/controllers/main.py:81
+#: code:addons/website_customer/controllers/main.py:0
 #, python-format
 msgid "All Sectors of Activity"
 msgstr "Tüm Faaliyet Sektörleri"
 
 #. module: website_customer
+#: model_terms:ir.ui.view,arch_db:website_customer.res_partner_tag_view_search
+msgid "Archived"
+msgstr "Arşivlendi"
+
+#. module: website_customer
 #: model:ir.model.fields,help:website_customer.field_res_partner_tag__classname
 msgid "Bootstrap class to customize the color"
 msgstr "Rengi kişiselleştirecek Bootstrap sınıfı"
+
+#. module: website_customer
+#: model:ir.model.fields,field_description:website_customer.field_res_partner_tag__can_publish
+msgid "Can Publish"
+msgstr ""
 
 #. module: website_customer
 #: model:ir.model.fields,field_description:website_customer.field_res_partner_tag__name
@@ -78,7 +91,7 @@ msgstr "Kapat"
 #. module: website_customer
 #: model:ir.model,name:website_customer.model_res_partner
 msgid "Contact"
-msgstr "İletişim"
+msgstr "Kontak"
 
 #. module: website_customer
 #: model_terms:ir.actions.act_window,help:website_customer.action_partner_tag_form
@@ -112,8 +125,8 @@ msgstr "Uygulayan"
 
 #. module: website_customer
 #: model:ir.model.fields,field_description:website_customer.field_res_partner_tag__is_published
-msgid "Is published"
-msgstr "Yayınlandı"
+msgid "Is Published"
+msgstr "Est publié"
 
 #. module: website_customer
 #: model:ir.model.fields,field_description:website_customer.field_res_partner_tag____last_update
@@ -192,6 +205,11 @@ msgstr "Etiketlere Göre Referanslar"
 #: model_terms:ir.ui.view,arch_db:website_customer.index
 msgid "Search"
 msgstr "Arama"
+
+#. module: website_customer
+#: model_terms:ir.ui.view,arch_db:website_customer.res_partner_tag_view_search
+msgid "Search Partner Tag"
+msgstr ""
 
 #. module: website_customer
 #: model:ir.model.fields,help:website_customer.field_res_partner_tag__website_url

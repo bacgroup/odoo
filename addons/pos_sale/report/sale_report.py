@@ -8,6 +8,12 @@ from odoo import api, fields, models
 class SaleReport(models.Model):
     _inherit = "sale.report"
 
+    @api.model
+    def _get_done_states(self):
+        done_states = super(SaleReport, self)._get_done_states()
+        done_states.extend(['pos_done', 'invoiced'])
+        return done_states
+
     state = fields.Selection(selection_add=[('pos_draft', 'New'),
                                             ('paid', 'Paid'),
                                             ('pos_done', 'Posted'),
@@ -31,18 +37,21 @@ class SaleReport(models.Model):
             count(*) AS nbr,
             pos.name AS name,
             pos.date_order AS date,
-            pos.date_order AS confirmation_date,
             CASE WHEN pos.state = 'draft' THEN 'pos_draft' WHEN pos.state = 'done' THEN 'pos_done' else pos.state END AS state,
             pos.partner_id AS partner_id,
             pos.user_id AS user_id,
             pos.company_id AS company_id,
+            NULL AS campaign_id,
+            NULL AS medium_id,
+            NULL AS source_id,
             extract(epoch from avg(date_trunc('day',pos.date_order)-date_trunc('day',pos.create_date)))/(24*60*60)::decimal(16,2) AS delay,
             t.categ_id AS categ_id,
             pos.pricelist_id AS pricelist_id,
             NULL AS analytic_account_id,
-            config.crm_team_id AS team_id,
+            pos.crm_team_id AS team_id,
             p.product_tmpl_id,
             partner.country_id AS country_id,
+            partner.industry_id AS industry_id,
             partner.commercial_partner_id AS commercial_partner_id,
             (select sum(t.weight*l.qty/u.factor) from pos_order_line l
                join product_product p on (l.product_id=p.id)
@@ -89,11 +98,11 @@ class SaleReport(models.Model):
             pos.pricelist_id,
             p.product_tmpl_id,
             partner.country_id,
+            partner.industry_id,
             partner.commercial_partner_id,
             u.factor,
-            config.crm_team_id
+            pos.crm_team_id
         '''
-
         current = '(SELECT %s FROM %s GROUP BY %s)' % (select_, from_, groupby_)
 
         return '%s UNION ALL %s' % (res, current)

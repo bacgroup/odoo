@@ -20,8 +20,8 @@ Note:
 -----
 
 * Fiscal positions '内税' and '外税' have been added to handle special \
-requirements which might arise from POS implementation. [1]  You may not \
-need to use these at all under normal circumstances.
+requirements which might arise from POS implementation. [1]  Under normal \
+circumstances, you might not need to use those at all.
 
 [1] See https://github.com/odoo/odoo/pull/6470 for detail.
 
@@ -33,7 +33,8 @@ need to use these at all under normal circumstances.
         'data/l10n_jp_chart_data.xml',
         'data/account.account.template.csv',
         'data/account.tax.group.csv',
-        'data/account.tax.template.csv',
+        'data/account_tax_report_data.xml',
+        'data/account_tax_template_data.xml',
         'data/account_chart_template_data.xml',
         'data/account.fiscal.position.template.csv',
         'data/account.fiscal.position.tax.template.csv',

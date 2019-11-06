@@ -1,32 +1,22 @@
 odoo.define('payment.processing', function (require) {
     'use strict';
 
-    var Widget = require('web.Widget');
-    var Ajax = require('web.ajax');
-    var Core = require('web.core');
-    var Qweb = Core.qweb;
-    var _t = Core._t;
+    var publicWidget = require('web.public.widget');
+    var ajax = require('web.ajax');
+    var core = require('web.core');
+
+    var _t = core._t;
 
     $.blockUI.defaults.css.border = '0';
     $.blockUI.defaults.css["background-color"] = '';
     $.blockUI.defaults.overlayCSS["opacity"] = '0.9';
 
-    return Widget.extend({
-        /* Members */
-        _payment_tx_ids: null,
-        _pollCount: 0,
-        /* Events */
-        events: {
-
-        },
-        /* deps */
+    publicWidget.registry.PaymentProcessing = publicWidget.Widget.extend({
+        selector: '.o_payment_processing',
         xmlDependencies: ['/payment/static/src/xml/payment_processing.xml'],
-        /* Widget overrides */
-        init: function (parent, payment_tx_ids) {
-            this._super.apply(this, arguments);
-            //
-            this._payment_tx_ids = payment_tx_ids;
-        },
+
+        _pollCount: 0,
+
         start: function() {
             this.displayLoading();
             this.poll();
@@ -48,7 +38,7 @@ odoo.define('payment.processing', function (require) {
         },
         poll: function () {
             var self = this;
-            Ajax.jsonRpc('/payment/process/poll', 'call', {}).then(function(data) {
+            ajax.jsonRpc('/payment/process/poll', 'call', {}).then(function(data) {
                 if(data.success === true) {
                     self.processPolledData(data.transactions);
                 }
@@ -65,7 +55,8 @@ odoo.define('payment.processing', function (require) {
                     }
                 }
                 self.startPolling();
-             }).fail(function(e) {
+
+            }).guardedCatch(function() {
                 self.displayContent("payment.rpc_error", {});
                 self.startPolling();
             });
@@ -80,7 +71,7 @@ odoo.define('payment.processing', function (require) {
                 'tx_error': [],
             };
 
-            if (transactions.length > 0 && transactions[0].acquirer_provider == 'transfer') {
+            if (transactions.length > 0 && ['transfer', 'sepa_direct_debit'].indexOf(transactions[0].acquirer_provider) >= 0) {
                 window.location = transactions[0].return_url;
                 return;
             }
@@ -103,7 +94,7 @@ odoo.define('payment.processing', function (require) {
                 return nbTx;
             }
             // if there's only one tx to manage
-            if(countTxInState(['tx_done', 'tx_error']) === 1) {
+            if(countTxInState(['tx_done', 'tx_error', 'tx_pending']) === 1) {
                 var tx = render_values['tx_done'][0] || render_values['tx_error'][0];
                 if (tx) {
                     window.location = tx.return_url;
@@ -114,12 +105,12 @@ odoo.define('payment.processing', function (require) {
             this.displayContent("payment.display_tx_list", render_values);
         },
         displayContent: function (xmlid, render_values) {
-            var html = Qweb.render(xmlid, render_values);
+            var html = core.qweb.render(xmlid, render_values);
             $.unblockUI();
             this.$el.find('.o_payment_processing_content').html(html);
         },
         displayLoading: function () {
-            var msg = _t("We are processing your payments, please wait ...");
+            var msg = _t("We are processing your payment, please wait ...");
             $.blockUI({
                 'message': '<h2 class="text-white"><img src="/web/static/src/img/spin.png" class="fa-pulse"/>' +
                     '    <br />' + msg +
