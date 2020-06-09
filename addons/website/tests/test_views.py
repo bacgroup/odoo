@@ -756,6 +756,10 @@ class TestCowViewSaving(common.TransactionCase):
             'arch': '<div position="replace"><p>COMPARE</p></div>',
             'key': '_website_sale_comparison.product_add_to_compare',
         })])
+        Website.with_context(load_all_views=True).viewref('_website_sale_comparison.product_add_to_compare').invalidate_cache()
+
+        # Simulate end of installation/update
+        View._create_all_specific_views(['_website_sale_comparison'])
 
         specific_view = Website.with_context(load_all_views=True, website_id=1).viewref('_website_sale.product')
         specific_view_arch = specific_view.read_combined(['arch'])['arch']
@@ -766,7 +770,6 @@ class TestCowViewSaving(common.TransactionCase):
         View._load_records([dict(xml_id='_website_sale_comparison.product_add_to_compare', values={
             'arch': '<div position="replace"><p>COMPARE EDITED</p></div>',
         })])
-
         specific_view_arch = Website.with_context(load_all_views=True, website_id=1).viewref('_website_sale.product').read_combined(['arch'])['arch']
         self.assertEqual(specific_view_arch, '<p>COMPARE EDITED</p>', "When a module updates an inherited view (on a generic tree), it should also update the copies of that view (COW).")
 
@@ -805,6 +808,7 @@ class TestCowViewSaving(common.TransactionCase):
             'model': self.base_view._name,
             'res_id': self.base_view.id,
         })
+        self.base_view.invalidate_cache()
         View._load_records([dict(xml_id='_website_sale.product', values={
             'website_meta_title': 'A bug got fixed by updating this field',
         })])
@@ -896,6 +900,54 @@ class TestCowViewSaving(common.TransactionCase):
         # 5  | Extension   |  , extended content   |     1      |     4    |  website.extension_view
         # 3  | Extension 2 |  , extended content 2 |     1      |     5    |  website.extension_view_2
 
+    def test_cow_extension_with_install(self):
+        View = self.env['ir.ui.view']
+        # Base
+        v1 = View.create({
+            'name': 'Base',
+            'type': 'qweb',
+            'arch': '<div>base content</div>',
+            'key': 'website.base_view_v1',
+        }).with_context(load_all_views=True)
+        self.env['ir.model.data'].create({
+            'module': 'website',
+            'name': 'base_view_v1',
+            'model': v1._name,
+            'res_id': v1.id,
+        })
+
+        # Extension
+        v2 = View.create({
+            'name': 'Extension',
+            'mode': 'extension',
+            'inherit_id': v1.id,
+            'arch': '<div position="inside"><ooo>extended content</ooo></div>',
+            'key': 'website.extension_view_v2',
+        })
+        self.env['ir.model.data'].create({
+            'module': 'website',
+            'name': 'extension_view_v2',
+            'model': v2._name,
+            'res_id': v2.id,
+        })
+
+        # multiwebsite specific
+        v1.with_context(website_id=1).write({'name': 'Extension Specific'})
+
+        original_pool_init = View.pool._init
+        View.pool._init = True
+
+        try:
+            # Simulate module install
+            View._load_records([dict(xml_id='website.extension2_view', values={
+                'name': ' ---',
+                'mode': 'extension',
+                'inherit_id': v1.id,
+                'arch': '<ooo position="replace"><p>EXTENSION</p></ooo>',
+                'key': 'website.extension2_view',
+            })])
+        finally:
+            View.pool._init = original_pool_init
 
 class Crawler(HttpCase):
     def setUp(self):

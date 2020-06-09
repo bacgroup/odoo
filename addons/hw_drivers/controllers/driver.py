@@ -6,10 +6,11 @@ from usb import core
 from gatt import DeviceManager as Gatt_DeviceManager
 import subprocess
 import json
-from re import sub
+from re import sub, finditer
 import urllib3
 import os
 import socket
+import sys
 from importlib import util
 import v4l2
 from fcntl import ioctl
@@ -76,7 +77,7 @@ class StatusController(http.Controller):
         """
         server = helpers.get_odoo_server_url()
         image = get_resource_path('hw_drivers', 'static/img', 'False.jpg')
-        if server == '':
+        if not server:
             credential = b64decode(token).decode('utf-8').split('|')
             url = credential[0]
             token = credential[1]
@@ -87,15 +88,35 @@ class StatusController(http.Controller):
                 helpers.add_credential(db_uuid, enterprise_code)
             try:
                 subprocess.check_call([get_resource_path('point_of_sale', 'tools/posbox/configuration/connect_to_server.sh'), url, '', token, 'noreboot'])
-                helpers.check_certificate()
                 m.send_alldevices()
-                m.load_drivers()
                 image = get_resource_path('hw_drivers', 'static/img', 'True.jpg')
+                helpers.odoo_restart(3)
             except subprocess.CalledProcessError as e:
                 _logger.error('A error encountered : %s ' % e.output)
         if os.path.isfile(image):
             with open(image, 'rb') as f:
                 return f.read()
+
+#----------------------------------------------------------
+# Log Exceptions
+#----------------------------------------------------------
+
+class ExceptionLogger:
+    """
+    Redirect Exceptions to the logger to keep track of them in the log file.
+    """
+
+    def __init__(self):
+        self.logger = logging.getLogger()
+
+    def write(self, message):
+        if message != '\n':
+            self.logger.error(message)
+
+    def flush(self):
+        pass
+
+sys.stderr = ExceptionLogger()
 
 #----------------------------------------------------------
 # Drivers
@@ -250,6 +271,8 @@ class Manager(Thread):
             if spec:
                 module = util.module_from_spec(spec)
                 spec.loader.exec_module(module)
+        http.addons_manifest = {}
+        http.root = http.Root()
 
     def send_alldevices(self):
         """
@@ -302,14 +325,22 @@ class Manager(Thread):
 
     def get_connected_displays(self):
         display_devices = {}
-        hdmi = subprocess.check_output(['tvservice', '-n']).decode('utf-8').replace('\n', '')
-        if hdmi.find('=') != -1 and hdmi.split('=')[1] != "Unk-Composite dis":
-            hdmi_serial = sub('[^a-zA-Z0-9 ]+', '', hdmi.split('=')[1]).replace(' ', '_')
-            iot_device = IoTDevice({
-                'identifier': hdmi_serial,
-                'name': hdmi.split('=')[1],
-            }, 'display')
-            display_devices[hdmi_serial] = iot_device
+
+        displays = subprocess.check_output(['tvservice', '-l']).decode()
+        x_screen = 0
+        for match in finditer('Display Number (\d), type HDMI (\d)', displays):
+            display_id, hdmi_id = match.groups()
+            tvservice_output = subprocess.check_output(['tvservice', '-nv', display_id]).decode().rstrip()
+            if tvservice_output:
+                display_name = tvservice_output.split('=')[1]
+                display_identifier = sub('[^a-zA-Z0-9 ]+', '', display_name).replace(' ', '_') + "_" + str(hdmi_id)
+                iot_device = IoTDevice({
+                    'identifier': display_identifier,
+                    'name': display_name,
+                    'x_screen': str(x_screen),
+                }, 'display')
+                display_devices[display_identifier] = iot_device
+                x_screen += 1
 
         if not len(display_devices):
             # No display connected, create "fake" device to be accessed from another computer
@@ -369,7 +400,7 @@ class Manager(Thread):
         printer_devices = {}
         with cups_lock:
             devices = conn.getDevices()
-        for path in [printer_lo for printer_lo in devices if devices[printer_lo]['device-make-and-model'] != 'Unknown']:
+        for path in devices:
             if 'uuid=' in path:
                 serial = sub('[^a-zA-Z0-9 ]+', '', path.split('uuid=')[1])
             elif 'serial=' in path:
@@ -386,6 +417,7 @@ class Manager(Thread):
         """
         Thread that will check connected/disconnected device, load drivers if needed and contact the odoo server with the updates
         """
+        helpers.check_git_branch()
         helpers.check_certificate()
         updated_devices = {}
         self.send_alldevices()

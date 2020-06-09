@@ -4,7 +4,7 @@
 import re
 
 from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 from odoo.tools.float_utils import float_split_str
 from odoo.tools.misc import mod10r
 
@@ -19,7 +19,7 @@ class AccountMove(models.Model):
     l10n_ch_isr_subscription_formatted = fields.Char(compute='_compute_l10n_ch_isr_subscription', help="ISR subscription number your company or your bank, formated with '-' and without the padding zeros, to generate ISR report.")
 
     l10n_ch_isr_number = fields.Char(compute='_compute_l10n_ch_isr_number', store=True, help='The reference number associated with this invoice')
-    l10n_ch_isr_number_spaced = fields.Char(compute='_compute_l10n_ch_isr_number', help="ISR number split in blocks of 5 characters (right-justified), to generate ISR report.")
+    l10n_ch_isr_number_spaced = fields.Char(compute='_compute_l10n_ch_isr_number_spaced', help="ISR number split in blocks of 5 characters (right-justified), to generate ISR report.")
 
     l10n_ch_isr_optical_line = fields.Char(compute="_compute_l10n_ch_isr_optical_line", help='Optical reading line, as it will be printed on ISR')
 
@@ -71,6 +71,19 @@ class AccountMove(models.Model):
         this number with zeros. The last character of the ISR number is the result
         of a recursive modulo 10 on its first 26 characters.
         """
+        for record in self:
+            if record.name and record.invoice_partner_bank_id and record.invoice_partner_bank_id.l10n_ch_postal:
+                invoice_issuer_ref = record.invoice_partner_bank_id.l10n_ch_postal.ljust(l10n_ch_ISR_NUMBER_ISSUER_LENGTH, '0')
+                invoice_ref = re.sub('[^\d]', '', record.name)
+                #We only keep the last digits of the sequence number if it is too long
+                invoice_ref = invoice_ref[-l10n_ch_ISR_NUMBER_ISSUER_LENGTH:]
+                internal_ref = invoice_ref.zfill(l10n_ch_ISR_NUMBER_LENGTH - l10n_ch_ISR_NUMBER_ISSUER_LENGTH - 1) # -1 for mod10r check character
+                record.l10n_ch_isr_number = mod10r(invoice_issuer_ref + internal_ref)
+            else:
+                record.l10n_ch_isr_number = False
+
+    @api.depends('l10n_ch_isr_number')
+    def _compute_l10n_ch_isr_number_spaced(self):
         def _space_isr_number(isr_number):
             to_treat = isr_number
             res = ''
@@ -83,19 +96,13 @@ class AccountMove(models.Model):
 
         for record in self:
             if record.name and record.invoice_partner_bank_id and record.invoice_partner_bank_id.l10n_ch_postal:
-                invoice_issuer_ref = record.invoice_partner_bank_id.l10n_ch_postal.ljust(l10n_ch_ISR_NUMBER_ISSUER_LENGTH, '0')
-                invoice_ref = re.sub('[^\d]', '', record.name)
-                #We only keep the last digits of the sequence number if it is too long
-                invoice_ref = invoice_ref[-l10n_ch_ISR_NUMBER_ISSUER_LENGTH:]
-                internal_ref = invoice_ref.zfill(l10n_ch_ISR_NUMBER_LENGTH - l10n_ch_ISR_NUMBER_ISSUER_LENGTH - 1) # -1 for mod10r check character
-                record.l10n_ch_isr_number = mod10r(invoice_issuer_ref + internal_ref)
                 record.l10n_ch_isr_number_spaced = _space_isr_number(record.l10n_ch_isr_number)
             else:
-                record.l10n_ch_isr_number = False
                 record.l10n_ch_isr_number_spaced = False
 
+
     @api.depends(
-        'currency_id.name', 'amount_total', 'name',
+        'currency_id.name', 'amount_residual', 'name',
         'invoice_partner_bank_id.l10n_ch_postal',
         'invoice_partner_bank_id.l10n_ch_isr_subscription_eur',
         'invoice_partner_bank_id.l10n_ch_isr_subscription_chf')
@@ -117,6 +124,7 @@ class AccountMove(models.Model):
             bank supporting the ISR (including the zeros).
         """
         for record in self:
+            record.l10n_ch_isr_optical_line = ''
             if record.l10n_ch_isr_number and record.l10n_ch_isr_subscription and record.currency_id.name:
                 #Left part
                 currency_code = None
@@ -124,7 +132,7 @@ class AccountMove(models.Model):
                     currency_code = '01'
                 elif record.currency_id.name == 'EUR':
                     currency_code = '03'
-                units, cents = float_split_str(record.amount_total, 2)
+                units, cents = float_split_str(record.amount_residual, 2)
                 amount_to_display = units + cents
                 amount_ref = amount_to_display.zfill(10)
                 left = currency_code + amount_ref
@@ -155,10 +163,11 @@ class AccountMove(models.Model):
         This function is needed on the model, as it must be called in the report
         template, which cannot reference static functions
         """
-        return float_split_str(self.amount_total, 2)
+        return float_split_str(self.amount_residual, 2)
 
     def display_swiss_qr_code(self):
-        """ Trigger the print of the Swiss QR code in the invoice report or not
+        """ DEPRECATED FUNCTION: not used anymore. QR-bills can now always
+        be generated, with a dedicated report
         """
         self.ensure_one()
         qr_parameter = self.env['ir.config_parameter'].sudo().get_param('l10n_ch.print_qrcode')
@@ -178,6 +187,30 @@ class AccountMove(models.Model):
                                    - define its bank\n
                                    - associate this bank with a postal reference for the currency used in this invoice\n
                                    - fill the 'bank account' field of the invoice with the postal to be used to receive the related payment. A default account will be automatically set for all invoices created after you defined a postal account for your company."""))
+
+    def can_generate_qr_bill(self):
+        """ Returns True iff the invoice can be used to generate a QR-bill.
+        """
+        self.ensure_one()
+
+        # First part of this condition is due to fix commit https://github.com/odoo/odoo/commit/719f087b1b5be5f1f276a0f87670830d073f6ef4
+        # We do that to ensure not to try generating QR-bills for modules that haven't been
+        # updated yet. Not doing that could crash when trying to send an invoice by mail,
+        # as the QR report data haven't been loaded.
+        # TODO: remove this in master
+        return not self.env.ref('l10n_ch.l10n_ch_swissqr_template').inherit_id \
+               and self.invoice_partner_bank_id.validate_swiss_code_arguments(self.invoice_partner_bank_id.currency_id, self.partner_id, self.invoice_payment_ref)
+
+    def print_ch_qr_bill(self):
+        """ Triggered by the 'Print QR-bill' button.
+        """
+        self.ensure_one()
+
+        if not self.can_generate_qr_bill():
+            raise UserError(_("Cannot generate the QR-bill. Please check you have configured the address of your company and debtor. If you are using a QR-IBAN, also check the invoice's payment reference is a QR reference."))
+
+        self.l10n_ch_isr_sent = True
+        return self.env.ref('l10n_ch.l10n_ch_qr_report').report_action(self)
 
     def action_invoice_sent(self):
         # OVERRIDE

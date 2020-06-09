@@ -211,8 +211,6 @@ publicWidget.registry.WebsiteSale = publicWidget.Widget.extend(VariantMixin, {
 
         this.$('select[name="country_id"]').change();
 
-        this.$('#checkbox_cgv').trigger('change');
-
         core.bus.on('resize', this, function () {
             if (config.device.size_class === config.device.SIZES.XL) {
                 $('.toggle_summary_div').addClass('d-none d-xl-block');
@@ -927,12 +925,12 @@ publicWidget.registry.productsSearchBar = publicWidget.Widget.extend({
                 this._render();
                 break;
             case $.ui.keyCode.UP:
-                ev.preventDefault();
-                this.$menu.children().last().focus();
-                break;
             case $.ui.keyCode.DOWN:
                 ev.preventDefault();
-                this.$menu.children().first().focus();
+                if (this.$menu) {
+                    let $element = ev.which === $.ui.keyCode.UP ? this.$menu.children().last() : this.$menu.children().first();
+                    $element.focus();
+                }
                 break;
         }
     },

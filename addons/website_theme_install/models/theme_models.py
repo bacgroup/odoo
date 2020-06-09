@@ -113,10 +113,10 @@ class ThemeMenu(models.Model):
         new_menu = {
             'name': self.name,
             'url': self.url,
-            'page_id': page_id,
+            'page_id': page_id and page_id.id or False,
             'new_window': self.new_window,
             'sequence': self.sequence,
-            'parent_id': parent_id,
+            'parent_id': parent_id and parent_id.id or False,
             'theme_template_id': self.id,
         }
         return new_menu
@@ -212,6 +212,20 @@ class IrUiView(models.Model):
 
     theme_template_id = fields.Many2one('theme.ir.ui.view')
 
+    def write(self, vals):
+        no_arch_updated_views = other_views = self.env['ir.ui.view']
+        for record in self:
+            # Do not mark the view as user updated if original view arch is similar
+            arch = vals.get('arch', vals.get('arch_base'))
+            if record.theme_template_id and record.theme_template_id.arch == arch:
+                no_arch_updated_views += record
+            else:
+                other_views += record
+        res = super(IrUiView, other_views).write(vals)
+        if no_arch_updated_views:
+            vals['arch_updated'] = False
+            res &= super(IrUiView, no_arch_updated_views).write(vals)
+        return res
 
 class IrAttachment(models.Model):
     _inherit = 'ir.attachment'
