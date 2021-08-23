@@ -174,8 +174,8 @@ var CompletionFieldMixin = {
     init: function() {
         this.limit = 7;
         this.orderer = new utils.DropMisordered();
-        this.can_create = this.node.attrs.can_create || true;
-        this.can_write = this.node.attrs.can_write || true;
+        this.can_create = this.node.attrs.can_create == "false" ? false : true;
+        this.can_write = this.node.attrs.can_write == "false" ? false : true;
     },
     /**
      * Call this method to search using a string.
@@ -729,6 +729,12 @@ var AbstractField = FormWidget.extend(FieldInterface, {
     set_value: function(value_) {
         this.set({'value': value_});
     },
+    /**
+        Method to set value of a field when loading a record
+    */
+    set_value_from_record: function(record) {
+        this.set_value.call(this, record[this.name] || false);
+    },
     get_value: function() {
         return this.get('value');
     },
@@ -970,6 +976,9 @@ var SelectCreateListView = ListView.extend({
  * Search dialog (displays a list of records and permits to create a new one by switching to a form view)
  */
 var SelectCreateDialog = ViewDialog.extend({
+    custom_events: {
+        get_controller_context: '_onGetControllerContext',
+    },
     /**
      * options:
      * - initial_ids
@@ -1100,6 +1109,23 @@ var SelectCreateDialog = ViewDialog.extend({
         return new FormViewDialog(this.__parentedParent, this.options).open();
     },
     on_view_list_loaded: function() {},
+
+    //--------------------------------------------------------------------------
+    // Handlers
+    //--------------------------------------------------------------------------
+
+    /**
+     * Handles a context request: provides to the caller the context of the
+     * list view.
+     *
+     * @private
+     * @param {OdooEvent} ev
+     * @param {function} ev.data.callback used to send the requested context
+     */
+    _onGetControllerContext: function (ev) {
+        var context = this.view_list.get_context();
+        ev.data.callback(context);
+    },
 });
 
 var DomainEditorDialog = SelectCreateDialog.extend({
