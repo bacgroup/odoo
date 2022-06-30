@@ -15,9 +15,9 @@
 # David Minneci <david@numeko.it>, 2018
 # Stefano Consolaro <stefano.consolaro@mymage.it>, 2018
 # Léonie Bouchat <lbo@odoo.com>, 2019
-# Sergio Zanchetta <primes2h@gmail.com>, 2020
 # Lorenzo Battistini <lb@takobi.online>, 2020
 # Alberto Carollo <baba75@gmail.com>, 2020
+# Sergio Zanchetta <primes2h@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -25,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-07 13:44+0000\n"
 "PO-Revision-Date: 2018-08-24 09:17+0000\n"
-"Last-Translator: Alberto Carollo <baba75@gmail.com>, 2020\n"
+"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>, 2021\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,6 +134,11 @@ msgid ""
 "community module, a case study, methodology feedback, technical, etc. Each "
 "presentation must be in English.</em>"
 msgstr ""
+"<em>Se desideri fare una presentazione, invia il prima possibile la proposta"
+" di argomento al Sig. Famke Jenssens a ngh (chiocciola) yourcompany (punto) "
+"com per l'approvazione. La presentazione deve riguardare, ad esempio, un "
+"modulo della comunità, un caso di studio, un riscontro su una metodologia, "
+"un aspetto tecnico ecc. Ciascuna presentazione deve essere in inglese.</em>"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
@@ -824,14 +829,14 @@ msgstr "Numero allegati"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
 msgid "Attendance"
-msgstr "Presenze"
+msgstr "Presenza"
 
 #. module: event
 #: selection:event.registration,state:0
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
 #: model_terms:ir.ui.view,arch_db:event.view_registration_search
 msgid "Attended"
-msgstr "Partecipa"
+msgstr "Presente"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_registration__date_closed
@@ -879,7 +884,7 @@ msgstr "Conferma registrazioni automaticamente"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_type__use_mail_schedule
 msgid "Automatically Send Emails"
-msgstr "Invia email automaticamente"
+msgstr "Invio automatico e-mail"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__seats_available
@@ -1160,7 +1165,7 @@ msgstr "Data fine"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_end_located
 msgid "End Date Located"
-msgstr "Calcolo data fine"
+msgstr "Data fine impostata"
 
 #. module: event
 #: model:ir.model,name:event.model_event_event
@@ -1223,12 +1228,12 @@ msgstr "Logo evento"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_mail_form
 msgid "Event Mail Scheduler"
-msgstr "Pianificatore email evento"
+msgstr "Pianificatore e-mail evento"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_mail_tree
 msgid "Event Mail Schedulers"
-msgstr "Schedulatori email evento"
+msgstr "Pianificatori e-mail evento"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
@@ -1294,7 +1299,7 @@ msgstr "Tipo evento"
 #: model:ir.cron,cron_name:event.event_mail_scheduler
 #: model:ir.cron,name:event.event_mail_scheduler
 msgid "Event: Mail Scheduler"
-msgstr "Evento: schedulatore email"
+msgstr "Evento: pianificatore e-mail"
 
 #. module: event
 #: model:ir.actions.act_window,name:event.action_event_view
@@ -1319,7 +1324,7 @@ msgstr "Analisi eventi"
 #. module: event
 #: model:ir.actions.act_window,name:event.action_event_mail
 msgid "Events Mail Schedulers"
-msgstr "Schedulatori eventi email"
+msgstr "Pianificatori e-mail eventi"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_type_form
@@ -1597,22 +1602,22 @@ msgstr "Registrazione e-mail"
 #: model:ir.model.fields,field_description:event.field_event_event__event_mail_ids
 #: model:ir.model.fields,field_description:event.field_event_type__event_type_mail_ids
 msgid "Mail Schedule"
-msgstr "Programma invio"
+msgstr "Programma e-mail"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail_registration__scheduler_id
 msgid "Mail Scheduler"
-msgstr "Pianificatore invio"
+msgstr "Pianificatore e-mail"
 
 #. module: event
 #: model:ir.ui.menu,name:event.menu_event_mail_schedulers
 msgid "Mail Schedulers"
-msgstr "Pianificatori invio"
+msgstr "Pianificatori e-mail"
 
 #. module: event
 #: model:ir.model,name:event.model_event_type_mail
 msgid "Mail Scheduling on Event Category"
-msgstr ""
+msgstr "Pianificazione e-mail  su categoria evento"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail_registration__mail_sent
@@ -1622,7 +1627,7 @@ msgstr "E-mail inviata"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_mail__mail_sent
 msgid "Mail Sent on Event"
-msgstr "Messaggio inviato all'evento"
+msgstr "E-mail dell'evento inviata"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__message_main_attachment_id
@@ -1700,7 +1705,7 @@ msgstr "I miei eventi"
 #: code:addons/event/models/event.py:263
 #, python-format
 msgid "No more available seats."
-msgstr "Nessun posto disponibile"
+msgstr "Nessun posto disponibile."
 
 #. module: event
 #: code:addons/event/models/event.py:369
@@ -1770,7 +1775,7 @@ msgstr "Evento online"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_search
 msgid "Online Events"
-msgstr "Eventi Online"
+msgstr "Eventi online"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_res_config_settings__module_website_event_sale
@@ -1794,6 +1799,13 @@ msgid ""
 msgstr ""
 "Gli eventi online come i webinar non richiedono un luogo specifico e sono "
 "gestiti online."
+
+#. module: event
+#: code:addons/event/models/event.py:386
+#, python-format
+msgid ""
+"Only event users or managers are allowed to create or update registrations."
+msgstr ""
 
 #. module: event
 #: model_terms:event.event,description:event.event_0
@@ -1886,12 +1898,12 @@ msgstr "ID registrazione"
 #. module: event
 #: model:ir.model,name:event.model_event_mail_registration
 msgid "Registration Mail Scheduler"
-msgstr "Schedulatore dei messaggi di registrazione"
+msgstr "Pianificatore e-mail di registrazione"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_mail_form
 msgid "Registration Mails"
-msgstr "Messaggi di registrazione"
+msgstr "E-mail di registrazione"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_res_config_settings__module_website_event_questions
@@ -1901,7 +1913,7 @@ msgstr "Sondaggio registrazione"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_mail_form
 msgid "Registration mail"
-msgstr "Messaggio registrazione"
+msgstr "E-mail di registrazione"
 
 #. module: event
 #: model:ir.ui.menu,name:event.menu_reporting_events
@@ -1981,7 +1993,7 @@ msgstr "Imposta a bozza"
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
 msgid "Set To Unconfirmed"
-msgstr "Imposta \"Non confermato\""
+msgstr "Imposta a non confermato"
 
 #. module: event
 #: model:ir.actions.act_window,name:event.action_event_configuration
@@ -1997,7 +2009,7 @@ msgstr "Spettacolo"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_registration__origin
 msgid "Source Document"
-msgstr "Documento di origine"
+msgstr "Documento origine"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_begin
@@ -2237,7 +2249,7 @@ msgstr "events@odoo.com"
 #. module: event
 #: model_terms:event.event,description:event.event_0
 msgid "events@yourcompany.com"
-msgstr ""
+msgstr "events@yourcompany.com"
 
 #. module: event
 #: code:addons/event/models/event.py:526

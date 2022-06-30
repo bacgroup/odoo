@@ -1989,6 +1989,13 @@ msgstr ""
 "realizadas online."
 
 #. module: event
+#: code:addons/event/models/event.py:386
+#, python-format
+msgid ""
+"Only event users or managers are allowed to create or update registrations."
+msgstr ""
+
+#. module: event
 #: model_terms:event.event,description:event.event_0
 msgid ""
 "OpenElec Applications 23 Rockwell Lane, Los Angeles, CA 90001, United States"
@@ -2260,7 +2267,7 @@ msgstr ""
 #. module: event
 #: model:ir.model.fields,field_description:event.field_res_config_settings__module_event_sale
 msgid "Tickets"
-msgstr ""
+msgstr "Tickets"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_tz
