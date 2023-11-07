@@ -14,6 +14,9 @@ from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 from odoo.exceptions import UserError
 from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
 from operator import itemgetter
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class PickingType(models.Model):
@@ -543,16 +546,51 @@ class Picking(models.Model):
         self.write({'printed': True})
         return self.env.ref('stock.action_report_picking').report_action(self)
 
+    # @api.multi
+    # def action_confirm(self):
+    #     self.mapped('package_level_ids').filtered(lambda pl: pl.state == 'draft' and not pl.move_ids)._generate_moves()
+    #     # call `_action_confirm` on every draft move
+    #     self.mapped('move_lines')\
+    #         .filtered(lambda move: move.state == 'draft')\
+    #         ._action_confirm()
+    #     # call `_action_assign` on every confirmed move which location_id bypasses the reservation
+    #     self.filtered(lambda picking: picking.location_id.usage in ('supplier', 'inventory', 'production') and picking.state == 'confirmed')\
+    #         .mapped('move_lines')._action_assign()
+    #     return True
     @api.multi
     def action_confirm(self):
-        self.mapped('package_level_ids').filtered(lambda pl: pl.state == 'draft' and not pl.move_ids)._generate_moves()
+        batch_len = 10
+
+        # self.mapped('package_level_ids').filtered(lambda pl: pl.state == 'draft' and not pl.move_ids)._generate_moves()
+        moves_to_generate = self.mapped('package_level_ids').filtered(lambda pl: pl.state == 'draft' and not pl.move_ids)
+        mtg_len = len(moves_to_generate)
+        _logger.info(f'SMP moves_to_generate {mtg_len}')
+        for i in range(0, mtg_len, batch_len):
+            bathc_moves_to_generate = moves_to_generate[i:i + batch_len]
+            bathc_moves_to_generate._generate_moves()
+
         # call `_action_confirm` on every draft move
-        self.mapped('move_lines')\
-            .filtered(lambda move: move.state == 'draft')\
-            ._action_confirm()
+        # self.mapped('move_lines')\
+        #     .filtered(lambda move: move.state == 'draft')\
+        #     ._action_confirm()
+
+        moves_draft = self.mapped('move_lines').filtered(lambda move: move.state == 'draft')
+        md_len = len(moves_draft)
+        _logger.info(f'SMP moves_draft {md_len}')
+        for i in range(0, md_len, batch_len):
+            moves_to_confirm = moves_draft[i:i + batch_len]
+            moves_draft._action_confirm()
+
         # call `_action_assign` on every confirmed move which location_id bypasses the reservation
-        self.filtered(lambda picking: picking.location_id.usage in ('supplier', 'inventory', 'production') and picking.state == 'confirmed')\
-            .mapped('move_lines')._action_assign()
+        # self.filtered(lambda picking: picking.location_id.usage in ('supplier', 'inventory', 'production') and picking.state == 'confirmed')\
+        #     .mapped('move_lines')._action_assign()
+        moves_to_assign = self.filtered(lambda picking: picking.location_id.usage in ('supplier', 'inventory', 'production') and picking.state == 'confirmed').mapped('move_lines')
+        mta_len = len(moves_to_assign)
+        _logger.info(f'SMP moves_to_assign {mta_len}')
+        for i in range(0, mta_len, batch_len):
+            batch_moves_to_assign = moves_to_assign[i:i + batch_len]
+            batch_moves_to_assign._action_assign()
+
         return True
 
     @api.multi
