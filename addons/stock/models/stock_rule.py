@@ -183,8 +183,12 @@ class StockRule(models.Model):
 
         data = self._get_stock_move_values(product_id, product_qty, product_uom, location_id, name, origin, values, group_id)
         # Since action_confirm launch following procurement_group we should activate it.
-        move = self.env['stock.move'].sudo().with_context(force_company=data.get('company_id', False)).create(data)
-        move._action_confirm()
+        try:
+            move = self.env['stock.move'].sudo().with_context(force_company=data.get('company_id', False)).create(data)
+            move._action_confirm()
+        except Exception as e:
+            move = self.env['stock.move'].sudo().with_context(force_company=data.get('company_id', False)).create(data)
+            move._action_confirm()
         return True
 
     def _get_custom_move_fields(self):
