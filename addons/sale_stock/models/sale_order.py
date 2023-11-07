@@ -6,6 +6,9 @@ from datetime import datetime, timedelta
 from odoo import api, fields, models, _
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, float_compare
 from odoo.exceptions import UserError
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class SaleOrder(models.Model):
@@ -75,8 +78,13 @@ class SaleOrder(models.Model):
 
     @api.multi
     def _action_confirm(self):
+        batch_len = 20
         for order in self:
-            order.order_line._action_launch_stock_rule()
+            # order.order_line._action_launch_stock_rule()
+            lines_len = len(order.order_line)
+            for i in range(0, lines_len, batch_len):
+                batch_lines = order.order_line[i:i + batch_len]
+                batch_lines._action_launch_stock_rule()
         super(SaleOrder, self)._action_confirm()
 
     @api.depends('picking_ids')
@@ -365,9 +373,12 @@ class SaleOrderLine(models.Model):
         depending on the sale order line product rule.
         """
         precision = self.env['decimal.precision'].precision_get('Product Unit of Measure')
+        get_param = self.env['ir.config_parameter'].sudo().get_param
         errors = []
+        partner_shipping_ids = self.mapped('order_id').mapped('partner_shipping_id')
+        property_stock_customer_ids = partner_shipping_ids.mapped('property_stock_customer') if partner_shipping_ids else None
         for line in self:
-            if line.state != 'sale' or not line.product_id.type in ('consu','product'):
+            if line.state != 'sale' or not line.product_id.type in ('consu', 'product'):
                 continue
             qty = line._get_qty_procurement()
             if float_compare(qty, line.product_uom_qty, precision_digits=precision) >= 0:
@@ -397,13 +408,17 @@ class SaleOrderLine(models.Model):
 
             procurement_uom = line.product_uom
             quant_uom = line.product_id.uom_id
-            get_param = self.env['ir.config_parameter'].sudo().get_param
+
             if procurement_uom.id != quant_uom.id and get_param('stock.propagate_uom') != '1':
                 product_qty = line.product_uom._compute_quantity(product_qty, quant_uom, rounding_method='HALF-UP')
                 procurement_uom = quant_uom
 
             try:
-                self.env['procurement.group'].run(line.product_id, product_qty, procurement_uom, line.order_id.partner_shipping_id.property_stock_customer, line.name, line.order_id.name, values)
+                _logger.info(f'SMP _action_launch_stock_rule property_stock_customer START')
+
+                property_stock_customer = line.order_id.partner_shipping_id.property_stock_customer if not property_stock_customer_ids or len(property_stock_customer_ids) > 1 else property_stock_customer_ids
+                _logger.info(f'SMP _action_launch_stock_rule property_stock_customer {property_stock_customer} END')
+                self.env['procurement.group'].run(line.product_id, product_qty, procurement_uom, property_stock_customer, line.name, line.order_id.name, values)
             except UserError as error:
                 errors.append(error.name)
         if errors:
@@ -425,7 +440,6 @@ class SaleOrderLine(models.Model):
                 },
             }
         return {}
-
 
     def _check_routing(self):
         """ Verify the route of the product based on the warehouse
