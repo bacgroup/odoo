@@ -78,7 +78,7 @@ class SaleOrder(models.Model):
 
     @api.multi
     def _action_confirm(self):
-        batch_len = 20
+        batch_len = 100
         for order in self:
             # order.order_line._action_launch_stock_rule()
             lines_len = len(order.order_line)
@@ -178,7 +178,6 @@ class SaleOrder(models.Model):
             return self.env.ref('sale_stock.exception_on_so').render(values=values)
 
         self.env['stock.picking']._log_activity(_render_note_exception_quantity_so, documents)
-
 
 
 class SaleOrderLine(models.Model):
@@ -415,11 +414,14 @@ class SaleOrderLine(models.Model):
 
             try:
                 property_stock_customer = line.order_id.partner_shipping_id.property_stock_customer if not property_stock_customer_ids or len(property_stock_customer_ids) > 1 else property_stock_customer_ids
-                self.env['procurement.group'].run(line.product_id, product_qty, procurement_uom, property_stock_customer, line.name, line.order_id.name, values)
+                self.env['procurement.group'].with_context(stock_move_confirm=False).run(line.product_id, product_qty, procurement_uom, property_stock_customer, line.name, line.order_id.name, values)  # ~DJG +context to skip confirm stock move (confirm one at a time / line by line)
             except UserError as error:
                 errors.append(error.name)
         if errors:
             raise UserError('\n'.join(errors))
+        stock_mvoes_to_confirm = self.env['stock.move'].search([('sale_line_id', 'in', self._ids), ('state', '=', 'draft')])
+        if stock_mvoes_to_confirm:  # +DJG Confirm multi stock move
+            stock_mvoes_to_confirm._action_confirm()
         return True
 
     @api.multi

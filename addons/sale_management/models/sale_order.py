@@ -107,13 +107,14 @@ class SaleOrder(models.Model):
         if template.note:
             self.note = template.note
 
-    @api.multi
-    def action_confirm(self):
-        res = super(SaleOrder, self).action_confirm()
-        for order in self:
-            if order.sale_order_template_id and order.sale_order_template_id.mail_template_id:
-                self.sale_order_template_id.mail_template_id.send_mail(order.id)
-        return res
+    # -DJG Skip Send Mail
+    # @api.multi
+    # def action_confirm(self):
+    #     res = super(SaleOrder, self).action_confirm()
+    #     for order in self:
+    #         if order.sale_order_template_id and order.sale_order_template_id.mail_template_id:
+    #             self.sale_order_template_id.mail_template_id.send_mail(order.id)
+    #     return res
 
     @api.multi
     def get_access_action(self, access_uid=None):
