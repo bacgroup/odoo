@@ -360,12 +360,8 @@ class AccountPaymentRegister(models.TransientModel):
                  'journal_id.outbound_payment_method_ids')
     def _compute_payment_method_fields(self):
         for wizard in self:
-            if wizard.can_edit_wizard:
-                wizard.available_payment_method_ids = wizard._get_batch_available_payment_methods(wizard.journal_id, wizard.payment_type)
-                wizard.hide_payment_method = len(wizard.available_payment_method_ids) == 1 and wizard.available_payment_method_ids.code == 'manual'
-            else:
-                wizard.available_payment_method_ids = None
-                wizard.hide_payment_method = False
+            wizard.available_payment_method_ids = wizard._get_batch_available_payment_methods(wizard.journal_id, wizard.payment_type)
+            wizard.hide_payment_method = len(wizard.available_payment_method_ids) == 1 and wizard.available_payment_method_ids.code == 'manual'
 
     @api.depends('payment_type',
                  'journal_id.inbound_payment_method_ids',
@@ -373,7 +369,7 @@ class AccountPaymentRegister(models.TransientModel):
     def _compute_payment_method_id(self):
         for wizard in self:
             available_payment_methods = wizard._get_batch_available_payment_methods(wizard.journal_id, wizard.payment_type)
-            if wizard.can_edit_wizard and available_payment_methods:
+            if available_payment_methods:
                 wizard.payment_method_id = available_payment_methods[:1]
             else:
                 wizard.payment_method_id = False
@@ -397,7 +393,7 @@ class AccountPaymentRegister(models.TransientModel):
                 wizard.amount = wizard.source_amount
             else:
                 # Foreign currency on payment different than the one set on the journal entries.
-                amount_payment_currency = wizard.company_id.currency_id._convert(wizard.source_amount, wizard.currency_id, wizard.company_id, wizard.payment_date)
+                amount_payment_currency = wizard.company_id.currency_id._convert(wizard.source_amount, wizard.currency_id, wizard.company_id, wizard.payment_date or fields.Date.today())
                 wizard.amount = amount_payment_currency
 
     @api.depends('amount')
@@ -411,7 +407,7 @@ class AccountPaymentRegister(models.TransientModel):
                 wizard.payment_difference = wizard.source_amount - wizard.amount
             else:
                 # Foreign currency on payment different than the one set on the journal entries.
-                amount_payment_currency = wizard.company_id.currency_id._convert(wizard.source_amount, wizard.currency_id, wizard.company_id, wizard.payment_date)
+                amount_payment_currency = wizard.company_id.currency_id._convert(wizard.source_amount, wizard.currency_id, wizard.company_id, wizard.payment_date or fields.Date.today())
                 wizard.payment_difference = amount_payment_currency - wizard.amount
 
     # -------------------------------------------------------------------------

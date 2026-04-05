@@ -13,11 +13,9 @@
 # Hamid Darabi, 2020
 # Hamed Mohammadi <hamed@dehongi.com>, 2021
 # Mohsen Mohammadi <iammohsen.123@gmail.com>, 2021
-# Far Har <fhari1234@gmail.com>, 2021
-# Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2022
 # Mohsen Seifmohammadi, 2022
-# Mohammad Tahmasebi <hit.tah75@gmail.com>, 2022
 # Hanna Kheradroosta, 2022
+# F Hariri <fhari1234@gmail.com>, 2023
 # 
 msgid ""
 msgstr ""
@@ -25,8 +23,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-27 15:34+0000\n"
 "PO-Revision-Date: 2020-09-07 08:19+0000\n"
-"Last-Translator: Hanna Kheradroosta, 2022\n"
-"Language-Team: Persian (https://www.transifex.com/odoo/teams/41243/fa/)\n"
+"Last-Translator: F Hariri <fhari1234@gmail.com>, 2023\n"
+"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -78,18 +76,18 @@ msgstr "%s (کپی)"
 #: code:addons/survey/models/survey_survey.py:0
 #, python-format
 msgid "%s certification passed"
-msgstr "گواهینامه %s تصویب شد"
+msgstr "%s گواهینامه صادرشد"
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
 #, python-format
 msgid "%s challenge certification"
-msgstr "گواهینامه چالش %s"
+msgstr "%s گواهینامه چالشی"
 
 #. module: survey
 #: model:ir.actions.report,print_report_name:survey.certification_report
 msgid "'Certification - %s' % (object.survey_id.display_name)"
-msgstr "'گواهینامه - %s' % (object.survey_id.display_name)"
+msgstr "گواهینامه - %s' % (object.survey_id.display_name)"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p4_q2_sug2
@@ -604,7 +602,7 @@ msgstr "<span class=\"text-muted\">موفقیت‌ها</span>"
 msgid ""
 "<span class=\"text-muted\">The code is found on the screen in front of "
 "you</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">کد در صفحه جلوی شما یافت می‌شود</span>"
 
 #. module: survey
 #: model:survey.question,description:survey.survey_demo_quiz_p3_q1
@@ -620,7 +618,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_session_code
 msgid "<span>Code is incorrect. Please try again.</span>"
-msgstr ""
+msgstr "<span>کد نادرست است. لطفا دوباره امتحان کنید.</span>"
 
 #. module: survey
 #: model:survey.question,description:survey.survey_demo_quiz_p5_q1
@@ -632,7 +630,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_button_retake
 msgid "<span>Number of attemps left</span>:"
-msgstr ""
+msgstr "<span>تعداد تلاش‌های باقیمانده</span>:"
 
 #. module: survey
 #: model:survey.question,description:survey.survey_demo_quiz_p2_q1
@@ -647,18 +645,18 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_page_statistics_question
 msgid "<span>Right answer:</span>"
-msgstr ""
+msgstr "<span>پاسخ درست:</span>"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_start
 msgid "<span>Time limit for this survey: </span>"
-msgstr ""
+msgstr "<span>مالیات‌ها</span>"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.user_input_session_manage_content
 #: model_terms:ir.ui.view,arch_db:survey.user_input_session_open
 msgid "<span>Waiting for attendees...</span>"
-msgstr ""
+msgstr "<span> منتظر شرکت کنندگان...</span>"
 
 #. module: survey
 #: model:survey.question,title:survey.survey_demo_quiz_p3_q4
@@ -669,7 +667,7 @@ msgstr ""
 #: code:addons/survey/models/survey_question.py:0
 #, python-format
 msgid "A label must be attached to only one question."
-msgstr "یک برچسب باید فقط به یک سوال چسبانده شود."
+msgstr "یک برچسب باید فقط به یک سوال وصل شود."
 
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_question_positive_len_max
@@ -693,8 +691,7 @@ msgid ""
 "A positive score indicates a correct choice; a negative or null score "
 "indicates a wrong answer"
 msgstr ""
-"نمره مثبت نشان دهنده انتخاب صحیح است. نمره منفی یا صفر نشان دهنده پاسخ "
-"اشتباه است"
+"نمره مثبت نشانگر انتخاب صحیح است. نمره منفی یا تهی نشانگر پاسخ اشتباه است"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form
@@ -705,7 +702,7 @@ msgstr "مشکلی رخ داده است"
 #: code:addons/survey/models/survey_user.py:0
 #, python-format
 msgid "A question can either be skipped or answered, not both."
-msgstr ""
+msgstr "یک سؤال را می توان رد کرد یا پاسخ داد، نه هر دو."
 
 #. module: survey
 #: model:survey.question,title:survey.survey_feedback_p2
@@ -731,7 +728,7 @@ msgstr "توکن دسترسی"
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_survey_access_token_unique
 msgid "Access token should be unique"
-msgstr "توکن دسترسی باید منحصر به فرد باشد"
+msgstr "توکن دسترسی باید یکتا باشد"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__message_needaction
@@ -769,8 +766,8 @@ msgid ""
 "Add a list of email of recipients (will not be converted into contacts). "
 "Separated by commas, semicolons or newline..."
 msgstr ""
-"لیستی از ایمیل گیرندگان را اضافه کنید (به مخاطبین تبدیل نخواهد شد). با کاما،"
-" نقطه ویرگول یا خط جدید از هم جدا می شوند..."
+"لیستی از ایمیل گیرندگان را اضافه کنید (به مخاطبین تبدیل نمی شود). توسط کاما،"
+" نقطه ویرگول یا خط جدید ... جدا می‌شوند"
 
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_form
@@ -795,7 +792,7 @@ msgstr "افزودن تماس‌های موجود..."
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__emails
 msgid "Additional emails"
-msgstr "ایمیل های اضافی"
+msgstr "ایمیل‌های بیشتر"
 
 #. module: survey
 #: model:res.groups,name:survey.group_survey_manager
@@ -845,7 +842,7 @@ msgstr "تمام پرسش‌ها"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_page_statistics_inner
 msgid "All surveys"
-msgstr "تمام نظرسنجی ها"
+msgstr "همه نظرسنجی‌ها"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -990,12 +987,12 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.user_input_session_manage_content
 msgid "Attendees are answering the question..."
-msgstr "حاضرین به این سوال پاسخ می دهند..."
+msgstr "شرکت کنندگان در حال پاسخ به این سوال هستند ..."
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__session_speed_rating
 msgid "Attendees get more points if they answer quickly"
-msgstr "شرکت کنندگان اگر سریع پاسخ دهند امتیاز بیشتری می گیرند"
+msgstr "شرکت‌کنندگان اگر سریعتر جواب دهند، امتیاز بیشتری دریافت می‌کنند"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__author_id
@@ -1039,7 +1036,7 @@ msgstr "دکمه برگشت"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__background_image
 msgid "Background Image"
-msgstr "تصویر زمینه"
+msgstr "تصویر پس‌زمینه"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.gamification_badge_form_view_simplified
@@ -1079,7 +1076,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_classic
 msgid "CERTIFICATE"
-msgstr ""
+msgstr "گواهی"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_2_choice_3
@@ -1104,7 +1101,7 @@ msgstr "لغو"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Candidates"
-msgstr "کاندیدها"
+msgstr "نامزدها"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
@@ -1137,27 +1134,27 @@ msgstr "صدور گواهینامه ناموفق بود"
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_classic
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_modern
 msgid "Certification Seal"
-msgstr ""
+msgstr "مهر و موم گواهینامه"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Certification Template"
-msgstr "قالب گواهینامه"
+msgstr "الگوی گواهینامه"
 
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_survey_give_badge_check
 msgid "Certification badge must be configured if Give Badge is set."
-msgstr ""
+msgstr "در صورت تنظیم نشان، نشان گواهینامه باید پیکربندی شود."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__certification_report_layout
 msgid "Certification template"
-msgstr "قالب گواهینامه"
+msgstr "الگوی گواهینامه"
 
 #. module: survey
 #: model:mail.template,subject:survey.mail_template_certification
 msgid "Certification: ${object.survey_id.display_name}"
-msgstr ""
+msgstr "صدور گواهینامه: $ {object.survey_id.display_name}"
 
 #. module: survey
 #: model:ir.actions.report,name:survey.certification_report
@@ -1169,18 +1166,18 @@ msgstr "گواهی نامه‌ها"
 #: model:ir.model.fields,field_description:survey.field_res_partner__certifications_count
 #: model:ir.model.fields,field_description:survey.field_res_users__certifications_count
 msgid "Certifications Count"
-msgstr "تعداد گواهینامه ها"
+msgstr "تعداد گواهی‌نامه‌ها"
 
 #. module: survey
 #: model:ir.actions.act_window,name:survey.res_partner_action_certifications
 msgid "Certifications Succeeded"
-msgstr "صدور گواهینامه ها موفقیت آمیز بود"
+msgstr "صدور گواهینامه‌ها  موفق بود"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 #: model_terms:ir.ui.view,arch_db:survey.survey_kanban
 msgid "Certified"
-msgstr "گواهی شده"
+msgstr "گواهی‌شده"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_1_question_2_choice_1
@@ -1197,8 +1194,8 @@ msgstr "نمودار"
 #: model:ir.model.fields,help:survey.field_survey_user_input__is_attempts_limited
 msgid "Check this option if you want to limit the number of attempts per user"
 msgstr ""
-"اگر می خواهید تعداد تلاش برای هر کاربر را محدود کنید، این گزینه را علامت "
-"بزنید"
+"اگر می‌خواهید تعداد تلاش‌های هر کاربر را محدود کنید، این گزینه را انتخاب "
+"کنید"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p4_q2_sug2
@@ -1299,7 +1296,7 @@ msgstr "نگارش ایمیل"
 #: code:addons/survey/models/survey_user.py:0
 #, python-format
 msgid "Computing score requires a question in arguments."
-msgstr ""
+msgstr "محاسبات امتیاز نیاز به یک سوال در استدلال‌ها دارد."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__is_conditional
@@ -1400,7 +1397,7 @@ msgstr "پاسخ تاریخ صحیح"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__answer_date
 msgid "Correct date answer for this question."
-msgstr "پاسخ تاریخ صحیح برای این سوال."
+msgstr "پاسخ تاریخ صحیح برای این سوال وارد کنید."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__answer_datetime
@@ -1410,12 +1407,12 @@ msgstr "پاسخ صحیح تاریخ"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__answer_numerical_box
 msgid "Correct number answer for this question."
-msgstr "پاسخ عددی صحیح برای این سوال."
+msgstr "پاسخ عددی صحیح برای این سوال وارد کنید."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__answer_numerical_box
 msgid "Correct numerical answer"
-msgstr "پاسخ عددی صحیح"
+msgstr "پاسخ عددی درست"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_3_choice_3
@@ -1430,7 +1427,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Create Live Session"
-msgstr "ایجاد جلسه زنده"
+msgstr "نشست زنده ایجاد کنید"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__create_uid
@@ -1471,13 +1468,13 @@ msgstr ""
 #: code:addons/survey/models/survey_survey.py:0
 #, python-format
 msgid "Creating token for archived surveys is not allowed."
-msgstr ""
+msgstr "ایجاد توکن برای نظرسنجی‌های بایگانی شده مجاز نیست."
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
 #, python-format
 msgid "Creating token for closed surveys is not allowed."
-msgstr ""
+msgstr "ایجاد توکن برای نظرسنجی‌های بسته مجاز نیست."
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
@@ -1503,7 +1500,7 @@ msgstr "زمان شروع سوال فعلی"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__session_start_time
 msgid "Current Session Start Time"
-msgstr "زمان شروع جلسه فعلی"
+msgstr "زمان شروع نشست فعلی"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__is_time_limited
@@ -1516,13 +1513,13 @@ msgid ""
 "Customers will receive a new token and be able to completely retake the "
 "survey."
 msgstr ""
-"مشتریان یک توکن جدید دریافت می کنند و می توانند به طور کامل در نظرسنجی شرکت "
-"کنند."
+"مشتریان یک توکن جدید دریافت می کنند و می توانند نظرسنجی را به طور کامل "
+"بازیابی کنند."
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
 msgid "Customers will receive the same token."
-msgstr "مشتریان همان توکن را دریافت خواهند کرد."
+msgstr "مشتریان همان توکن را دریافت می کنند."
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_1_question_2_choice_5
@@ -1545,12 +1542,12 @@ msgstr "پاسخ تاریخ"
 #: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__datetime
 #: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__datetime
 msgid "Datetime"
-msgstr "تاریخ زمان"
+msgstr "زمان قرار"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_datetime
 msgid "Datetime answer"
-msgstr "پاسخ تاریخ زمان"
+msgstr "پاسخ تاریخ ساعت"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_user_input__deadline
@@ -1585,8 +1582,8 @@ msgstr "توضیحات"
 #: model_terms:ir.actions.act_window,help:survey.action_survey_form
 msgid "Design easily your survey, send invitations and analyze answers."
 msgstr ""
-"نظرسنجی خود را به راحتی طراحی کنید، دعوت نامه ارسال کنید و پاسخ ها را تجزیه "
-"و تحلیل کنید."
+"نظرسنجی خود را به راحتی طراحی کنید، دعوت نامه‌ها را ارسال کنید و پاسخ‌ها را "
+"تجزیه و تحلیل کنید."
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_2_choice_2
@@ -1597,7 +1594,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:survey.survey_user_input_line_action
 #: model:ir.ui.menu,name:survey.menu_survey_response_line_form
 msgid "Detailed Answers"
-msgstr "پاسخ های تفصیلی"
+msgstr "پاسخ‌های دقیق"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_feedback_p2_q2_col2
@@ -1628,7 +1625,7 @@ msgid ""
 "Display images in addition to answer label. Valid only for simple / multiple"
 " choice questions."
 msgstr ""
-"نمایش تصاویر علاوه بر برچسب پاسخ. فقط برای سوالات ساده / چند گزینه ای معتبر "
+"نمایش تصاویر علاوه بر برچسب پاسخ. فقط برای سوالات ساده / چند انتخاب معتبر "
 "است."
 
 #. module: survey
@@ -1706,7 +1703,7 @@ msgstr "آدرس ایمیل فرستنده."
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__description_done
 msgid "End Message"
-msgstr "پایان پیام"
+msgstr "پیام نهایی"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__constr_error_msg
@@ -1726,17 +1723,17 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
 msgid "Except Test Entries"
-msgstr "باستثنای ورودی های تست"
+msgstr "به جز سندهای تست"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_partner_ids
 msgid "Existing Partner"
-msgstr "شریک موجود"
+msgstr "همکار موجود"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_emails
 msgid "Existing emails"
-msgstr "ایمیل های موجود"
+msgstr "ایمیل‌های موجود"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p2_q3_sug2
@@ -1771,7 +1768,7 @@ msgstr "جدول امتیازات نهایی"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_page_statistics_inner
 msgid "Finished surveys"
-msgstr "نظرسنجی های تمام شده"
+msgstr "نظرسنجی به پایان رسیده"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__message_follower_ids
@@ -1831,7 +1828,7 @@ msgstr "نشان بازی‌گونه‌سازی"
 #. module: survey
 #: model:ir.model,name:survey.model_gamification_challenge
 msgid "Gamification Challenge"
-msgstr "چالش گیمیفیکیشن"
+msgstr "چالش بازی‌گونه سازی"
 
 #. module: survey
 #: model:survey.question,title:survey.survey_demo_burger_quiz_p2
@@ -1842,7 +1839,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__certification_give_badge
 msgid "Give Badge"
-msgstr "نشان بدهید"
+msgstr "دادن نشان"
 
 #. module: survey
 #: model:survey.question,title:survey.survey_demo_quiz_p2_q3
@@ -1888,7 +1885,7 @@ msgstr "دسته بندی بر مبنای"
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_mode
 #: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
 msgid "Handle existing"
-msgstr "رسیدگی به موجود"
+msgstr "رسیدگی به موجودها"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p4_q3_sug1
@@ -2079,8 +2076,8 @@ msgid ""
 "If checked, this question will be displayed only \n"
 "        if the specified conditional answer have been selected in a previous question"
 msgstr ""
-"اگر علامت زده شود، این سوال فقط نمایش داده می شود\n"
-"         اگر پاسخ مشروط مشخص شده در سوال قبلی انتخاب شده باشد"
+"در صورت بررسی، این سؤال فقط نمایش داده می شود\n"
+"اگر پاسخ مشروط مشخص شده در یک سوال قبلی انتخاب شده است"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__users_can_go_back
@@ -2200,7 +2197,7 @@ msgstr "تصویر"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__allow_value_image
 msgid "Images on answers"
-msgstr "تصاویر روی پاسخ ها"
+msgstr "تصاویر روی پاسخ‌ها"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p3_q2_sug1
@@ -2288,7 +2285,7 @@ msgstr "یک صفحه است؟"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__is_session_answer
 msgid "Is in a Session"
-msgstr "آیا در یک جلسه است"
+msgstr "آیا یک نشست است"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_user_input__is_session_answer
@@ -2345,7 +2342,7 @@ msgstr "ترتیب دنباله برچسب"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__matrix_row_ids
 msgid "Labels used for proposed choices: rows of matrix"
-msgstr "برچسب های مورد استفاده برای انتخاب های پیشنهادی: ردیف های ماتریس"
+msgstr "برچسب‌های مورد استفاده برای گزینه‌های پیشنهادی: ردیف‌های ماتریس"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__suggested_answer_ids
@@ -2353,8 +2350,8 @@ msgid ""
 "Labels used for proposed choices: simple choice, multiple choice and columns"
 " of matrix"
 msgstr ""
-"برچسب های مورد استفاده برای انتخاب های پیشنهادی: انتخاب ساده، چند گزینه ای و"
-" ستون های ماتریس"
+"برچسب‌های مورد استفاده برای گزینه‌های پیشنهادی: انتخاب ساده، انتخاب "
+"چندگزینه‌ای و ستون‌های ماتریس"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_2_choice_4
@@ -2429,12 +2426,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_survey__is_attempts_limited
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__is_attempts_limited
 msgid "Limited number of attempts"
-msgstr "تعداد محدود دفعات"
+msgstr "تعداد محدودی از تلاش‌ها"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Live Session"
-msgstr "جلسه زنده"
+msgstr "نشست زنده"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -2445,7 +2442,7 @@ msgstr "جلسات زنده"
 #: model:ir.model.fields,field_description:survey.field_survey_invite__survey_users_login_required
 #: model:ir.model.fields,field_description:survey.field_survey_survey__users_login_required
 msgid "Login Required"
-msgstr "ورود به سیستم لازم است"
+msgstr "ورود به سیستم مورد نیاز است"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_auth_required
@@ -2471,7 +2468,7 @@ msgstr "ماتریس"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__matrix_row_ids
 msgid "Matrix Rows"
-msgstr "ردیف های ماتریسی"
+msgstr "ردیف‌های ماتریس"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__matrix_subtype
@@ -2481,7 +2478,7 @@ msgstr "نوع ماتریس"
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_question_validation_date
 msgid "Max date cannot be smaller than min date!"
-msgstr "حداکثر تاریخ نمی تواند کوچکتر از حداقل تاریخ باشد!"
+msgstr "تاریخ حداکثر نمی تواند از تاریخ کوچکتر باشد!"
 
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_question_validation_datetime
@@ -2496,7 +2493,7 @@ msgstr "حداکثر طول نمی تواند کوچکتر از حداقل طو�
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_question_validation_float
 msgid "Max value cannot be smaller than min value!"
-msgstr "حداکثر مقدار نمی تواند کوچکتر از حداقل مقدار باشد!"
+msgstr "مقدار حداکثر نمی تواند کوچکتر از مقدار حداقل باشد!"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_max_date
@@ -2521,7 +2518,7 @@ msgstr "مقدار حداکثر"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_403_page
 msgid "Maybe you were looking for"
-msgstr "شاید دنبالش بودی"
+msgstr "شاید شما به دنبال آن بودید"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__message_has_error
@@ -2607,12 +2604,12 @@ msgstr "جعبه متن چند سطری"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
 msgid "Multiple choice with multiple answers"
-msgstr "چند گزینه ای با چند پاسخ"
+msgstr "انتخاب چندگزینه‌ای با پاسخ‌های متعدد"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
 msgid "Multiple choice with one answer"
-msgstr "چند گزینه ای با یک پاسخ"
+msgstr "انتخاب چندگزینه‌ای با یک پاسخ"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__multiple_choice
@@ -2689,7 +2686,7 @@ msgstr "هیچ تلاشی باقی نمانده است."
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_question_form
 msgid "No questions found"
-msgstr "سوالی پیدا نشد"
+msgstr "هیچ سوالی یافت نشد"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__no_scoring
@@ -2699,12 +2696,12 @@ msgstr "بدون امتیاز"
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.survey_question_answer_action
 msgid "No survey labels found"
-msgstr "هیچ برچسب نظرسنجی یافت نشد"
+msgstr "هیچ برچسب بررسی یافت نشد"
 
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.survey_user_input_line_action
 msgid "No user input lines found"
-msgstr "هیچ سطر ورودی کاربر پیدا نشد"
+msgstr "هیچ خط ورودی کاربر یافت نمی شود"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p4_q3_sug2
@@ -2714,7 +2711,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_user_input
 msgid "Nobody has replied to your surveys yet"
-msgstr "هنوز کسی به نظرسنجی های شما پاسخ نداده است"
+msgstr "هنوز هیچ کس به نظرسنجی‌های شما پاسخ نداده است"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p4_q5_sug2
@@ -2746,7 +2743,7 @@ msgstr "تعداد کنش ها"
 #: model:ir.model.fields,field_description:survey.field_survey_survey__attempts_limit
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__attempts_limit
 msgid "Number of attempts"
-msgstr "تعداد دفعات"
+msgstr "تعداد تلاش"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__column_nb
@@ -2792,7 +2789,7 @@ msgstr "پاسخ عددی"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.question_result_number_or_date
 msgid "Occurrence"
-msgstr "رخداد"
+msgstr "وقوع"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_2_choice_5
@@ -2829,17 +2826,17 @@ msgstr "یک گزینه در هر ردیف"
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__page_per_question
 msgid "One page per question"
-msgstr "هر سوال یک صفحه"
+msgstr "یک صفحه بازای هر سوال"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__page_per_section
 msgid "One page per section"
-msgstr "یک صفحه در هر بخش"
+msgstr "یک صفحه بازای هر بخش"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__one_page
 msgid "One page with all the questions"
-msgstr "یک صفحه با تمام سوالات"
+msgstr "یک صفحه با همه سوالات"
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
@@ -2851,7 +2848,7 @@ msgstr "فقط کاربران نظرسنجی می توانند جلسات را �
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Open Session Manager"
-msgstr "باز کردن مدیر جلسه"
+msgstr "مدیر بازکردن جلسه"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -2881,7 +2878,7 @@ msgstr "میل سرور خروجی"
 #: code:addons/survey/static/src/js/survey_result.js:0
 #, python-format
 msgid "Overall Performance %.2f%s"
-msgstr ""
+msgstr "عملکرد کلی %.2f%s"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_feedback_p2_q1_sug5
@@ -2912,19 +2909,19 @@ msgstr "جزئی"
 #: code:addons/survey/models/survey_user.py:0
 #, python-format
 msgid "Partially"
-msgstr ""
+msgstr "تا اندازه ای"
 
 #. module: survey
 #: model:mail.template,subject:survey.mail_template_user_input_invite
 msgid "Participate to ${object.survey_id.title} survey"
-msgstr ""
+msgstr "شرکت در $ {object.survey_id.title} نظرسنجی"
 
 #. module: survey
 #: model:ir.actions.act_window,name:survey.action_survey_user_input
 #: model:ir.ui.menu,name:survey.menu_survey_type_form1
 #: model:ir.ui.menu,name:survey.survey_menu_user_inputs
 msgid "Participations"
-msgstr "مشارکت ها"
+msgstr "مشارکت"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__partner_id
@@ -2942,7 +2939,7 @@ msgstr "قبول شده"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_in_progress
 msgid "Pay attention to the host screen until the next question."
-msgstr "تا سوال بعدی به صفحه میزبان دقت کنید."
+msgstr "تا سوال بعدی به صفحه میزبان توجه کنید."
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__progression_mode__percent
@@ -2967,7 +2964,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.question_result_choice
 msgid "Pie Graph"
-msgstr "نمودار کلوچه ای"
+msgstr "نمودار قارچی"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p4_q1_sug1
@@ -2978,12 +2975,12 @@ msgstr ""
 #: code:addons/survey/wizard/survey_invite.py:0
 #, python-format
 msgid "Please enter at least one valid recipient."
-msgstr "لطفا حداقل یک گیرنده معتبر وارد کنید."
+msgstr "لطفاً حداقل یک گیرنده معتبر را وارد کنید."
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_session_code
 msgid "Please enter the code"
-msgstr ""
+msgstr "لطفا کد را وارد کنید"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_void_content
@@ -2991,8 +2988,8 @@ msgid ""
 "Please make sure you have at least one question in your survey. You also "
 "need at least one section if you chose the \"Page per section\" layout.<br/>"
 msgstr ""
-"لطفا مطمئن شوید که حداقل یک سوال در نظرسنجی خود دارید. همچنین اگر طرح‌بندی "
-"«صفحه در هر بخش» را انتخاب کنید، به حداقل یک بخش نیاز دارید.<br/>"
+"لطفاً اطمینان حاصل کنید که حداقل یک سوال در نظرسنجی خود دارید. اگر طرح "
+"\"صفحه در هر بخش\" را انتخاب کردید، حداقل به یک بخش نیاز دارید. <br/>"
 
 #. module: survey
 #: model:survey.question,title:survey.vendor_certification_page_3
@@ -3012,7 +3009,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__predefined_question_ids
 msgid "Predefined Questions"
-msgstr "سوالات از پیش تعریف شده"
+msgstr "سوالات ار قبل تعیین‌شده"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -3038,7 +3035,7 @@ msgstr "محصولات"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__progression_mode
 msgid "Progression Mode"
-msgstr "حالت پیشرفت"
+msgstr "حالت پیشرفتی"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question_answer__question_id
@@ -3051,12 +3048,12 @@ msgstr "پرسش"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question_answer__matrix_question_id
 msgid "Question (as matrix row)"
-msgstr "سوال (به عنوان ردیف ماتریس)"
+msgstr "پرسش (یصورت ردیف ماتریس)"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__session_question_answer_count
 msgid "Question Answers Count"
-msgstr "تعداد پاسخ سوالات"
+msgstr "تعداد پاسخ‌های سوال"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -3071,7 +3068,7 @@ msgstr "به محدودیت زمانی سوال رسیده است"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__question_type
 msgid "Question Type"
-msgstr "نوع سوال"
+msgstr "نوع پرسش"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__triggering_question_id
@@ -3097,12 +3094,12 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__scoring_success
 msgid "Quizz Passed"
-msgstr "قبول شده"
+msgstr "کوئیز قبول شد"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
 msgid "Quizz passed"
-msgstr "قبول شده"
+msgstr "کوئیز قبول شد"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__random_questions_count
@@ -3138,7 +3135,7 @@ msgstr "ارسال مجدد نظر"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
 msgid "Resend Invitation"
-msgstr "باز ارسال دعوت‌نامه"
+msgstr "ارسال مجدد دعوتنامه"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_invite__existing_mode__resend
@@ -3163,12 +3160,12 @@ msgstr "تلاش دوباره"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__session_speed_rating
 msgid "Reward quick answers"
-msgstr "به پاسخ های سریع پاداش دهید"
+msgstr "به پاسخ‌های سریع پاداش دهید"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.gamification_badge_form_view_simplified
 msgid "Rewards for challenges"
-msgstr "پاداش برای چالش ها"
+msgstr "پاداش برای چالش‌ها"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_page_statistics_question
@@ -3178,12 +3175,12 @@ msgstr "جواب درست:"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_page_statistics_question
 msgid "Right answers:"
-msgstr "جواب‌های درست:"
+msgstr "پاسخ‌های درست:"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line__matrix_row_id
 msgid "Row answer"
-msgstr "پاسخ ردیفی"
+msgstr "جواب خام"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -3223,7 +3220,7 @@ msgstr "ذخیره به عنوان ایمیل کاربر"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__save_as_nickname
 msgid "Save as user nickname"
-msgstr "ذخیره به عنوان نام مستعار کاربر"
+msgstr "ذخیره به عنوان نام‌مستعار کاربر"
 
 #. module: survey
 #: model:survey.question,title:survey.survey_demo_burger_quiz_p4
@@ -3236,7 +3233,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line__answer_score
 #: model_terms:ir.ui.view,arch_db:survey.question_result_choice
 msgid "Score"
-msgstr "امتیاز"
+msgstr "نمره"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__scoring_percentage
@@ -3251,7 +3248,7 @@ msgstr "امتیاز برای این گزینه"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__answer_score
 msgid "Score value for a correct answer to this question."
-msgstr "امتیاز برای پاسخ صحیح به این سوال."
+msgstr "مقدار امتیاز برای پاسخ صحیح به این سوال."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__is_scored_question
@@ -3263,27 +3260,27 @@ msgstr "امتیاز داده شده"
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__scoring_type
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Scoring"
-msgstr "امتیاز دهی"
+msgstr "امتیازدهی"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__scoring_type
 msgid "Scoring Type"
-msgstr "نوع امتیاز دهی"
+msgstr "نوع امتیازدهی"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__scoring_with_answers
 msgid "Scoring with answers at the end"
-msgstr "امتیاز دهی با پاسخ در پایان"
+msgstr "دادن امتیاز با پاسخ‌ها در انتها"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__scoring_without_answers
 msgid "Scoring without answers at the end"
-msgstr "امتیاز دهی بدون پاسخ در پایان"
+msgstr "دادن امتیاز بدون پاسخ‌ها در انتها"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_answer_view_search
 msgid "Search Label"
-msgstr "جستجو برچسب"
+msgstr "جستجوی برچسب"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_search
@@ -3309,7 +3306,7 @@ msgstr "بخش"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__question_and_page_ids
 msgid "Sections and Questions"
-msgstr "بخش ‌ها و سوالات"
+msgstr "بخش‌ها و سوالات"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -3378,7 +3375,7 @@ msgstr "کد جلسه باید منحصر به فرد باشد"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "Set to draft"
-msgstr ""
+msgstr "تبدیل به پیش‌نویس"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p2_q2_sug1
@@ -3394,7 +3391,7 @@ msgstr "اشتراک گذاری"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__comments_allowed
 msgid "Show Comments Field"
-msgstr "نمایش فیلد نظرات"
+msgstr "نمایش نظرات"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__session_show_leaderboard
@@ -3431,12 +3428,12 @@ msgstr "برخی از ایمیل‌هایی که وارد کرده‌اید نا
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_page_statistics_header
 msgid "Sorry, no one answered this survey yet."
-msgstr "متاسفم، هنوز کسی به این نظرسنجی پاسخ نداده است."
+msgstr "متاسفانه، هنوز کسی به این نظرسنجی پاسخ نداده است."
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_in_progress
 msgid "Sorry, you have not been fast enough."
-msgstr "متاسفم، شما به اندازه کافی سریع نبوده اید."
+msgstr "متاسفانه، شما به اندازه کافی سریع نبوده‌اید."
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p4_q4_sug4
@@ -3547,7 +3544,7 @@ msgstr "میزان موفقیت:"
 #: model:ir.actions.act_window,name:survey.survey_question_answer_action
 #: model:ir.ui.menu,name:survey.menu_survey_label_form1
 msgid "Suggested Values"
-msgstr "مقدار های پیشنهادی"
+msgstr "مقادیر پیشنهادی"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line__suggested_answer_id
@@ -3593,7 +3590,7 @@ msgstr "لیست پاسخ های نظرسنجی"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_gamification_badge__survey_ids
 msgid "Survey Ids"
-msgstr "شناسه های نظرسنجی"
+msgstr "شناسه نظرسنجی"
 
 #. module: survey
 #: model:ir.model,name:survey.model_survey_invite
@@ -3662,7 +3659,7 @@ msgstr "فیلتر نظرسنجی"
 #. module: survey
 #: model:ir.actions.server,name:survey.survey_action_server_clean_test_answers
 msgid "Survey: Clean test answers"
-msgstr "نظرسنجی: پاک کردن پاسخ های تست"
+msgstr "نظرسنجی: پاک‌کردن پاسخ‌های آزمون"
 
 #. module: survey
 #: model:ir.actions.act_window,name:survey.action_survey_form
@@ -3684,7 +3681,7 @@ msgstr "آزمایش"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
 msgid "Test Entries"
-msgstr "ورودی های تست"
+msgstr "ورودی‌های آزمون"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__test_entry
@@ -3710,7 +3707,7 @@ msgstr "سپاسگذاریم!"
 #: code:addons/survey/models/survey_user.py:0
 #, python-format
 msgid "The answer must be in the right type"
-msgstr ""
+msgstr "جواب باید از نوع مناسب باشد"
 
 #. module: survey
 #: code:addons/survey/models/survey_question.py:0
@@ -3793,7 +3790,7 @@ msgid ""
 "The attempts limit needs to be a positive number if the survey has a limited"
 " number of attempts."
 msgstr ""
-"اگر نظرسنجی تعداد تلاش محدودی داشته باشد، محدودیت تلاش باید یک عدد مثبت "
+"اگر در این نظرسنجی تعداد محدودی تلاش مجاز باشد، محدودیت تلاش باید عدد مثبتی "
 "باشد."
 
 #. module: survey
@@ -3832,20 +3829,20 @@ msgid ""
 "use this to give the purpose and guidelines to your candidates before they "
 "start it."
 msgstr ""
-"توضیحات در صفحه اصلی نظرسنجی نمایش داده می شود. شما می توانید از این برای "
-"ارائه هدف و دستورالعمل ها به کاندیدهای خود قبل از شروع آن استفاده کنید."
+"توضیحات در صفحه اصلی نظرسنجی نمایش داده می شود. شما می توانید از این امر "
+"برای ارائه هدف و دستورالعمل‌ها به نامزدهای خود قبل از شروع آن استفاده کنید."
 
 #. module: survey
 #: code:addons/survey/wizard/survey_invite.py:0
 #, python-format
 msgid "The following customers have already received an invite"
-msgstr "مشتریان زیر قبلا دعوتنامه دریافت کرده اند"
+msgstr "مشتریان زیر قبلاً دعوت شده‌اند"
 
 #. module: survey
 #: code:addons/survey/wizard/survey_invite.py:0
 #, python-format
 msgid "The following emails have already received an invite"
-msgstr "ایمیل های زیر قبلا دعوتنامه دریافت کرده اند"
+msgstr "ایمیل‌های زیر قبلا دعوتنامه دریافت کرده‌اند"
 
 #. module: survey
 #: code:addons/survey/wizard/survey_invite.py:0
@@ -3854,8 +3851,8 @@ msgid ""
 "The following recipients have no user account: %s. You should create user "
 "accounts for them or allow external signup in configuration."
 msgstr ""
-"گیرندگان زیر هیچ حساب کاربری ندارند: %s. باید برای آنها حساب های کاربری "
-"ایجاد کنید یا اجازه ثبت نام خارجی را در پیکربندی بدهید."
+"گیرنده‌های زیر هیچ حساب کاربری ندارند: %s. شما باید حساب‌های کاربری را برای "
+"آن‌ها ایجاد کنید یا در پیکربندی امکان ثبت‌نام خارجی را فراهم کنید."
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_feedback_p2_q2_row1
@@ -3875,7 +3872,7 @@ msgstr "درصد موفقیت باید بین 0 تا 100 تعریف شود."
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__is_time_limited
 msgid "The question is limited in time"
-msgstr "سوال در زمان محدود است"
+msgstr "سوال محدودیت زمانی دارد"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_start
@@ -3891,7 +3888,7 @@ msgstr "نظرسنجی از قبل شروع شده است."
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__is_time_limited
 msgid "The survey is limited in time"
-msgstr "نظرسنجی از نظر زمانی محدود است"
+msgstr "نظرسنجی از نظر زمانی محدودیت دارد"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__session_question_start_time
@@ -3922,7 +3919,7 @@ msgstr "کاربر موفق به دریافت گواهینامه نشده است
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form
 msgid "There was an error during the validation of the survey."
-msgstr "در حین اعتبارسنجی نظرسنجی خطایی وجود داشت."
+msgstr "در حین اعتبارسنجی نظرسنجی خطایی رخ داد."
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__column_nb
@@ -3930,12 +3927,14 @@ msgid ""
 "These options refer to col-xx-[12|6|4|3|2] classes in Bootstrap for "
 "dropdown-based simple and multiple choice questions."
 msgstr ""
+"این گزینه‌ها به کلاسهای Col-XX- [12 | 6 | 4 | 3 | 2] در Bootstrap برای "
+"سؤالات ساده و چند انتخاب مبتنی بر کشویی اشاره دارد."
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_classic
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_modern
 msgid "This Certificate is Presented to"
-msgstr ""
+msgstr "این گواهینامه تقدیم می‌شود به"
 
 #. module: survey
 #: code:addons/survey/models/survey_question.py:0
@@ -3987,13 +3986,13 @@ msgid ""
 "This list of emails of recipients will not be converted in contacts.        "
 "Emails must be separated by commas, semicolons or newline."
 msgstr ""
-"این لیست از ایمیل های گیرندگان به مخاطب تبدیل نمی شود.       ایمیل ها باید "
-"با کاما، نقطه ویرگول یا خط جدید از هم جدا شوند."
+"این لیست از ایمیل های گیرندگان به مخاطب تبدیل نمی شود. ایمیل ها باید با "
+"کاما، نقطه ویرگول یا خط جدید از هم جدا شوند."
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__description_done
 msgid "This message will be displayed when survey is completed"
-msgstr "این پیام پس از تکمیل نظرسنجی نمایش داده می شود"
+msgstr "این پیام پس از اتمام نظرسنجی نمایش داده می‌شود"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -4153,12 +4152,12 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__triggering_answer_id
 msgid "Triggering Answer"
-msgstr ""
+msgstr "آغازکردن پاسخ"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__triggering_question_id
 msgid "Triggering Question"
-msgstr ""
+msgstr "آغازکردن پرسش"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_search
@@ -4190,7 +4189,7 @@ msgstr "ارسال پیام ممکن نیست، لطفا آدرس ایمیل ف�
 #: code:addons/survey/models/survey_user.py:0
 #, python-format
 msgid "Unanswered"
-msgstr "بی پاسخ"
+msgstr "بی‌پاسخ"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_3_choice_2
@@ -4291,17 +4290,17 @@ msgstr "کاربران می توانند به عقب برگردند"
 #: model:ir.model.fields,field_description:survey.field_survey_invite__survey_users_can_signup
 #: model:ir.model.fields,field_description:survey.field_survey_survey__users_can_signup
 msgid "Users can signup"
-msgstr "کاربران می توانند ثبت نام کنند"
+msgstr "کاربران می‌توانند ثبت‌نام کنند"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_required
 msgid "Validate entry"
-msgstr "تایید ورودی"
+msgstr "معتبرسازی سند"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_error_msg
 msgid "Validation Error message"
-msgstr "پیغام خطای اعتبارسنجی"
+msgstr "پیام خطای معتبرسازی"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_quiz_p3_q1_sug2
@@ -4324,7 +4323,7 @@ msgid ""
 "We have registered your answer! Please wait for the host to go to the next "
 "question."
 msgstr ""
-"ما پاسخ شما را ثبت کرده ایم! لطفا منتظر بمانید تا میزبان به سوال بعدی برود."
+"ما پاسخ شما را ثبت کرده‌ایم! لطفاً صبر کنید تا میزبان به سوال بعدی برود."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__website_message_ids
@@ -4530,9 +4529,8 @@ msgid ""
 "feedback, recruitment interviews, employee's periodical evaluations, "
 "marketing campaigns, etc."
 msgstr ""
-"می‌توانید نظرسنجی‌هایی را برای اهداف مختلف ایجاد کنید: نظر مشتری، بازخورد "
-"خدمات، مصاحبه‌های استخدام، ارزیابی‌های دوره‌ای کارمندان، کمپین‌های بازاریابی"
-" و غیره."
+"شما می توانید برای اهداف مختلف نظرسنجی ایجاد کنید: نظر مشتری، بازخورد خدمات،"
+" مصاحبه استخدام، ارزیابی دوره‌ای کارمندان، کمپین‌های بازاریابی و غیره."
 
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_survey_certification_check
@@ -4540,14 +4538,15 @@ msgid ""
 "You can only create certifications for surveys that have a scoring "
 "mechanism."
 msgstr ""
-"شما فقط می توانید برای نظرسنجی هایی که مکانیسم امتیازدهی دارند، گواهی ایجاد "
-"کنید."
+"شما فقط می توانید برای نظرسنجی‌هایی که مکانیسم امتیازدهی دارند، "
+"گواهینامه‌هایی ایجاد کنید."
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
 #, python-format
 msgid "You cannot send an invitation for a survey that has no questions."
-msgstr "شما نمی توانید برای نظرسنجی که سوالی ندارد دعوتنامه بفرستید."
+msgstr ""
+"شما نمی توانید دعوت نامه‌ای را برای نظرسنجی ارسال کنید که هیچ سوالی ندارد."
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
@@ -4573,7 +4572,7 @@ msgstr ""
 #: code:addons/survey/models/survey_survey.py:0
 #, python-format
 msgid "You cannot send invitations for closed surveys."
-msgstr "شما نمی توانید برای نظرسنجی های بسته دعوتنامه ارسال کنید."
+msgstr "شما نمی توانید برای نظرسنجی‌های بسته دعوتنامه ارسال کنید."
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_done
@@ -4603,19 +4602,19 @@ msgstr "پاسخ داده شده"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "e.g. Satisfaction Survey"
-msgstr "به عنوان مثال، نظرسنجی رضایت"
+msgstr "به عنوان مثال، نظرسنجی رضایت‌مندی"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_classic
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_modern
 msgid "for graduating"
-msgstr ""
+msgstr "برای فارغ‌التحصیلی"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_classic
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view_modern
 msgid "is proud to award this certificate to"
-msgstr ""
+msgstr "مفتخریم که این گواهی را تقدیم کنیم به"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_auth_required
@@ -4640,12 +4639,12 @@ msgstr "مرور پاسخ‌های خودتان"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_closed_expired
 msgid "survey expired"
-msgstr "نظرسنجی منقضی شده"
+msgstr "نظرسنجی منقضی‌شده"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_void_content
 msgid "survey is void"
-msgstr ""
+msgstr "نظرسنجی از درجه اعتبار ساقط است"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_403_page

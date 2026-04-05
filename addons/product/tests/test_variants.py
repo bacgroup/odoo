@@ -213,6 +213,31 @@ class TestVariants(common.TestProductCommon):
         self.assertEqual(variant_copy.name, 'Test Copy (copy) (copy)')
         self.assertEqual(len(variant_copy.product_variant_ids), 2)
 
+    def test_dynamic_variants_copy(self):
+        self.color_attr = self.env['product.attribute'].create({'name': 'Color', 'create_variant': 'dynamic'})
+        self.color_attr_value_r = self.env['product.attribute.value'].create({'name': 'Red', 'attribute_id': self.color_attr.id})
+        self.color_attr_value_b = self.env['product.attribute.value'].create({'name': 'Blue', 'attribute_id': self.color_attr.id})
+
+        # test copy of variant with dynamic attribute
+        template_dyn = self.env['product.template'].create({
+            'name': 'Test Dynamical',
+            'attribute_line_ids': [(0, 0, {
+                'attribute_id': self.color_attr.id,
+                'value_ids': [(4, self.color_attr_value_r.id), (4, self.color_attr_value_b.id)],
+            })]
+        })
+
+        self.assertEqual(len(template_dyn.product_variant_ids), 0)
+        self.assertEqual(template_dyn.name, 'Test Dynamical')
+
+        variant_dyn = template_dyn._create_product_variant(template_dyn._get_first_possible_combination())
+        self.assertEqual(len(template_dyn.product_variant_ids), 1)
+
+        variant_dyn_copy = variant_dyn.copy()
+        template_dyn_copy = variant_dyn_copy.product_tmpl_id
+        self.assertEqual(len(template_dyn_copy.product_variant_ids), 1)
+        self.assertEqual(template_dyn_copy.name, 'Test Dynamical (copy)')
+
     def test_standard_price(self):
         """ Ensure template values are correctly (re)computed depending on the context """
         one_variant_product = self.product_1
@@ -261,6 +286,46 @@ class TestVariants(common.TestProductCommon):
         variant_1.toggle_active()
         self.assertTrue(variant_1.active)
         self.assertTrue(template.active)
+
+    def test_template_barcode(self):
+        template = self.env['product.template'].create({
+            'name': 'template',
+            'barcode': 'test',
+        })
+        self.assertEqual(len(template.product_variant_ids), 1)
+        self.assertEqual(template.barcode, 'test')
+
+        template.product_variant_ids.action_archive()
+        self.assertFalse(template.active)
+        template.invalidate_cache(['barcode'])
+        self.assertEqual(template.barcode, 'test')
+        template.product_variant_ids.action_unarchive()
+        template.action_unarchive()
+
+        template.write({
+            'attribute_line_ids': [(0, False, {
+                'attribute_id': self.size_attr.id,
+                'value_ids': [
+                    (4, self.size_attr.value_ids[0].id, self.size_attr_value_s),
+                    (4, self.size_attr.value_ids[1].id, self.size_attr_value_m)
+                ],
+            })]
+        })
+        self.assertFalse(template.barcode)  # 2 active variants --> no barcode on template
+
+        variant_1 = template.product_variant_ids[0]
+        variant_2 = template.product_variant_ids[1]
+
+        variant_1.barcode = 'v1_barcode'
+        variant_2.barcode = 'v2_barcode'
+
+        variant_1.action_archive()
+        template.invalidate_cache(['barcode'])
+        self.assertEqual(template.barcode, variant_2.barcode)  # 1 active variant --> barcode on template
+
+        variant_1.action_unarchive()
+        template.invalidate_cache(['barcode'])
+        self.assertFalse(template.barcode)  # 2 active variants --> no barcode on template
 
     def test_archive_all_variants(self):
         template = self.env['product.template'].create({
@@ -1101,6 +1166,19 @@ class TestVariantsArchive(common.TestProductCommon):
         self.assertTrue(product_white.active)
 
         Product._revert_method('unlink')
+
+    def test_set_barcode(self):
+        tmpl = self.product_0.product_tmpl_id
+        tmpl.barcode = '123'
+        self.assertEqual(tmpl.barcode, '123')
+        self.assertEqual(self.product_0.barcode, '123')
+
+        tmpl.toggle_active()
+
+        tmpl.barcode = '456'
+        tmpl.invalidate_cache(fnames=['barcode'], ids=tmpl.ids)
+        self.assertEqual(tmpl.barcode, '456')
+        self.assertEqual(self.product_0.barcode, '456')
 
     def _update_color_vars(self, ptal):
         self.ptal_color = ptal
